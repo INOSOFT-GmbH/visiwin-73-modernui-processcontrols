@@ -1,0 +1,38 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HMI"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+	
+	<vw:BrushStateCollection x:Key="BrushList1">
+		<vw:BrushState Value="0" Brush="White"/>
+		<vw:BrushState Value="1,2,3,13" Brush="Yellow"/>
+		<vw:BrushState Value="4..6" Brush="Red"/>
+		<vw:BrushState Value="7" Brush="Green"/>
+		<vw:BrushState Value="8" Brush="LightGray"/>
+		<vw:BrushState Value="9..12" Brush="Blue"/>
+		<vw:BrushState Brush="Azure"/>
+	</vw:BrushStateCollection>
+
+	<vw:BrushStateCollection x:Key="BrushList2">
+		<vw:BrushState Value="0" Brush="Blue"/>
+		<vw:BrushState Value="1,7,9" >
+			<vw:BrushState.Brush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Green" Offset="0"/>
+					<GradientStop Color="Yellow" Offset="1"/>
+				</LinearGradientBrush>
+			</vw:BrushState.Brush>
+		</vw:BrushState>
+		<vw:BrushState Value="10..16,67,89" Brush="Green"/>
+		<vw:BrushState Value="-10..-2" Brush="Yellow"/>
+		<vw:BrushState Brush="Red"/>
+	</vw:BrushStateCollection>
+
+	<vw:BrushStateCollection x:Key="BrushList3">
+		<vw:BrushState Value="-9.5..-5.5" Brush="White"/>
+		<vw:BrushState Value="1.1,2.2,3.3" Brush="Yellow"/>
+		<vw:BrushState Value="4..6" Brush="Red"/>
+		<vw:BrushState Brush="Azure"/>
+	</vw:BrushStateCollection>
+
+</ResourceDictionary>

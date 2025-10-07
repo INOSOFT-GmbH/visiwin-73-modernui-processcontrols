@@ -1,0 +1,72 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:VisiWin7.ProcessControls.WPF.Controls;assembly=VisiWin7.ProcessControls.WPF"
+                    xmlns:pc="http://inosoft.com/ProcessControls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ProcessControlStyles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--BeltConveyor-Style-->
+    <Style TargetType="pc:BeltConveyor" BasedOn="{StaticResource {x:Type controls:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,0 A 10,10 360 1 1 0,1 z 
+                                                   M 10,-9.5 l 80,0 
+                                                   M 10,10.5 l 80,0 
+                                                   m 0,0 a 10,10 360 1 1 1,0 z"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--ScrewConveyor-Style-->
+    <Style TargetType="pc:ScrewConveyor" BasedOn="{StaticResource {x:Type controls:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry FillRule="Nonzero"
+                                            Figures="m 0,0 A 10,10 180 1 0 0,20 l 100,0 a 10,10 180 1 0 0,-20 z 
+                                                    l 8.3,18 l 8.3,-16 l 8.3,16 l 8.3,-16 l 8.3,16 l 8.3,-16 l 8.3,16 l 8.3,-16 l 8.3,16 l 8.3,-16 l 8.3,16 l 8.3,-18 
+                                                    M -10,10 l 120,0"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--CeilingConveyor-Style-->
+    <Style TargetType="pc:CeilingConveyor" BasedOn="{StaticResource {x:Type controls:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                          Stroke="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,0 l 100,0
+                                                   M 16.6,0 l 0,20
+                                                   M 50,0 l 0,20
+                                                   M 83.3,0 l 0,20"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+</ResourceDictionary>

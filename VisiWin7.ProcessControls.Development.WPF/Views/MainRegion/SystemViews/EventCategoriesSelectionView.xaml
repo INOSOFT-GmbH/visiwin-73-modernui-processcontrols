@@ -1,0 +1,54 @@
+﻿<vw:View x:Class="HMI.EventCategoriesSelectionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    mc:Ignorable="d"
+    d:DesignWidth="550" d:DesignHeight="500">
+
+    <d:View.DataContext>
+        <vw:EventViewSettingsContext/>
+    </d:View.DataContext>
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <vw:Label Grid.Row="0" LocalizableText="@Events.EventFilter.Categories" FontSize="20"
+                          Width="Auto"
+                          FontWeight="Bold" Margin="5,0,5,0" />
+
+                <ItemsControl Grid.Row="1" ItemsSource="{Binding DesiredEventCategories}"
+                              Width="Auto" Margin="5,0,5,0">
+
+                    <ItemsControl.ItemTemplate>
+
+                        <DataTemplate DataType="vw:EventFilterItem">
+                            <vw:CheckBox LabelText="{Binding LocalizedText}"
+                                         Width="Auto" Height="65"
+                                         IsChecked="{Binding IsSelected}" Margin="8,0,8,0" />
+                        </DataTemplate>
+
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</vw:View>

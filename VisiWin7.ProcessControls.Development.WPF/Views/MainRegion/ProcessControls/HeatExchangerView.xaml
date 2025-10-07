@@ -1,0 +1,22 @@
+﻿<vw:View x:Class="HMI.HeatExchangerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:pc="http://inosoft.com/ProcessControls"
+    mc:Ignorable="d"
+    d:DesignWidth="1024" d:DesignHeight="588">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
+	    <pc:HeatExchanger Width="170" Height="155" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,31,0,0"/>
+	    <pc:HeatExchangerWithoutCrossingFlow Width="120" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="259,38,0,0"/>
+	    <pc:HeatExchangerTubes Width="120" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="383,57,0,0"/>
+	    <pc:Burner Width="122" Height="165" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="554,21,0,0"/>
+	    <pc:Cooler Height="195" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="724,45,0,0" Width="123"/>
+	    <pc:CoolingTower Width="106" Height="203" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="888,51,0,0"/>
+	    <pc:SprayCoolingTower Width="289" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,349,0,0"/>
+	    <pc:CoolingTowerWithInlet Width="303" Height="178" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="387,255,0,0"/>
+    </Grid> 	
+    
+</vw:View>

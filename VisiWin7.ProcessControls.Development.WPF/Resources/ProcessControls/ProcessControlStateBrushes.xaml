@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:pc="http://inosoft.com/ProcessControls">
+
+    <pc:BlinkBrushStateCollection x:Key="ProcessControlStates">
+        <!--Off-->
+        <pc:BlinkBrushState Value="1" Brush="LightGray"/>
+        <!--On-->
+        <pc:BlinkBrushState Value="2" Brush="LightGreen" />
+        <!--Error-->
+        <pc:BlinkBrushState Value="3" Brush="Red" IsBlinkEnabled="true"/>
+        <!--Error + Off-->
+        <pc:BlinkBrushState Value="4" Brush="LightGray" IsBlinkEnabled="true" BlinkBrush="Red"/>
+        <!--Error + On-->
+        <pc:BlinkBrushState Value="5" Brush="LightGreen" IsBlinkEnabled="true"  BlinkBrush="Red"/>
+        <!--Default-->
+        <pc:BlinkBrushState  Brush="Magenta" />
+    </pc:BlinkBrushStateCollection>
+
+    <pc:BlinkBrushStateCollection x:Key="CustomProcessControlStates">
+        <!--Ein-->
+        <pc:BlinkBrushState Value="1" Brush="LightGray"/>
+        <!--Aus-->
+        <pc:BlinkBrushState Value="2" Brush="LightGreen" />
+        <!--Fehler-->
+        <pc:BlinkBrushState Value="4" Brush="Red" IsBlinkEnabled="true"/>
+        <!--Fehler + AUS-->
+        <pc:BlinkBrushState Value="5" Brush="DarkGray" IsBlinkEnabled="true" BlinkBrush="Maroon"/>
+        <!--Fehler + EIN-->
+        <pc:BlinkBrushState Value="6" Brush="Darkgreen" IsBlinkEnabled="true"  BlinkBrush="Orange"/>
+        <!--Sonst-->
+        <pc:BlinkBrushState  Brush="LightSkyBlue" IsBlinkEnabled="true"/>
+    </pc:BlinkBrushStateCollection>
+
+</ResourceDictionary>

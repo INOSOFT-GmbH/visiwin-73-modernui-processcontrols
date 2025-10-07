@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HMI"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <vw:TextStateCollection x:Key="TextList1">
+        <vw:TextState Value="0" Text="Text0"/>
+        <vw:TextState Value="1..15" Text="Text1 - Text15"/>
+        <vw:TextState Value="20,22,24" Text="Text20, Text22, Text24"/>
+        <vw:TextState Text="-"/>
+    </vw:TextStateCollection>
+
+    <vw:TextStateCollection x:Key="TextList2">
+        <vw:TextState Value="0" Text="{vw:LocalizedTextBinding LocalizableText=@[ClientSystem].Dialogs.Common.cmdYes}"/>
+        <vw:TextState Value="1..15" Text="{vw:LocalizedTextBinding LocalizableText=@[ClientSystem].Dialogs.Common.cmdNo}"/>
+        <vw:TextState Value="20,22,24" Text="{vw:LocalizedTextBinding LocalizableText=@[ClientSystem].Dialogs.Common.cmdCancel}"/>
+        <vw:TextState Text="{vw:LocalizedTextBinding LocalizableText=@[ClientSystem].Dialogs.Common.cmdIgnore}"/>
+    </vw:TextStateCollection>
+
+</ResourceDictionary>

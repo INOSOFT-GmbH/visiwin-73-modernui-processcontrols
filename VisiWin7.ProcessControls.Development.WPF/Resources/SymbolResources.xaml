@@ -1,0 +1,98 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Einträge ins SymbolResourceDictionary sollten hier erfolgen -->
+
+    <DataTemplate x:Key="InvertedHelpIcon"> 
+        <Image Source="/Images/twotone_help_black_48dp.png" Stretch="Uniform" Height="38" Width="38" />
+    </DataTemplate>
+  
+    <DataTemplate x:Key="InvertedHomeButtonIcon">
+        <Image Source="/Images/twotone_home_black_48dp.png" Stretch="Uniform" Height="38" Width="38" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="InvertedMachineButtonIcon">
+        <Image Source="/Images/twotone_category_black_48dp.png" Stretch="Uniform" Height="38" Width="38" />
+    </DataTemplate>
+  
+    <DataTemplate x:Key="HomeButtonIcon">
+        <Image Source="/Images/twotone_home_white_48dp.png" Stretch="Uniform" Height="38" Width="38" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MachineButtonIcon">
+        <Image Source="/Images/twotone_category_white_48dp.png" Stretch="Uniform" Height="38" Width="38" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="LogoIcon">
+        <Image Source="/Images/Logo.png" Stretch="Uniform" Height="Auto" Width="Auto" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="HelpIcon">
+        <Image Source="/Images/twotone_help_white_48dp.png" Stretch="Uniform" Height="38" Width="38" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="PersonIcon">
+        <Image Source="/Images/twotone_person_white_48dp.png" Stretch="Uniform" Height="38" Width="38" />
+    </DataTemplate>
+
+   <DataTemplate x:Key="FlagSymbol1031">
+        <Image Source="/Images/LanguageSwitching/Flag-Germany.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="FlagSymbol1033">
+        <Image Source="/Images/LanguageSwitching/Flag-United-States.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+
+	  <DataTemplate x:Key="CloseIcon">
+		  <Image Source="/Images/twotone_close_white_48dp.png" Stretch="Fill" Width="38" Height="38" />
+	  </DataTemplate>
+  
+	<DataTemplate x:Key="BlackCloseIcon">
+		<Image Source="/Images/twotone_close_black_48dp.png" Stretch="Fill" Width="16" Height="16" />
+	</DataTemplate>
+	
+	<DataTemplate x:Key="IconSave">
+        <Image Source="/Images/baseline_save_black_48dp.png" Stretch="Fill" Width="32" Height="32" />
+    </DataTemplate>
+	
+    <DataTemplate x:Key="FeedbackIcon">
+        <Image Source="/Images/twotone_feedback_white_48dp.png" Stretch="Uniform" Height="38" Width="38" />
+    </DataTemplate>
+	
+    <DataTemplate x:Key="ApplicationSymbol">
+    	<Image Source="/Images/SingleApplication.ico" Stretch="Uniform"/>
+    </DataTemplate>
+    <DataTemplate x:Key="ExitApplicationSymbol">
+		<Image Source="/Images/exit_application_64x64.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+	<DataTemplate x:Key="BridgeSymbol">
+    	<Image Source="/Images/bridge_48x48.png" Stretch="Uniform" Width="48" Height="48"/>
+    </DataTemplate>
+    <DataTemplate x:Key="MBAsterixIcon">
+        <Image Source="/Images/MessageBox/mb_asterix_48x48.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBErrorIcon">
+        <Image Source="/Images/MessageBox/mb_error_48x48.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBExclamationIcon">
+        <Image Source="/Images/MessageBox/mb_exclamation_48x48.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBHandIcon">
+        <Image Source="/Images/MessageBox/mb_hand_48x48.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBInformationIcon">
+        <Image Source="/Images/MessageBox/mb_information_48x48.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBQuestionIcon">
+        <Image Source="/Images/MessageBox/mb_question_48x48.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBStopIcon">
+        <Image Source="/Images/MessageBox/mb_stop_48x48.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBWarningIcon">
+        <Image Source="/Images/MessageBox/mb_warning_48x48.png" Stretch="Uniform" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="CancelButtonIcon">
+        <Image Source="/Images/cancel_button_24x24.png" Stretch="Uniform" Height="24" Width="24" />
+    </DataTemplate>
+</ResourceDictionary>

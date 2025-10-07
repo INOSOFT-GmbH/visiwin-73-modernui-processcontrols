@@ -1,0 +1,31 @@
+﻿<vw:View x:Class="HMI.EventSettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vw="http://inosoft.com/visiwin7"    
+    MinWidth="550" MinHeight="675"
+    Width="750" Height="675"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot">
+
+        <vw:NavigationContainer NavigationPanelDock="Left" Width="Auto" Height="Auto">
+
+            <vw:NavigationContainerItem LocalizableText="@Events.EventFilter.Timespan"
+                                        Width="150" Height="100"
+                                        ViewName="EventTimespanSelectionView" IsChecked="True" />
+
+            <vw:NavigationContainerItem LocalizableText="@Events.EventFilter.Categories"
+                                        Width="150" Height="100"
+                                        ViewName="EventCategoriesSelectionView" />
+
+            <vw:NavigationContainerItem LocalizableText="@Events.EventFilter.Colors"
+                                        Width="150" Height="100"
+                                        ViewName="EventCategoriesColorsView" />
+
+        </vw:NavigationContainer>
+
+    </Grid>	
+    
+</vw:View>

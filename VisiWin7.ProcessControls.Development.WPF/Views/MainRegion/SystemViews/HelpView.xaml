@@ -1,0 +1,16 @@
+﻿<vw:View x:Class="HMI.HelpView"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:HMI"
+	mc:Ignorable="d" MinWidth="1024" MinHeight="588">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
+    	
+        <vw:PictureBox Width="80" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,8,0,0" SymbolResourceKey="InvertedHelpIcon"/>
+
+    </Grid>
+    
+</vw:View>

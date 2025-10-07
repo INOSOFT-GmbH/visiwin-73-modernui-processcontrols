@@ -1,0 +1,9 @@
+﻿<vw:View x:Class="HMI.EmptyView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7" 
+    IsHitTestVisible="False">
+
+    <Grid Width="0" Height="0"/>
+    
+</vw:View>

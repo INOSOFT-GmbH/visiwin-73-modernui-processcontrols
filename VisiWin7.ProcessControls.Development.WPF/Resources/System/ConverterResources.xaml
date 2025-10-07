@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <vw:ValueToStateBrushConverter x:Key="ValueToStateBrushConverter"/>
+    <vw:ValueToStateSymbolConverter x:Key="ValueToStateSymbolConverter"/>
+    <vw:ValueToStateTextConverter x:Key="ValueToStateTextConverter"/>
+
+	<vw:IsNullConverter x:Key="IsNullConverter"/>
+    <vw:NotConverter x:Key="NotConverter"/>
+    <vw:OrConverter x:Key="OrConverter"/>
+
+    <vw:BoolToVisibilityConverter x:Key="BoolToVisibilityHiddenConverter" FalseValue="Hidden" TrueValue="Visible"/>
+    <vw:BoolToVisibilityConverter x:Key="BoolToVisibilityCollapsedConverter" FalseValue="Collapsed" TrueValue="Visible"/>
+	
+</ResourceDictionary>

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dt:Assets xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dt="clr-namespace:VisiWin.AssetService;assembly=VisiWin7.AssetService">
+  <dt:DesignTabConfig x:Name="config">
+    <dt:DesignTabConfig.DesignTabGroups>
+      <dt:DesignTabGroup Name="@DesignTabGroup.Name.Drawing" Position="1" ImageLarge="Ellipse.png" ImageSmall="EllipseSmall.png">
+        <dt:DesignTabGroup.SingleButtonConfigurations>
+          <dt:ControlAssetInfo Description="Rectangle" Type="System.Windows.Shapes.Rectangle" ImageLarge="Rectangle.png" ImageSmall="RectangleSmall.png" Assembly="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+          <dt:ControlAssetInfo Description="Ellipse" Type="System.Windows.Shapes.Ellipse" ImageLarge="Ellipse.png" ImageSmall="EllipseSmall.png" Assembly="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+          <dt:ControlAssetInfo Description="Line" Type="System.Windows.Shapes.Line" ImageLarge="Line.png" ImageSmall="LineSmall.png" Assembly="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        </dt:DesignTabGroup.SingleButtonConfigurations>
+      </dt:DesignTabGroup>
+      <dt:DesignTabGroup Name="@DesignTabGroup.Name.Controls" Position="2" ImageLarge="VarOut.png" ImageSmall="VarOutSmall.png">
+        <dt:DesignTabGroup.SingleButtonConfigurations>
+          <dt:ControlAssetInfo Description="Button" Type="VisiWin.Controls.Button" ImageLarge="Button.png" ImageSmall="ButtonSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          <dt:ControlAssetInfo Description="Label" Type="VisiWin.Controls.Label" ImageLarge="Label.png" ImageSmall="LabelSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          <dt:ControlAssetInfo Description="NumericVarOut" Type="VisiWin.Controls.NumericVarOut" ImageLarge="NumericVarOut.png" ImageSmall="NumericVarOutSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          <dt:ControlAssetInfo Description="TextVarOut" Type="VisiWin.Controls.TextVarOut" ImageLarge="TextVarOut.png" ImageSmall="TextVarOutSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          <dt:ControlAssetInfo Description="NumericVarIn" Type="VisiWin.Controls.NumericVarIn" ImageLarge="NumericVarIn.png" ImageSmall="NumericVarInSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          <dt:ControlAssetInfo Description="TextVarIn" Type="VisiWin.Controls.TextVarIn" ImageLarge="TextVarIn.png" ImageSmall="TextVarInSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+        </dt:DesignTabGroup.SingleButtonConfigurations>
+        <dt:DesignTabGroup.PopUpButtonConfigurations>
+          <dt:PopUpButtonConfiguration Name="@PopUpButtonConfiguration.Name.Buttons" ImageSmall="Buttons.png">
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Common" Description="Button" Type="VisiWin.Controls.Button" ImageLarge="Button.png" ImageSmall="ButtonSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Common" Description="ToggleButton" Type="VisiWin.Controls.ToggleButton" ImageLarge="ToggleButton.png" ImageSmall="ToggleButtonSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Common" Description="CheckBox" Type="VisiWin.Controls.CheckBox" ImageLarge="Checkbox.png" ImageSmall="CheckboxSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Common" Description="RadioButton" Type="VisiWin.Controls.RadioButton" ImageLarge="Radiobutton.png" ImageSmall="RadiobuttonSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Navigation" Description="NavigationButton" Type="VisiWin.Controls.NavigationButton" ImageLarge="Navigationbutton.png" ImageSmall="NavigationButtonsmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Navigation" Description="NavigationRadio Button" Type="VisiWin.Controls.NavigationRadioButton" ImageLarge="navigationRadioButton.png" ImageSmall="NavigationRadioButtonSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Navigation" Description="NavigationToggle Button" Type="VisiWin.Controls.NavigationToggleButton" ImageLarge="NavigationToggleButton.png" ImageSmall="NavigationToggleButtonSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.SwitchesAndButtons" Description="Key" Type="VisiWin.Controls.Key" ImageLarge="Key.png" ImageSmall="KeySmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.SwitchesAndButtons" Description="Switch" Type="VisiWin.Controls.Switch" ImageLarge="Switch.png" ImageSmall="SwitchSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.SwitchesAndButtons" Description="RadioSwitch" Type="VisiWin.Controls.RadioSwitch" ImageLarge="RadioSwitch.png" ImageSmall="RadioSwitchSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          </dt:PopUpButtonConfiguration>
+          <dt:PopUpButtonConfiguration Name="@PopUpButtonConfiguration.Name.InputOutput" ImageSmall="InputOutputControls.png">
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Lists" Description="ListBox" Type="VisiWin.Controls.ListBox" ImageLarge="ListBox.png" ImageSmall="ListBoxSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Lists" Description="ComboBox" Type="VisiWin.Controls.ComboBox" ImageLarge="ComboBox.png" ImageSmall="ComboBoxSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableOutput" Description="NumericVarOut" Type="VisiWin.Controls.NumericVarOut" ImageLarge="NumericVarOut.png" ImageSmall="NumericVarOutSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableOutput" Description="TextVarOut" Type="VisiWin.Controls.TextVarOut" ImageLarge="TextVarOut.png" ImageSmall="TextVarOutSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableOutput" Description="DateTimeVarOut" Type="VisiWin.Controls.DateTimeVarOut" ImageLarge="DateTimeVarOut.png" ImageSmall="DateTimeVarOutSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableOutput" Description="Bar" Type="VisiWin.Controls.Bar" ImageLarge="Bar.png" ImageSmall="BarSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableOutput" Description="Gauge" Type="VisiWin.Controls.Gauge" ImageLarge="Gauge.png" ImageSmall="GaugeSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableInput" Description="NumericVarIn" Type="VisiWin.Controls.NumericVarIn" ImageLarge="NumericVarIn.png" ImageSmall="NumericVarInSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableInput" Description="TextVarIn" Type="VisiWin.Controls.TextVarIn" ImageLarge="TextVarIn.png" ImageSmall="TextVarInSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableInput" Description="DateTimeVarIn" Type="VisiWin.Controls.DateTimeVarIn" ImageLarge="DateTimeVarIn.png" ImageSmall="DateTimeVarInSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableInput" Description="UpDown NumericVarIn" Type="VisiWin.Controls.UpDownNumericVarIn" ImageLarge="UpDownNumericVarIn.png" ImageSmall="UpDownNumericVarInSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableInput" Description="PasswordVarIn" Type="VisiWin.Controls.PasswordVarIn" ImageLarge="PasswordVarIn.png" ImageSmall="PasswordVarInSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableInput" Description="Wheel" Type="VisiWin.Controls.Wheel" ImageLarge="Wheel.png" ImageSmall="WheelSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.TextOutput" Description="Label" Type="VisiWin.Controls.Label" ImageLarge="Label.png" ImageSmall="LabelSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableInput" Description="Slider" Type="VisiWin.Controls.Slider" ImageLarge="Slider.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c"></dt:ControlAssetInfo>
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.VariableInput" Description="RangeSlider" Type="VisiWin.Controls.RangeSlider" ImageLarge="Rangeslider.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c"></dt:ControlAssetInfo>
+            
+            <!--<dt:ControlAssetInfo Category="@ControlAssetInfo.Category.TextOutput" Description="IndexLabel" Type="VisiWin.Controls.IndexLabel" ImageLarge="IndexLabel.png" ImageSmall="IndexLabelSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />-->
+
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.TextOutput" Description="TextBlock" Type="VisiWin.Controls.TextBlock" ImageLarge="TextBlock.png" ImageSmall="TextBlockSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Grafic" Description="PictureBox" Type="VisiWin.Controls.PictureBox" ImageLarge="PictureBox.png" ImageSmall="PictureBoxSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          </dt:PopUpButtonConfiguration>
+          <dt:PopUpButtonConfiguration Name="@PopUpButtonConfiguration.Name.System" ImageSmall="SystemControls.png">
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Alarms" Description="AlarmLine" Type="VisiWin.Controls.AlarmLine" ImageLarge="AlarmLine.png" ImageSmall="AlarmLineSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Trends" Description="TrendChart" Type="VisiWin.Controls.TrendChart" ImageLarge="TrendChart.png" ImageSmall="TrendChartSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Trends" Description="XYChart" Type="VisiWin.Controls.XYChart" ImageLarge="TrendChart.png" ImageSmall="TrendChartSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Time" Description="Clock" Type="VisiWin.Controls.Clock" ImageLarge="DigitalClock.png" ImageSmall="DigitalClockSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.LanguageSwitching" Description="LanguageChange RadioButton" Type="VisiWin.Controls.LanguageChangeRadioButton" ImageLarge="LanguageChangeSwitch.png" ImageSmall="LanguageChangeSwitchSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.LanguageSwitching" Description="LanguageComboBox" Type="VisiWin.Controls.LanguageComboBox" ImageLarge="LanguageComboBox.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Alarms" Description="AlarmNotificationItem" Type="VisiWin.Controls.AlarmNotificationItem" ImageLarge="AlarmNotificationItem.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Alarms" Description="NotificationItem" Type="VisiWin.Controls.NotificationItem" ImageLarge="NotificationItem.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Trends" Description="PieChart" Type="VisiWin.Controls.PieChart" ImageLarge="Icon_Pie_Chart.png"  Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            
+          </dt:PopUpButtonConfiguration>
+          <dt:PopUpButtonConfiguration Name="@PopUpButtonConfiguration.Name.Container" ImageSmall="Container.png">
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Navigation" Description="Region" Type="VisiWin.Controls.Region" ImageLarge="Region.png" ImageSmall="RegionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c"/>
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Navigation" Description="PanoramaNavigation" ImageLarge="Panorama.png" ImageSmall="PanoramaSmall.png" Type="VisiWin.Controls.PanoramaNavigation" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c"/>
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Layout" Description="Canvas" Type="System.Windows.Controls.Canvas" ImageLarge="Canvas.png" ImageSmall="CanvasSmall.png" Assembly="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"></dt:ControlAssetInfo>
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Layout" Description="Grid" Type="System.Windows.Controls.Grid" ImageLarge="Grid.png" ImageSmall="GridSmall.png" Assembly="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"></dt:ControlAssetInfo>
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Layout" Description="StackPanel" Type="System.Windows.Controls.StackPanel" ImageLarge="StackPanel.png" ImageSmall="StackPanelSmall.png" Assembly="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"></dt:ControlAssetInfo>
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Layout" Description="GroupBox" Type="VisiWin.Controls.GroupBox" ImageLarge="GroupBox.png" ImageSmall="GroupBoxSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c"></dt:ControlAssetInfo>
+            <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Navigation" Description="NavigationContainer" Type="VisiWin.Controls.NavigationContainer" ImageLarge="NavigationContainer.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c"></dt:ControlAssetInfo>
+          </dt:PopUpButtonConfiguration>
+
+          <dt:PopUpButtonConfiguration Name="ProcessControls" ImageLarge="Process.png" ImageSmall="ProcessSmall.png">
+            <dt:ControlAssetInfo Category="Pipe" Description="ThinPipe" Type="VisiWin7.ProcessControls.WPF.Controls.ThinPipe" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Pipe" Description="ThinPipeBridge" Type="VisiWin7.ProcessControls.WPF.Controls.ThinPipeBridge" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Pipe" Description="ThinPipeConnection" Type="VisiWin7.ProcessControls.WPF.Controls.ThinPipeConnection" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Pipe" Description="Arrow" Type="VisiWin7.ProcessControls.WPF.Controls.Arrow" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Pipe" Description="ThickPipe" Type="VisiWin7.ProcessControls.WPF.Controls.ThickPipe" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Pipe" Description="ThickPipeCorner" Type="VisiWin7.ProcessControls.WPF.Controls.ThickPipeCorner" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Pipe" Description="ThickPipe3Way" Type="VisiWin7.ProcessControls.WPF.Controls.ThickPipeThreeWay" Assembly="VisiWin7.ProcessControls.WPF"/>
+
+            <dt:ControlAssetInfo Category="Valve" Description="Valve" Type="VisiWin7.ProcessControls.WPF.Controls.Valve" ImageLarge="ValveBase.png" ImageSmall="ValveSmall.png" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Valve" Description="PistonValve" Type="VisiWin7.ProcessControls.WPF.Controls.PistonValve" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Valve" Description="MotorValve" Type="VisiWin7.ProcessControls.WPF.Controls.MotorValve" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Valve" Description="AngleValve" Type="VisiWin7.ProcessControls.WPF.Controls.AngleValve" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Valve" Description="3WayValve" Type="VisiWin7.ProcessControls.WPF.Controls.ThreeWayValve" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Valve" Description="GlobeValve" Type="VisiWin7.ProcessControls.WPF.Controls.GlobeValve" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Valve" Description="FlapValve" Type="VisiWin7.ProcessControls.WPF.Controls.FlapValve" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Valve" Description="GateValve" Type="VisiWin7.ProcessControls.WPF.Controls.GateValve" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Valve" Description="BallValve" Type="VisiWin7.ProcessControls.WPF.Controls.BallValve" Assembly="VisiWin7.ProcessControls.WPF" />
+
+            <dt:ControlAssetInfo Category="Pump" Description="Pump" Type="VisiWin7.ProcessControls.WPF.Controls.Pump" ImageLarge="PumpBase.png" ImageSmall="PumpSmall.png"  Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Pump" Description="Compressor" Type="VisiWin7.ProcessControls.WPF.Controls.Compressor" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Pump" Description="Fan" Type="VisiWin7.ProcessControls.WPF.Controls.Fan" Assembly="VisiWin7.ProcessControls.WPF" />
+
+            <dt:ControlAssetInfo Category="Temperature" Description="HeatExchanger" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchanger" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Temperature" Description="HeatExchangerWithoutCrossingFlow" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchangerWithoutCrossingFlow" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Temperature" Description="HeatExchangerTubes" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchangerTubes" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Temperature" Description="Burner" Type="VisiWin7.ProcessControls.WPF.Controls.Burner" ImageLarge="Burner.png" ImageSmall="BurnerSmall.png"  Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Temperature" Description="Cooler" Type="VisiWin7.ProcessControls.WPF.Controls.Cooler" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Temperature" Description="CoolingTower" Type="VisiWin7.ProcessControls.WPF.Controls.CoolingTower" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Temperature" Description="SprayCoolingTower" Type="VisiWin7.ProcessControls.WPF.Controls.SprayCoolingTower" Assembly="VisiWin7.ProcessControls.WPF" />
+            <dt:ControlAssetInfo Category="Temperature" Description="CoolingTowerWithInlet" Type="VisiWin7.ProcessControls.WPF.Controls.CoolingTowerWithInlet" Assembly="VisiWin7.ProcessControls.WPF" />
+
+                        <dt:ControlAssetInfo Category="Tank" Description="Tank" Type="VisiWin7.ProcessControls.WPF.Controls.Tank" ImageLarge="Tank.png" ImageSmall="TankSmall.png" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Tank" Description="RoundTank" Type="VisiWin7.ProcessControls.WPF.Controls.RoundTank" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Tank" Description="Silo" Type="VisiWin7.ProcessControls.WPF.Controls.Silo" Assembly="VisiWin7.ProcessControls.WPF"/>
+
+            <dt:ControlAssetInfo Category="Engine" Description="Motor" Type="VisiWin7.ProcessControls.WPF.Controls.Motor" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Engine" Description="Turbine" Type="VisiWin7.ProcessControls.WPF.Controls.Turbine" Assembly="VisiWin7.ProcessControls.WPF"/>
+
+            <dt:ControlAssetInfo Category="Conveyor" Description="BeltConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.BeltConveyor" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Conveyor" Description="ScrewConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.ScrewConveyor" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="Conveyor" Description="CeilingConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.CeilingConveyor" Assembly="VisiWin7.ProcessControls.WPF"/>
+
+            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="RotaryFeeder" Type="VisiWin7.ProcessControls.WPF.Controls.RotaryFeeder" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="Diverter" Type="VisiWin7.ProcessControls.WPF.Controls.Diverter" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="Stirer" Type="VisiWin7.ProcessControls.WPF.Controls.Stirer" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="Centrifugal" Type="VisiWin7.ProcessControls.WPF.Controls.Centrifugal" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="Scale" Type="VisiWin7.ProcessControls.WPF.Controls.Scale" Assembly="VisiWin7.ProcessControls.WPF"/>
+          </dt:PopUpButtonConfiguration>
+
+        </dt:DesignTabGroup.PopUpButtonConfigurations>
+      </dt:DesignTabGroup>
+      <dt:DesignTabGroup Name="@DesignTabGroup.Name.Functions" Position="3" ImageLarge="SetViewAction.png" ImageSmall="SetViewActionSmall.png">
+        <dt:DesignTabGroup.SingleButtonConfigurations>
+          <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.View" Description="SetView" Type="VisiWin.Controls.SetViewAction" ImageLarge="SetViewAction.png" ImageSmall="SetViewActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Language" Description="ChangeLanguage" Type="VisiWin.Controls.ChangeLanguageAction" ImageLarge="ChangeLanguageAction.png" ImageSmall="ChangeLanguageActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Variable" Description="SetVariable" Type="VisiWin.Controls.SetVariableAction" ImageLarge="SetVariableAction.png" ImageSmall="SetVariableActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+        </dt:DesignTabGroup.SingleButtonConfigurations>
+        <dt:DesignTabGroup.PopUpButtonConfigurations>
+          <dt:PopUpButtonConfiguration Name="@PopUpButtonConfiguration.Name.AllFunctions" ImageSmall="Actions.png">
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Language" Description="ChangeLanguage" Type="VisiWin.Controls.ChangeLanguageAction" ImageLarge="ChangeLanguageAction.png" ImageSmall="ChangeLanguageActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Project" Description="ExitApplication" Type="VisiWin.Controls.ExitApplicationAction" ImageLarge="ExitApplicationAction.png" ImageSmall="ExitApplicationActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.System" Description="ShowControlPanel" Type="VisiWin.Controls.ShowControlPanelAction" ImageLarge="ShowControlPanelAction.png" ImageSmall="" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.System" Description="ShowTaskManager" Type="VisiWin.Controls.ShowTaskManagerAction" ImageLarge="ShowTaskmanagerAction.png" ImageSmall="" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.System" Description="DirectoryCopy" Type="VisiWin.Controls.DirectoryCopyAction" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+			  <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Touchpad" Description="Show AlphaTouchpad" Type="VisiWin.Controls.ShowAlphaTouchpadAction" ImageLarge="ShowAlphaTouchpadAction.png" ImageSmall="ShowAlphaTouchpadActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Touchpad" Description="Show NumericTouchpad" Type="VisiWin.Controls.ShowNumericTouchpadAction" ImageLarge="ShowNumericTouchpadAction.png" ImageSmall="ShowNumericTouchpadActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Variable" Description="DecrementVariable" Type="VisiWin.Controls.DecrementVariableAction" ImageLarge="DecrementVariableAction.png" ImageSmall="DecrementVariableActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Variable" Description="IncrementVariable" Type="VisiWin.Controls.IncrementVariableAction" ImageLarge="IncrementVariableAction.png" ImageSmall="IncrementVariableActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Variable" Description="ResetBit" Type="VisiWin.Controls.ResetBitAction" ImageLarge="ResetBitAction.png" ImageSmall="ResetBitActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Variable" Description="SetBit" Type="VisiWin.Controls.SetBitAction" ImageLarge="SetBitAction.png" ImageSmall="SetBitActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Variable" Description="SetVariable" Type="VisiWin.Controls.SetVariableAction" ImageLarge="SetVariableAction.png" ImageSmall="SetVariableActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.Variable" Description="ToggleBit" Type="VisiWin.Controls.ToggleBitAction" ImageLarge="ToggleBitAction.png" ImageSmall="ToggleBitActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.View" Description="SetView" Type="VisiWin.Controls.SetViewAction" ImageLarge="SetViewAction.png" ImageSmall="SetViewActionSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+            <dt:ActionAssetInfo Category="@ActionAssetInfo.Category.View" Description="SetTheme" Type="VisiWin.Controls.SetThemeAction" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          </dt:PopUpButtonConfiguration>
+        </dt:DesignTabGroup.PopUpButtonConfigurations>
+      </dt:DesignTabGroup>
+      <dt:DesignTabGroup Name="@DesignTabGroup.Name.Behaviors" Position="4" ImageLarge="SetViewAction.png" ImageSmall="SetViewActionSmall.png">
+        <dt:DesignTabGroup.SingleButtonConfigurations>
+          <dt:BehaviorAssetInfo Description="Verification" Type="VisiWin.Controls.VerificationBehavior" ImageLarge="VerificationBehavior.png" ImageSmall="VerificationBehaviorSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+          <dt:BehaviorAssetInfo Description="TranslateZoomRotate" Type="VisiWin.Controls.TranslateZoomRotateBehavior" ImageLarge="TranslateZoomRotateBehavior.png" ImageSmall="TranslateZoomRotateBehaviorSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c" />
+        </dt:DesignTabGroup.SingleButtonConfigurations>
+      </dt:DesignTabGroup>
+    </dt:DesignTabConfig.DesignTabGroups>
+  </dt:DesignTabConfig>
+</dt:Assets>

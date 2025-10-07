@@ -1,0 +1,224 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:pc="http://inosoft.com/ProcessControls">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ProcessControlStyles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--StandardValve-Style-->
+    <Style TargetType="pc:Valve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stretch="Uniform"
+                          StrokeStartLineCap="Square">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,50 l 0,50 l 100,-50 l 0,50 z
+                                                   m 50,25 l 0,-40
+                                                   m -20,0 l 40,0
+                                                   a 10,7.5 180 1 0 -40,0"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--PistonValve-Style-->
+    <Style TargetType="pc:PistonValve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 22.5,0 l 30,0 l 0,50 l -30,0 z
+                                                   m 0,20 l 30,0
+                                                   M 0,60 l 0,40 l 75,-40 l 0,40 z
+                                                   m 37.5,20 l 0,-60"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--MotorValve-Style-->
+    <Style TargetType="pc:MotorValve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Grid>
+                        <!--Rest vom Ventil-->
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                              Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                              Stretch="Uniform">
+                            <Path.Data>
+                                <PathGeometry Figures="m 25,0 l 50,0 l 0,50 l -50,0 z
+                                                       M 10,60 l 0,40 l 80,-40 l 0,40 z
+                                                       m 40,20 l 0,-30"/>
+                            </Path.Data>
+                        </Path>
+                        <!--M-->
+                        <TextBlock FontSize="30"
+                                   FontFamily="Arial"
+                                   Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                                   Margin="0,10"
+                                   TextAlignment="Center"
+                                   Text="M"/>
+                    </Grid>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--AngleValve-Style-->
+    <Style TargetType="pc:AngleValve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 35,35 l 65,35 l 0,-70 z l 35,60 l -70,0 z"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--ThreeWayValve-Style-->
+    <Style TargetType="pc:ThreeWayValve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 50,50 l 25,50 l -50,0 z l 50,25 l 0,-50 z l 25,-50 l -50,0 z"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--GlobeValve-Style-->
+    <Style TargetType="pc:GlobeValve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Grid>
+                        <!--Rest vom Ventil-->
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                              Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                              Stretch="Uniform">
+                            <Path.Data>
+                                <PathGeometry Figures="m 0,0 l 0,60 l 100,-60 l 0,60 z"/>
+                            </Path.Data>
+                        </Path>
+                        <!--Schwarzer Punkt-->
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                              Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}">
+                            <Path.Data>
+                                <EllipseGeometry Center="50,30" RadiusX="10" RadiusY="10"/>
+                            </Path.Data>
+                        </Path>
+                    </Grid>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--FlapValve-Style-->
+    <Style TargetType="pc:FlapValve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,0 l 100,0 l 0,50 l -100,0 z l 100,50"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--GateValve-Style-->
+    <Style TargetType="pc:GateValve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,0 0,60 100,-60 0,60 z 
+                                                   m 50,0 0,60"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--BallValve-Style-->
+    <Style TargetType="pc:BallValve" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Grid>
+                        <!--Kugel im Hintergrund für den Fill-->
+                        <Path Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                              Stretch="Uniform"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center">
+                            <Path.Data>
+                                <EllipseGeometry Center="50,50" RadiusX="20" RadiusY="20"/>
+                            </Path.Data>
+                        </Path>
+                        <!--Ventil-->
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                              Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                              Stretch="Uniform">
+                            <Path.Data>
+                                <PathGeometry Figures="m 0,0 l 0,60 l 100,-60 l 0,60 z"/>
+                            </Path.Data>
+                        </Path>
+                        <!--Kugel im Vordergrund für den Stroke-->
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                              Stretch="Uniform"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center">
+                            <Path.Data>
+                                <EllipseGeometry Center="50,50" RadiusX="20" RadiusY="20"/>
+                            </Path.Data>
+                        </Path>
+                    </Grid>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+</ResourceDictionary>

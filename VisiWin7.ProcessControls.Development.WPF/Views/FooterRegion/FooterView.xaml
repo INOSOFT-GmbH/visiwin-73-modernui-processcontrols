@@ -1,0 +1,86 @@
+﻿<vw:View x:Class="HMI.FooterView"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+         MinWidth="1024"
+         mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource PrimaryBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <vw:NavigationContainer x:Name="NavigationContainer"
+                                Background="{DynamicResource PrimaryBrush}"
+                                MoreMenuStyle="{DynamicResource ShadowlessMenuButtonStyle}"
+                                ItemTemplate="{StaticResource ShadowlessNavigationContainerItemTemplate}"
+                                HideRegions="True"
+                                Margin="30,0,0,0"
+                                NavigationPanelDock="Bottom">
+
+            <vw:NavigationContainer.Items>
+
+                <vw:NavigationContainerItem Text="General"
+                                            Width="108"
+                                            RegionName="MainRegion"
+                                            ViewName="GeneralShowcaseView" IsChecked="True" />
+
+                <vw:NavigationContainerItem Text="All"
+                                            Width="108"
+                                            RegionName="MainRegion"
+                                            ViewName="AllShowcaseView" />
+
+                <vw:NavigationContainerItem Text="Machine"
+                                            Width="108"
+                                            RegionName="MainRegion"
+                                            ViewName="MachineShowcaseView" />
+
+                <vw:NavigationContainerItem Width="108" ViewName="ConveyorView" Text="Conveyor"
+                                            RegionName="MainRegion" />
+
+                <vw:NavigationContainerItem Width="108" ViewName="EngineView"
+                                            Text="Engine" RegionName="MainRegion" />
+
+                <vw:NavigationContainerItem Width="108" ViewName="MechanicalEquipmentView"
+                                            Text="Equipment" RegionName="MainRegion" />
+
+                <vw:NavigationContainerItem Width="108" ViewName="PipeView" 
+                                            Text="Pipe" RegionName="MainRegion" />
+
+                <vw:NavigationContainerItem Width="108" ViewName="PumpView" 
+                                            Text="Pump" RegionName="MainRegion" />
+
+                <vw:NavigationContainerItem Width="108" ViewName="TankView" 
+                                            Text="Tank" RegionName="MainRegion" />
+
+                <vw:NavigationContainerItem Width="108" ViewName="ValveView"
+                                            Text="Valve" RegionName="MainRegion" />
+
+            </vw:NavigationContainer.Items>
+
+        </vw:NavigationContainer>
+
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,0,35,0">
+            <vw:Button Text="Exit"
+                       MinWidth="155"
+                       HorizontalAlignment="Right"
+                       Style="{DynamicResource ShadowlessRaisedLogInButton}"
+                       Symbol="{DynamicResource CloseIcon}"
+                       LocalizableText="@Views.Footer.Exit">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <vw:ExitApplicationAction />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </vw:Button>
+
+        </StackPanel>
+
+    </Grid>
+
+</vw:View>

@@ -1,0 +1,115 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:pc="http://inosoft.com/ProcessControls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ProcessControlStyles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--RotaryFeeder-Style-->
+    <Style TargetType="pc:RotaryFeeder" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,0 A 50,50 360 1 1 0,1 z l 100,0 
+                                                   M 50,-50 l 0,100 
+                                                   M 85,-35 L 15,35 
+                                                   m 0,-70 L 85,35"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--Diverter-Style-->
+    <Style TargetType="pc:Diverter" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,0 A 25,25 360 1 1 0,1 z l -25,0 
+                                                   m 0,-5 l 0,10
+                                                   M 50,0 l 25,0 
+                                                   m 0,-5 l 0,10 
+                                                   M 42.5,-17.5 l 17.5,-17.5 
+                                                   m 3.75,3.75 l -7.5,-7.5"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--Scale-Style-->
+    <Style TargetType="pc:Scale" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stretch="Uniform" 
+                          StrokeEndLineCap="Square">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,0 l 0,20 l 20,0 l 0,-20 z 
+                                                   m 20,10 l 120,0 
+                                                   m -60,0 l 20,20 l -40,0 l 20,-20
+                                                   m 40,-20 l 40,0 
+                                                   m -20,0 l 0,20"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--Centrifugal-Style-->
+    <Style TargetType="pc:Centrifugal" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry FillRule="Nonzero"
+                                          Figures="m 0,0 l 80,0 l 0,80 l -80,0 z 
+                                                   m 50,20 l 20,50 l -60,0 l 20,-50 
+                                                   m 10,50 l 0,20"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!--Stirer-Style-->
+    <Style TargetType="pc:Stirer" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stroke="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                          Stretch="Uniform">
+                        <Path.Data>
+                            <PathGeometry Figures="m 0,100 l 0,-30 l 100,30 l 0,-30
+                                                   m -50,15 l 0,-85"/>
+                        </Path.Data>
+                    </Path>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+</ResourceDictionary>

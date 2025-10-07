@@ -1,0 +1,143 @@
+﻿<vw:View x:Class="HMI.EventCategoriesColorsView"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         mc:Ignorable="d"
+         d:DesignWidth="550" d:DesignHeight="675">
+
+    <d:View.DataContext>
+        <vw:EventViewSettingsContext />
+    </d:View.DataContext>
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <vw:Label Grid.Row="0" LocalizableText="@Events.EventFilter.Colors" FontSize="20"
+                          Width="Auto"
+                          FontWeight="Bold" Margin="5,0,5,0" />
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Margin="10">
+
+                    <vw:Label LocalizableText="@Events.EventFilter.SuccessColor" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Margin="0,0,5,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Foreground" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=SuccessForegroundColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Background" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=SuccessColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                    </Grid>
+
+                    <vw:Label LocalizableText="@Events.EventFilter.InformationalColor" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Margin="0,0,5,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Foreground" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=InformationalForegroundColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Background" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=InformationalColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                    </Grid>
+
+                    <vw:Label LocalizableText="@Events.EventFilter.WarningColor" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Margin="0,0,5,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Foreground" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=WarningForegroundColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Background" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=WarningColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                    </Grid>
+
+                    <vw:Label LocalizableText="@Events.EventFilter.ErrorColor" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Margin="0,0,5,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Foreground" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=ErrorForegroundColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Background" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=ErrorColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                    </Grid>
+
+                    <vw:Label LocalizableText="@Events.EventFilter.FatalColor" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Margin="0,0,5,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Foreground" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=FatalForegroundColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                            <vw:Label LocalizableText="@Events.EventFilter.Background" Margin="0,0,0,0" />
+                            <vw:ComboBoxColorPicker
+                                SelectedColorBrush="{Binding Path=FatalColorBrush, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="0,0,0,10" VerticalContentAlignment="Bottom" />
+                        </StackPanel>
+                    </Grid>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</vw:View>

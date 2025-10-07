@@ -1,0 +1,97 @@
+﻿<vw:View x:Class="HMI.HeaderView"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         mc:Ignorable="d"
+         DataContext="{vw:AdapterBinding Type=vw:StandardUserLogOnOffAdapter}">
+
+   <Grid x:Name="LayoutRoot" Background="{DynamicResource PrimaryBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <ContentControl ContentTemplate="{DynamicResource LogoIcon}" Width="160" Margin="35,0,0,0"
+                        VerticalAlignment="Center" HorizontalAlignment="Left" Height="60" />
+
+        <vw:AlarmLine Height="100" Width="Auto" VerticalAlignment="Top" Margin="35,0,10,0" IsHeaderHidden="True"
+					  MinWidth="450"
+                      Grid.Column="1"
+                      VerticalContentAlignment="Stretch" FormatTime="@ShortTime">
+
+            <vw:AlarmLine.Columns>
+
+                <vw:AlarmColumn AlarmProperty="ActivationTime" Width="*"
+                                CellTemplate="{StaticResource AlarmLineHeaderCellTemplate}" />
+
+            </vw:AlarmLine.Columns>
+
+        </vw:AlarmLine>
+
+        <StackPanel Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal">
+
+            <vw:Button SymbolResourceKey="PersonIcon" Margin="0,0,20,0"
+                       Style="{DynamicResource ShadowlessRaisedLogInButton}" 
+					   Command="{Binding UserLogOnOffCommand}"
+                       Width="280" />
+
+            <vw:LanguageComboBox Width="310" Margin="0,0,20,0" VerticalAlignment="Stretch" Style="{DynamicResource HeaderLanguageComboBox}" />
+
+			<Grid Margin="0,0,20,0" DataContext="{vw:AdapterBinding Type=vw:StandardEventViewAdapter}">
+
+                <vw:NavigationButton SymbolResourceKey="FeedbackIcon" 
+                                     Width="100"
+                                     Command="{Binding ClearErrorAndFatalEventsCountCommand}"
+                                     Style="{DynamicResource ShadowlessNavigationButtonStyle}"
+                                     ViewName="EventView"
+                                     RegionName="MainRegion" />
+
+				<vw:NotificationItem FontSize="14" NotificationElement="{Binding Path=ErrorAndFatalEventsCount}"
+                                     FontWeight="SemiBold"
+                                     Background="{DynamicResource ErrorBrush}" 
+                                     Margin="0,28,3,0"
+                                     Padding="4"
+                                     HorizontalAlignment="Right">
+                    <d:NotificationItem.DataContext>
+                        <vw:StandardEventViewAdapter/>
+                    </d:NotificationItem.DataContext>
+                </vw:NotificationItem>
+				
+            </Grid>
+			
+            <vw:NavigationButton SymbolResourceKey="HelpIcon" Text="" Width="Auto" Margin="0,0,20,0"
+                                 Style="{DynamicResource ShadowlessNavigationButtonStyle}" ViewName="HelpView"
+                                 RegionName="MainRegion" />
+
+            <Separator Background="{DynamicResource ForegroundBrush}"
+                       Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Margin="0,20,0,20" />
+
+            <Grid VerticalAlignment="Center" Width="200">
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+
+                    <vw:Clock DateTimeMode="TimeOnly" HorizontalContentAlignment="Left"
+                              FormatTime="@ShortTime"
+                              FontFamily="Segoe UI"
+                              Foreground="{DynamicResource ForegroundBrush}" FontWeight="Bold"
+                              FontSize="{DynamicResource FontSize_Label}" Margin="0,0,0,5" />
+
+                    <vw:Clock DateTimeMode="DateOnly" HorizontalContentAlignment="Left"
+                              FormatDate="@UserDefinedDate"
+                              FontFamily="Segoe UI"
+                              Foreground="{DynamicResource ForegroundBrush}" 
+                              FontSize="{DynamicResource FontSize_Normal}" />
+
+                </StackPanel>
+
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+
+</vw:View>

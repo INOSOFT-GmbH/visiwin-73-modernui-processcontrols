@@ -388,3 +388,4 @@ UserManagerRuntimeConfig.urc
 *.zip
 #/Data
 
+/References/VisiWin7.View.WPF.xml

@@ -1,0 +1,428 @@
+﻿<vw:View
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:pc="http://inosoft.com/ProcessControls"
+    x:Class="HMI.MachineShowcaseView"
+    mc:Ignorable="d"
+    d:DesignWidth="1920" d:DesignHeight="1024" SnapsToDevicePixels="True" UseLayoutRounding="True">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
+
+        <Viewbox Width="1920" Height="1024">
+
+            <Grid Width="1920" Height="1024">
+
+                <pc:Pump Margin="60,60,1797,863"
+                                   LabelText="ToDo"
+                                   StateBrushes="{DynamicResource ProcessControlStates}"
+                                   Mapping="{DynamicResource PumpMapping}"
+                                   Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="PumpOne" Orientation="Right"/>
+
+
+                <pc:Valve Margin="160,190,1697,729"
+                                  LabelText="ToDo"
+                                  StateBrushes="{DynamicResource ProcessControlStates}"
+                                  Mapping="{DynamicResource ValveMapping}"
+                                  Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="ValveOne" Orientation="Right"/>
+
+                <pc:ThinPipe Background="Blue" Width="4" Margin="188,126,1728,834"/>
+
+                <pc:ThinPipe Background="Blue" Width="4" Margin="190,295,1726,665"/>
+
+                <pc:ThinPipe Background="Blue" Height="4" Margin="190,359,1652,661"/>
+
+                <Border Style="{StaticResource TankBorder}" Margin="267,242,1470,407">
+
+                    <Grid>
+
+                        <pc:Tank VerticalAlignment="Top" StateBrushes="{DynamicResource ProcessControlStates}"
+                                 Mapping="{DynamicResource TankMapping}" HorizontalAlignment="Center"
+                                 Width="80" StructVariableName="TankOne"
+                                 Height="210" Margin="0,20,0,0"/>
+
+                        <pc:Burner Width="80" Height="105" HorizontalAlignment="Center" Orientation="Top"
+                                   LabelText="ToDo" StructVariableName="BurnerOne"
+                                   StateBrushes="{DynamicResource ProcessControlStates}"
+                                   Mapping="{DynamicResource BurnerMapping}"
+                                   Template="{DynamicResource FrameProcessControlTemplate}" Margin="0,248,0,0"/>
+
+                    </Grid>
+
+                </Border>
+
+                <pc:ThinPipe Background="Orange" Height="4" Margin="399,550,1391,470"/>
+
+                <Border Style="{StaticResource TankBorder}" Margin="477,455,1303,407">
+
+                    <pc:Tank VerticalAlignment="Top" StateBrushes="{DynamicResource ProcessControlStates}"
+                             Mapping="{DynamicResource TankMapping}" HorizontalAlignment="Center"
+                             Width="80" StructVariableName="TankOne"
+                             Height="124" Margin="0,20,0,0" />
+
+                </Border>
+
+                <pc:ThinPipe Background="Orange" Width="4" Margin="547,617,1369,343"/>
+
+                <pc:Pump Margin="518,681,1340,242"
+                         LabelText="ToDo" Orientation="Top"
+                         StateBrushes="{DynamicResource ProcessControlStates}"
+                         Mapping="{DynamicResource PumpMapping}"
+                         Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="PumpOne" />
+
+                <pc:ThinPipe Background="Orange" Width="4" Margin="547,782,1369,178"/>
+
+                <pc:ThinPipe Background="Orange" Height="4" Margin="123,844,497,176"/>
+
+                <Border BorderBrush="Gray" BorderThickness="1"
+                    Height="40" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="294,681,1498,303">
+
+                    <Grid VerticalAlignment="Center">
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+
+                        <vw:TextBlock Text=">" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Column="1" Text="ToDo" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Column="2" Text="°C" HorizontalAlignment="Center" />
+
+                    </Grid>
+
+                </Border>
+
+                <Line Style="{StaticResource DottedVerticalLine}"
+                      Stroke="Gray" Margin="358,596,1560,343" />
+
+                <Line Style="{StaticResource DottedHorizontalLine}"
+                      Stroke="Gray" Margin="399,359,1390,663" />
+
+                <Border BorderBrush="Gray" BorderThickness="1"
+                        Background="{DynamicResource ApplicationBackgroundBrush}" Margin="477,310,1316,635">
+
+                    <Grid VerticalAlignment="Center">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+
+                        <vw:TextBlock Text="&gt;" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Row="0" Grid.Column="1" Text="ToDo" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Row="0" Grid.Column="2" Text="°C" HorizontalAlignment="Center" />
+
+                        <vw:TextBlock Grid.Row="1" Grid.Column="0" Text="&gt;" HorizontalAlignment="Center"
+                                      Margin="0,5,0,0" />
+                        <vw:TextBlock Grid.Row="1" Grid.Column="1" Text="ToDo" HorizontalAlignment="Center"
+                                      Margin="0,5,0,0" />
+                        <vw:TextBlock Grid.Row="1" Grid.Column="2" Text="°C" HorizontalAlignment="Center" Margin="0,5,0,0" />
+
+                    </Grid>
+
+                </Border>
+
+                <pc:Valve Margin="595,190,1262,729"
+                                  LabelText="ToDo"
+                                  StateBrushes="{DynamicResource ProcessControlStates}"
+                                  Mapping="{DynamicResource ValveMapping}"
+                                  Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="ValveOne" Orientation="Right"/>
+
+                <pc:ThinPipe Background="Blue" Width="4" Margin="623,126,1293,834"/>
+
+                <pc:ThinPipe Background="Blue" Width="4" Margin="625,295,1291,665"/>
+
+                <pc:ThinPipe Background="Blue" Height="4" Margin="625,359,1217,661"/>
+
+                <Border Style="{StaticResource TankBorder}" Margin="702,242,1035,407">
+
+                    <Grid>
+
+                        <pc:Tank VerticalAlignment="Top" StateBrushes="{DynamicResource ProcessControlStates}"
+                                         Mapping="{DynamicResource TankMapping}" HorizontalAlignment="Center"
+                                         Width="80" StructVariableName="TankOne"
+                                         Height="210" Margin="0,20,0,0" />
+
+                        <pc:Burner Width="80" Height="105" HorizontalAlignment="Center" VerticalAlignment="Top"
+                                   LabelText="ToDo" StructVariableName="BurnerOne" Orientation="Top"
+                                   StateBrushes="{DynamicResource ProcessControlStates}"
+                                   Mapping="{DynamicResource BurnerMapping}"
+                                   Template="{DynamicResource FrameProcessControlTemplate}" Margin="0,248,0,0"/>
+
+                    </Grid>
+
+                </Border>
+
+                <pc:ThinPipe Background="Orange" Height="4" Margin="834,550,956,470"/>
+
+                <Border Style="{StaticResource TankBorder}" Margin="912,455,868,407">
+
+                    <Grid>
+
+                        <pc:Tank VerticalAlignment="Top" StateBrushes="{DynamicResource ProcessControlStates}"
+                                         Mapping="{DynamicResource TankMapping}" HorizontalAlignment="Center"
+                                         Width="80" StructVariableName="TankOne"
+                                         Height="124" Margin="0,20,0,0" />
+
+                    </Grid>
+
+                </Border>
+
+                <pc:ThinPipe Background="Orange" Width="4" Margin="982,617,934,343"/>
+
+                <pc:Pump Margin="953,681,905,242"
+                         LabelText="ToDo" Orientation="Top"
+                         StateBrushes="{DynamicResource ProcessControlStates}"
+                         Mapping="{DynamicResource PumpMapping}"
+                         Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="PumpOne" />
+
+                <pc:ThinPipe Background="Orange" Width="4" Margin="982,782,934,178"/>
+
+                <Border BorderBrush="Gray" BorderThickness="1"
+                    Height="40" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="729,681,1063,303">
+
+                    <Grid VerticalAlignment="Center">
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+
+                        <vw:TextBlock Text="&gt;" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Column="1" Text="ToDo" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Column="2" Text="°C" HorizontalAlignment="Center" />
+
+                    </Grid>
+
+                </Border>
+
+                <Line Style="{StaticResource DottedVerticalLine}"
+                      Stroke="Gray" Margin="793,596,1125,343" />
+
+                <Line Style="{StaticResource DottedHorizontalLine}"
+                      Stroke="Gray" Margin="834,359,955,663" />
+
+                <Border BorderBrush="Gray" BorderThickness="1"
+                        Background="{DynamicResource ApplicationBackgroundBrush}" Margin="912,310,881,635">
+
+                    <Grid VerticalAlignment="Center">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+
+                        <vw:TextBlock Text="&gt;" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Row="0" Grid.Column="1" Text="ToDo" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Row="0" Grid.Column="2" Text="°C" HorizontalAlignment="Center" />
+
+                        <vw:TextBlock Grid.Row="1" Grid.Column="0" Text="&gt;" HorizontalAlignment="Center"
+                                      Margin="0,5,0,0" />
+                        <vw:TextBlock Grid.Row="1" Grid.Column="1" Text="ToDo" HorizontalAlignment="Center"
+                                      Margin="0,5,0,0" />
+                        <vw:TextBlock Grid.Row="1" Grid.Column="2" Text="°C" HorizontalAlignment="Center" Margin="0,5,0,0" />
+
+
+                    </Grid>
+
+                </Border>
+
+                <pc:Valve Margin="1032,190,825,729"
+                                  LabelText="ToDo"
+                                  StateBrushes="{DynamicResource ProcessControlStates}"
+                                  Mapping="{DynamicResource ValveMapping}"
+                                  Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="ValveOne" Orientation="Right"/>
+
+                <pc:ThinPipe Background="Blue" Width="4" Margin="1060,126,855,834"/>
+
+                <pc:ThinPipe Background="Blue" Width="4" Margin="1062,295,854,665"/>
+
+                <pc:ThinPipe Background="Blue" Height="4" Margin="1062,359,780,661"/>
+
+                <Border Style="{StaticResource TankBorder}" Margin="1139,242,598,407">
+
+                    <Grid>
+
+                        <pc:Tank VerticalAlignment="Top" StateBrushes="{DynamicResource ProcessControlStates}"
+                                         Mapping="{DynamicResource TankMapping}" HorizontalAlignment="Center"
+                                         Width="80" StructVariableName="TankOne"
+                                         Height="210" Margin="0,20,0,0" />
+
+                        <pc:Burner Width="80" Height="105" HorizontalAlignment="Center" VerticalAlignment="Top"
+                                   LabelText="ToDo" StructVariableName="BurnerOne" Orientation="Top"
+                                   StateBrushes="{DynamicResource ProcessControlStates}"
+                                   Mapping="{DynamicResource BurnerMapping}"
+                                   Template="{DynamicResource FrameProcessControlTemplate}" Margin="0,248,0,0"/>
+
+                    </Grid>
+
+                </Border>
+
+                <pc:ThinPipe Background="Orange" Height="4" Margin="1271,550,519,470"/>
+
+                <Border Style="{StaticResource TankBorder}" Margin="1349,455,431,407">
+
+                    <Grid>
+
+                        <pc:Tank VerticalAlignment="Center" StateBrushes="{DynamicResource ProcessControlStates}"
+                                         Mapping="{DynamicResource TankMapping}" HorizontalAlignment="Center"
+                                         Width="80" StructVariableName="TankOne"
+                                         Height="124" />
+
+                    </Grid>
+
+                </Border>
+
+                <pc:ThinPipe Background="Orange" Width="4" Margin="1419,617,497,343"/>
+
+                <pc:Pump Margin="1390,681,468,242"
+                         LabelText="ToDo" Orientation="Top"
+                         StateBrushes="{DynamicResource ProcessControlStates}"
+                         Mapping="{DynamicResource PumpMapping}"
+                         Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="PumpOne" />
+
+                <pc:ThinPipe Background="Orange" Width="4" Margin="1419,782,497,178"/>
+
+                <Border BorderBrush="Gray" BorderThickness="1"
+                    Height="40" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="1166,681,626,303">
+
+                    <Grid VerticalAlignment="Center">
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+
+                        <vw:TextBlock Text="&gt;" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Column="1" Text="ToDo" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Column="2" Text="°C" HorizontalAlignment="Center" />
+
+                    </Grid>
+
+                </Border>
+
+                <Line Style="{StaticResource DottedVerticalLine}"
+                      Stroke="Gray" Margin="1230,596,688,343" />
+
+                <Line Style="{StaticResource DottedHorizontalLine}"
+                      Stroke="Gray" Margin="1271,359,518,663" />
+
+                <Border BorderBrush="Gray" BorderThickness="1"
+                        Background="{DynamicResource ApplicationBackgroundBrush}" Margin="1349,310,444,635">
+
+                    <Grid VerticalAlignment="Center">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+
+                        <vw:TextBlock Text="&gt;" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Row="0" Grid.Column="1" Text="ToDo" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Row="0" Grid.Column="2" Text="°C" HorizontalAlignment="Center" />
+
+                        <vw:TextBlock Grid.Row="1" Grid.Column="0" Text="&gt;" HorizontalAlignment="Center"
+                                      Margin="0,5,0,0" />
+                        <vw:TextBlock Grid.Row="1" Grid.Column="1" Text="ToDo" HorizontalAlignment="Center"
+                                      Margin="0,5,0,0" />
+                        <vw:TextBlock Grid.Row="1" Grid.Column="2" Text="°C" HorizontalAlignment="Center" Margin="0,5,0,0" />
+
+
+                    </Grid>
+
+                </Border>
+
+                <Border Style="{StaticResource TankBorder}" Margin="1665,242,72,406">
+
+                    <Grid>
+
+                        <pc:Tank VerticalAlignment="Center" StateBrushes="{DynamicResource ProcessControlStates}"
+                                         Mapping="{DynamicResource TankMapping}" HorizontalAlignment="Center"
+                                         Width="80" StructVariableName="TankOne"
+                                         Height="332" />
+
+                    </Grid>
+
+                </Border>
+
+                <pc:Valve Margin="1726,682,130,237"
+                                  LabelText="ToDo"
+                                  StateBrushes="{DynamicResource ProcessControlStates}"
+                                  Mapping="{DynamicResource ValveMapping}"
+                                  Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="ValveOne" Orientation="Right"/>
+
+
+                <pc:ThinPipe Background="LightBlue" Width="4" Margin="1754,618,162,342"/>
+                <pc:ThinPipe Background="LightBlue" Width="4" Margin="1756,787,160,173"/>
+                <pc:ThinPipe Background="LightBlue" Width="4" Margin="358,60,1558,782"/>
+                <pc:ThinPipe Background="LightBlue" Width="4" Margin="789,60,1127,782"/>
+                <pc:ThinPipe Background="LightBlue" Width="4" Margin="1226,60,690,782"/>
+                <pc:ThinPipe Background="LightBlue" Width="4" Margin="1752,60,164,782"/>
+                <pc:ThinPipe Background="LightBlue" Height="4" Margin="358,60,166,960"/>
+
+                <pc:ThinPipe Background="Blue" Height="4" Margin="123,124,856,896"/>
+                <Line Style="{StaticResource DottedHorizontalLine}"
+                  Stroke="Gray" Margin="1587,359,202,663" />
+
+                <Border BorderBrush="Gray" BorderThickness="1" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="1495,327,298,646">
+
+                    <Grid VerticalAlignment="Center">
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+
+                        <vw:TextBlock Text="&gt;" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Column="1" Text="ToDo" HorizontalAlignment="Center" />
+                        <vw:TextBlock Grid.Column="2" Text="°C" HorizontalAlignment="Center" />
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+
+        </Viewbox>
+
+    </Grid>
+
+</vw:View>

@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    
+    <ResourceDictionary.MergedDictionaries>
+
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/Resources.xaml" />
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ProcessControlStyles.xaml" />
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ValveStyles.xaml"/>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/PipeStyles.xaml"/>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/TankStyles.xaml"/>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/PumpStyles.xaml"/>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ExchangerStyles.xaml"/>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ConveyorStyles.xaml"/>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/EngineStyles.xaml"/>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/MechanicalEquipmentStyles.xaml"/>
+
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

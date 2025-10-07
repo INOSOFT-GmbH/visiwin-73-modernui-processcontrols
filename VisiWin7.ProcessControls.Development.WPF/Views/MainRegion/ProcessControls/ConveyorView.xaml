@@ -1,0 +1,17 @@
+﻿<vw:View x:Class="HMI.ConveyorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:pc="http://inosoft.com/ProcessControls"
+    mc:Ignorable="d"
+    d:DesignWidth="1024" d:DesignHeight="588">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
+	    <pc:BeltConveyor Width="154" Height="209" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,22,0,0"/>
+	    <pc:ScrewConveyor Height="218" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="259,31,0,0" Width="127"/>
+	    <pc:CeilingConveyor Width="187" Height="207" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="418,42,0,0"/>
+    </Grid> 	
+    
+</vw:View>

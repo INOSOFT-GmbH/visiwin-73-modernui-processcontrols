@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7247D015-6134-4160-978B-5C88785F9CE3}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>VisiWin7.ProcessControls.WPF.VW7.Design</RootNamespace>
+    <AssemblyName>VisiWin7.ProcessControls.WPF.VW7.Design</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\References\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.Windows.Design.Extensibility" />
+    <Reference Include="Microsoft.Windows.Design.Interaction" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="VisiWin7.AddIn.Shared" />
+    <Reference Include="VisiWin7.IDE.MEF" />
+    <Reference Include="VisiWin7.IDE.Shared" />
+    <Reference Include="VisiWin7.System.WPF" />
+    <Reference Include="VisiWin7.View.WPF" />
+    <Reference Include="VisiWin7.WPFDesign.DesignInformation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Initializer\AngleValveInitializer.cs" />
+    <Compile Include="Initializer\ArrowInitializer.cs" />
+    <Compile Include="Initializer\BallValveInitializer.cs" />
+    <Compile Include="Initializer\BeltConveyorInitializer.cs" />
+    <Compile Include="Initializer\BurnerInitializer.cs" />
+    <Compile Include="Initializer\CeilingConveyorInitializer.cs" />
+    <Compile Include="Initializer\CentrifugalInitializer.cs" />
+    <Compile Include="Initializer\CompressorInitializer.cs" />
+    <Compile Include="Initializer\CoolerInitializer.cs" />
+    <Compile Include="Initializer\CoolingTowerInitializer.cs" />
+    <Compile Include="Initializer\CoolingTowerWithInletInitializer.cs" />
+    <Compile Include="Initializer\DiverterInitializer.cs" />
+    <Compile Include="Initializer\FanInitializer.cs" />
+    <Compile Include="Initializer\FlapValveInitializer.cs" />
+    <Compile Include="Initializer\GateValveInitializer.cs" />
+    <Compile Include="Initializer\GlobeValveInitializer.cs" />
+    <Compile Include="Initializer\HeatExchangerInitializer.cs" />
+    <Compile Include="Initializer\HeatExchangerTubesInitializer.cs" />
+    <Compile Include="Initializer\HeatExchangerWithoutCrossingFlowInitializer.cs" />
+    <Compile Include="Initializer\MotorInitializer.cs" />
+    <Compile Include="Initializer\MotorValveInitializer.cs" />
+    <Compile Include="Initializer\PistonValveInitializer.cs" />
+    <Compile Include="Initializer\RotaryFeederInitializer.cs" />
+    <Compile Include="Initializer\ScrewConveyorInitializer.cs" />
+    <Compile Include="Initializer\SiloInitializer.cs" />
+    <Compile Include="Initializer\SprayCoolingTowerInitializer.cs" />
+    <Compile Include="Initializer\StirerInitializer.cs" />
+    <Compile Include="Initializer\ThickPipeCornerInitializer.cs" />
+    <Compile Include="Initializer\ThickPipeInitializer.cs" />
+    <Compile Include="Initializer\ThickPipeThreeWayInitializer.cs" />
+    <Compile Include="Initializer\ThinPipeBridgeInitializer.cs" />
+    <Compile Include="Initializer\ThinPipeInitializer.cs" />
+    <Compile Include="Initializer\ThreeWayValveInitializer.cs" />
+    <Compile Include="Initializer\ScaleInitializer.cs" />
+    <Compile Include="Initializer\ThinPipeConnectionInitializer.cs" />
+    <Compile Include="Initializer\PumpInitializer.cs" />
+    <Compile Include="Initializer\RoundTankInitializer.cs" />
+    <Compile Include="Initializer\TankInitializer.cs" />
+    <Compile Include="Initializer\TurbineInitializer.cs" />
+    <Compile Include="Initializer\ValveInitializer.cs" />
+    <Compile Include="Metadata.cs" />
+    <Compile Include="Initializer\Base\ProcessControlBaseInitializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PropertyGridAdjuster.cs" />
+    <Compile Include="SampleDefaultInitializer.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VisiWin7.ProcessControls.WPF\VisiWin7.ProcessControls.WPF.csproj">
+      <Project>{6bd96c55-1f03-46d2-bd1c-22a0420d3c0f}</Project>
+      <Name>VisiWin7.ProcessControls.WPF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

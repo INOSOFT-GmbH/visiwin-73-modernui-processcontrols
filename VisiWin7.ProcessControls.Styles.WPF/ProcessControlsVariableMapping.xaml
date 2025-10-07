@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mapping="clr-namespace:VisiWin7.ProcessControls.WPF.Mapping;assembly=VisiWin7.ProcessControls.WPF">
+
+    <!--Do not use this as default, just as a hint for naming. Cause no plc does have these real names, and this would cause in exceptions.-->
+    <!--
+    <mapping:VariableNameMappingCollection x:Key="DefaultMapping">
+
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
+
+    </mapping:VariableNameMappingCollection>
+
+    <mapping:VariableNameMappingCollection x:Key="DefaultPumpMapping">
+
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
+
+    </mapping:VariableNameMappingCollection>
+
+    <mapping:VariableNameMappingCollection x:Key="DefaultValveMapping">
+
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
+
+    </mapping:VariableNameMappingCollection>
+
+    <mapping:VariableNameMappingCollection x:Key="DefaultBurnerMapping">
+
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+            <mapping:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
+
+    </mapping:VariableNameMappingCollection>
+    
+    <mapping:VariableNameMappingCollection x:Key="DefaultTankMapping">
+
+        <mapping:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
+        <mapping:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <mapping:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
+        <mapping:VariableNameControlPropertyMapping ControlPropertyName="Volume" VariableName="Volume" />
+
+    </mapping:VariableNameMappingCollection>
+    -->
+
+</ResourceDictionary>

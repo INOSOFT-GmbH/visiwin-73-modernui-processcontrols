@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BD96C55-1F03-46D2-BD1C-22A0420D3C0F}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>VisiWin7.ProcessControls.WPF</RootNamespace>
+    <AssemblyName>VisiWin7.ProcessControls.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\References\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="VisiWin7.System.WPF" />
+    <Reference Include="VisiWin7.View.WPF" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Async\AsyncLock.cs" />
+    <Compile Include="Controls\Conveyors\BeltConveyor.cs" />
+    <Compile Include="Controls\Conveyors\CeilingConveyor.cs" />
+    <Compile Include="Controls\Conveyors\ScrewConveyor.cs" />
+    <Compile Include="Controls\Engines\Motor.cs" />
+    <Compile Include="Controls\Engines\Turbine.cs" />
+    <Compile Include="Controls\Exchangers\Base\ExchangerBase.cs" />
+    <Compile Include="Controls\Conveyors\Base\ConveyorBase.cs" />
+    <Compile Include="Controls\Engines\Base\EngineBase.cs" />
+    <Compile Include="Controls\Exchangers\Burner.cs" />
+    <Compile Include="Controls\Exchangers\Cooler.cs" />
+    <Compile Include="Controls\Exchangers\CoolingTower.cs" />
+    <Compile Include="Controls\Exchangers\SprayCoolingTower.cs" />
+    <Compile Include="Controls\Exchangers\CoolingTowerWithInlet.cs" />
+    <Compile Include="Controls\Exchangers\HeatExchanger.cs" />
+    <Compile Include="Controls\Exchangers\HeatExchangerWithoutCrossingFlow.cs" />
+    <Compile Include="Controls\Exchangers\HeatExchangerTubes.cs" />
+    <Compile Include="Controls\MechanicalEquipment\Base\MechanicalEquipmentBase.cs" />
+    <Compile Include="Controls\MechanicalEquipment\Centrifugal.cs" />
+    <Compile Include="Controls\MechanicalEquipment\Diverter.cs" />
+    <Compile Include="Controls\MechanicalEquipment\RotaryFeeder.cs" />
+    <Compile Include="Controls\MechanicalEquipment\Scale.cs" />
+    <Compile Include="Controls\MechanicalEquipment\Stirer.cs" />
+    <Compile Include="Controls\Pipes\Base\PipeBase.cs" />
+    <Compile Include="Controls\Pipes\Arrow.cs" />
+    <Compile Include="Controls\Pipes\ThickPipe.cs" />
+    <Compile Include="Controls\Pipes\ThickPipeCorner.cs" />
+    <Compile Include="Controls\Pipes\ThickPipeThreeWay.cs" />
+    <Compile Include="Controls\Pipes\ThinPipe.cs" />
+    <Compile Include="Controls\Pipes\ThinPipeBridge.cs" />
+    <Compile Include="Controls\Pipes\ThinPipeConnection.cs" />
+    <Compile Include="Controls\Base\ProcessControlBase.cs" />
+    <Compile Include="Controls\Base\DefaultProcessControlBase.cs" />
+    <Compile Include="Controls\Base\ProcessControlBase.Blink.cs" />
+    <Compile Include="Controls\Base\ProcessControlBase.AttachController.cs" />
+    <Compile Include="Controls\Base\ProcessControlBase.LabelText.cs" />
+    <Compile Include="Controls\Base\ProcessControlBase.Variable.cs" />
+    <Compile Include="Controls\Pumps\Base\PumpBase.cs" />
+    <Compile Include="Controls\Pumps\Compressor.cs" />
+    <Compile Include="Controls\Pumps\Fan.cs" />
+    <Compile Include="Controls\Pumps\Pump.cs" />
+    <Compile Include="Controls\Tanks\Tank.Variable.cs" />
+    <Compile Include="Controls\Tanks\Tank.cs" />
+    <Compile Include="Controls\Tanks\RoundTank.cs" />
+    <Compile Include="Controls\Tanks\Silo.cs" />
+    <Compile Include="Controls\Valves\Base\ValveBase.cs" />
+    <Compile Include="Controls\Valves\AngleValve.cs" />
+    <Compile Include="Controls\Valves\BallValve.cs" />
+    <Compile Include="Controls\Valves\FlapValve.cs" />
+    <Compile Include="Controls\Valves\GateValve.cs" />
+    <Compile Include="Controls\Valves\GlobeValve.cs" />
+    <Compile Include="Controls\Valves\MotorValve.cs" />
+    <Compile Include="Controls\Valves\PistonValve.cs" />
+    <Compile Include="Controls\Valves\Valve.cs" />
+    <Compile Include="Controls\Valves\ThreeWayValve.cs" />
+    <Compile Include="Mapping\VariableNameMappingCollection.cs" />
+    <Compile Include="Mapping\NameMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="States\BlinkBrushState.cs" />
+    <Compile Include="States\BlinkBrushStateCollection.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
