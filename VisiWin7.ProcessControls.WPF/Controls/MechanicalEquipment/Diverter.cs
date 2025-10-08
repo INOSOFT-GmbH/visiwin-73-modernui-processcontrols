@@ -1,8 +1,8 @@
 ﻿namespace VisiWin7.ProcessControls.WPF.Controls
 {
     /// <summary>
-    /// Represents a diverter control, derived from <see cref="MechanicalEquipmentBase"/>.
-    /// This class can be used to visualize or interact with diverter equipment in process control systems.
+    /// Represents a diverter equipment control for process control applications.
+    /// Inherits from <see cref="MechanicalEquipmentBase"/>.
     /// </summary>
     public class Diverter : MechanicalEquipmentBase
     {

@@ -7,15 +7,15 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!--Motor-Style-->
-    <Style TargetType="pc:Motor" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+    <Style TargetType="pc:Motor" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
         <Style.Resources>
             <DataTemplate x:Key="StyleTemplate">
                 <Viewbox>
                     <Grid>
                         <!--Kreis-->
-                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
-                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
-                              Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}"
+                              Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}"
                               Stretch="Uniform">
                             <Path.Data>
                                 <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
@@ -24,7 +24,7 @@
                         <!--M-->
                         <TextBlock FontSize="70"
                                    FontFamily="Arial"
-                                   Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}}"
+                                   Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
                                    Text="M"/>
@@ -35,13 +35,13 @@
     </Style>
 
     <!--Turbine-Style-->
-    <Style TargetType="pc:Turbine" BasedOn="{StaticResource {x:Type pc:ProcessControlBase}}">
+    <Style TargetType="pc:Turbine" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
         <Style.Resources>
             <DataTemplate x:Key="StyleTemplate">
                 <Viewbox>
-                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
-                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
-                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:ProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
                           Stretch="Uniform">
                         <Path.Data>
                             <PathGeometry Figures="m 0,0 l 0,20 l 60,30 l 0,-80 z 

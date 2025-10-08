@@ -1,10 +1,10 @@
 <!-- Readme for open source repositories -->
 # VisiWin7.ProcessControls.ModernUI
 
-This repository demonstrates how to create and extend process controls for the VisiWin7 IDE using ModernUI (WPF) technology. 
+This repository demonstrates how to create and extend process controls for the VisiWin7 IDE using ModernUI (WPF) technology.
 It provides a comprehensive set of reusable industrial process control components that can be easily integrated into VisiWin7 Runtime 7.3 projects.
 
-The project serves as both a sample implementation and a foundation for developing custom process controls such as tanks, valves, pumps, conveyors, and other industrial automation components. 
+The project serves as both a sample implementation and a foundation for developing custom process controls such as tanks, valves, pumps, conveyors, and other industrial automation components.
 Useful for UI developers and automation engineers working with the VisiWin7 IDE who need to create custom visual representations of industrial processes.
 
 ## Related packages
@@ -41,42 +41,50 @@ This sample works with and was tested with VisiWin 7 2025-1 and later.
                      Assembly="VisiWin7.ProcessControls.WPF"/>
 ```
 
-3. **Use controls in XAML with variable mapping**:
+3. **Use controls in XAML with variable mapping (relative to a struct variable)**:
 
 ```xml
-<controls:BeltConveyor x:Name="Conveyor1" 
-                       StrokeThickness="2" 
-                       Foreground="Blue" 
-                       Background="LightGray">
+<controls:BeltConveyor x:Name="Conveyor1"
+                       StrokeThickness="2"
+                       Foreground="Blue"
+                       Background="LightGray"
+                       StructVariableName="PLC.Conveyor1"> <!-- base path -->
     <controls:BeltConveyor.Mapping>
         <mapping:VariableNameMappingCollection>
+            <!-- VariableName is relative to StructVariableName -->
             <mapping:VariableNameControlPropertyMapping 
-                VariableName="PLC.Conveyor1.ActualValue" 
+                VariableName="ActualValue" 
                 ControlPropertyName="ActualValue"/>
             <mapping:VariableNameControlPropertyMapping 
-                VariableName="PLC.Conveyor1.SetValue" 
+                VariableName="SetValue" 
                 ControlPropertyName="SetValue"/>
         </mapping:VariableNameMappingCollection>
     </controls:BeltConveyor.Mapping>
 </controls:BeltConveyor>
 ```
 
+Notes:
+- Set the control's `StructVariableName` to the base variable (e.g., a PLC structure). Each mapping's `VariableName` is the relative member name.
+- Design-time pickers are provided for `StructVariableName` in the IDE.
+
 ### Creating Custom Process Controls
 
-1. **Inherit from base classes**:
+1. **Inherit from base classes** (pick the closest category):
 
 ```csharp
-public class CustomTank : TankBase
-{
-    // Custom implementation
-}
+public class CustomValve : ValveBase { }
+public class CustomConveyor : ConveyorBase { }
+public class CustomPump : PumpBase { }
+public class CustomPipe : PipeBase { }
+public class CustomExchanger : ExchangerBase { }
+public class CustomEngine : EngineBase { }
 
-// Or for new categories:
+// Or, if you create a completely new category, derive from DefaultProcessControlBase
 public abstract class CustomBase : DefaultProcessControlBase
 {
     static CustomBase()
     {
-        DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomBase), 
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomBase),
             new FrameworkPropertyMetadata(typeof(CustomBase)));
     }
 }
@@ -93,9 +101,45 @@ public double FillLevel
 }
 
 public static readonly DependencyProperty FillLevelProperty =
-    DependencyProperty.Register("FillLevel", typeof(double), 
+    DependencyProperty.Register("FillLevel", typeof(double),
         typeof(CustomTank), new PropertyMetadata(0.0));
 ```
+
+3. **Override variable mapping behavior** (if needed for complex controls):
+
+For controls that handle multiple values or require custom mapping logic beyond the standard `ActualValue`/`SetValue` pattern, override the `OnVariableValueChanged` method:
+
+```csharp
+protected override void OnVariableValueChanged(object sender, string controlPropertyName, VariableEventArgs variableEventArgs)
+{
+    base.OnVariableValueChanged(sender, controlPropertyName, variableEventArgs);
+    if (this.IsAttaching)
+    {
+        return;
+    }
+
+    var variableValue = this.Variables[controlPropertyName].Value;
+    var typeChangedValue = System.Convert.ChangeType(variableValue, typeof(int));
+    if (typeChangedValue == null)
+    {
+        return;
+    }
+
+    var intVariableValue = (int)typeChangedValue;
+    switch (controlPropertyName)
+    {
+        case nameof(this.CustomProperty1):
+            this.SetCurrentValue(CustomProperty1Property, intVariableValue);
+            this.UpdateControlStates(intVariableValue);
+            break;
+        case nameof(this.CustomProperty2):
+            this.SetCurrentValue(CustomProperty2Property, intVariableValue);
+            break;
+    }
+}
+```
+
+This is particularly useful for controls like `ThreeWayValve` that have multiple ports with separate `ActualValue` and `SetValue` properties for each port.
 
 ## Details
 
@@ -107,16 +151,18 @@ The **core logic project** containing all process control classes and business l
 
 - **Purpose**: Contains class definitions and implementations for all process controls
 - **Key Components**:
-  - `DefaultProcessControlBase` - Base class for all process controls
-  - Specialized base classes (`TankBase`, `ValveBase`, `PumpBase`, `ConveyorBase`, etc.)
-  - Concrete implementations (e.g., `BeltConveyor`, `CentrifugalPump`)
+  - `ProcessControlBase` – Root base class (state brushes, mapping, orientation, async init)
+  - `DefaultErrorProcessControlBase` – Adds `Errors` mapping support
+  - `DefaultProcessControlBase` – Adds `ActualValue`, `SetValue` and exposes `CurrentStateBrush` selected from `StateBrushes`
+  - Category base classes (`ConveyorBase`, `ValveBase`, `PumpBase`, `PipeBase`, `ExchangerBase`, `EngineBase`)
+  - Concrete implementations (e.g., `BeltConveyor`, `Tank`, `ThreeWayValve`, `Centrifugal`)
   - Custom properties with dependency property support
   - Process-specific logic and behaviors
 
 **Main Types**:
-- `ProcessControlBase` - Root base class with basic properties
-- `DefaultProcessControlBase` - Enhanced base with standard process control features
-- Category-specific base classes for common control types
+- `ProcessControlBase` – Root base with mapping (`StructVariableName` + `Mapping`), state system, orientation
+- `DefaultErrorProcessControlBase` – Error value (`Errors`) handling
+- `DefaultProcessControlBase` – Standard process values and visual state selection (`ActualValue`, `SetValue`, `CurrentStateBrush`)
 
 ### [VisiWin7.ProcessControls.Styles.WPF](VisiWin7.ProcessControls.Styles.WPF/)
 
@@ -126,11 +172,11 @@ The **styling and visual representation project** containing all XAML styles and
 - **Key Components**:
   - ResourceDictionaries with control styles
   - Path-based symbol definitions using WPF Path Markup syntax
-  - Visual templates and indicators
+  - Visual templates and indicators bound to `StateBrushes` / `CurrentStateBrush`
   - Styling configurations for different control states
 
 **Architecture**:
-- Symbols defined as `<Style>` elements with `IndicatorTemplate` setters
+- Symbols defined as `<Style>` elements with data templates
 - Path-based graphics using coordinates and geometric shapes
 - Binding support for dynamic properties (stroke, fill, thickness)
 - Support for special cases like tank fill level visualization
@@ -153,7 +199,7 @@ The **design-time support project** for VisiWin7 IDE integration.
 
 - **Purpose**: Provides metadata and design-time experience for the VisiWin7 IDE
 - **Key Components**:
-  - Property grid editors and selection editors
+  - Property grid editors and selection editors (e.g., variable and rights pickers)
   - Design-time metadata for improved IDE experience
   - Custom property editors for process-specific properties
   - Integration with VisiWin7 development environment
@@ -162,20 +208,22 @@ The **design-time support project** for VisiWin7 IDE integration.
 
 ### Creating New Controls
 
-1. **Define the Control Class**: Inherit from appropriate base class
+1. **Define the Control Class**: Inherit from the appropriate category base (or `DefaultProcessControlBase` for a new category)
 2. **Implement Custom Logic**: Add dependency properties and business logic
 3. **Create Visual Symbol**: Design the XAML symbol in the styles project
-4. **Configure Variable Mapping**: Set up PLC variable connections
+4. **Configure Variable Mapping**: Set up PLC variable connections using `StructVariableName` and relative mapping names
 5. **Register in IDE**: Add configuration to make it available in toolbox
 6. **Test Integration**: Verify functionality in VisiWin7 IDE and runtime
 
 ### Variable Mapping System
 
-The process controls framework provides a powerful variable mapping system that connects control properties to PLC variables. This enables real-time data exchange between the HMI and automation systems.
+The process controls framework provides a variable mapping system that connects control properties to PLC variables. This enables real-time data exchange between the HMI and automation systems.
 
-#### Understanding VariableNameMappingCollection
+#### Understanding StructVariableName and VariableNameMappingCollection
 
-The `Mapping` property of each process control contains a `VariableNameMappingCollection` that defines the relationships between PLC variables and control properties:
+- `StructVariableName` defines the base PLC variable (e.g., a structure or prefix).
+- Each entry in `Mapping` specifies the relative member name (`VariableName`) and the target control property (`ControlPropertyName`).
+- At runtime, variables are created by combining `StructVariableName` and the relative `VariableName`.
 
 ```csharp
 [Category("Process")]
@@ -190,18 +238,19 @@ public VariableNameMappingCollection Mapping
 
 **In XAML:**
 ```xml
-<controls:Tank x:Name="Tank1">
+<controls:Tank x:Name="Tank1"
+               StructVariableName="PLC.Tank1">
     <controls:Tank.Mapping>
         <mapping:VariableNameMappingCollection>
-            <!-- Map PLC variable to control property -->
+            <!-- Map PLC struct member to control property -->
             <mapping:VariableNameControlPropertyMapping 
-                VariableName="PLC.Tank1.FillLevel" 
+                VariableName="ActualValue" 
                 ControlPropertyName="ActualValue"/>
             <mapping:VariableNameControlPropertyMapping 
-                VariableName="PLC.Tank1.SetPoint" 
+                VariableName="SetValue" 
                 ControlPropertyName="SetValue"/>
             <mapping:VariableNameControlPropertyMapping 
-                VariableName="PLC.Tank1.Alarms" 
+                VariableName="Errors" 
                 ControlPropertyName="Errors"/>
         </mapping:VariableNameMappingCollection>
     </controls:Tank.Mapping>
@@ -213,18 +262,26 @@ public VariableNameMappingCollection Mapping
 // Create mapping collection
 var mappingCollection = new VariableNameMappingCollection();
 
-// Add individual mappings
+// Add individual mappings (relative names)
 mappingCollection.Add(new VariableNameControlPropertyMapping
 {
-    VariableName = "PLC.Tank1.FillLevel",
+    VariableName = "ActualValue",
     ControlPropertyName = "ActualValue"
 });
 
 mappingCollection.Add(new VariableNameControlPropertyMapping
 {
-    VariableName = "PLC.Tank1.SetPoint", 
+    VariableName = "SetValue",
     ControlPropertyName = "SetValue"
 });
 
 // Assign to control
+Tank1.StructVariableName = "PLC.Tank1";
 Tank1.Mapping = mappingCollection;
+```
+
+### Visual State System
+
+- Bind `StateBrushes` on a control to define color/animation per state value.
+- `DefaultProcessControlBase` selects the matching state as `CurrentStateBrush` when `ActualValue` changes.
+- Styles can bind fills/strokes to the `CurrentStateBrush` to reflect the current state visually.

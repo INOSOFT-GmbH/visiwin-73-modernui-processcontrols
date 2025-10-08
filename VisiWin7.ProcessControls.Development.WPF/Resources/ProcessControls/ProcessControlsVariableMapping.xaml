@@ -190,8 +190,12 @@
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="ThreeWayValveMapping">
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValuePortA" VariableName="ActualValuePortA" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortA" VariableName="SetValuePortA" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValuePortB" VariableName="ActualValuePortB" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortB" VariableName="SetValuePortB" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValuePortC" VariableName="ActualValuePortC" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortC" VariableName="SetValuePortC" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 

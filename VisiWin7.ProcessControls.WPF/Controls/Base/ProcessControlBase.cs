@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -48,27 +47,6 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// </summary>
         public static readonly DependencyProperty StateBrushesProperty = DependencyProperty.Register(nameof(StateBrushes), typeof(BlinkBrushStateCollection), typeof(ProcessControlBase),
             new PropertyMetadata(null, OnControlStatesChanged));
-
-        /// <summary>
-        /// Dependency property key for the current state brush.
-        /// </summary>
-        private static readonly DependencyPropertyKey currentStateBrushPropertyKey = DependencyProperty.RegisterReadOnly(nameof(CurrentStateBrush), typeof(BlinkBrushState),
-            typeof(ProcessControlBase), new FrameworkPropertyMetadata(default(BlinkBrushState), FrameworkPropertyMetadataOptions.None));
-
-        /// <summary>
-        /// Dependency property for <see cref="CurrentStateBrush"/>.
-        /// </summary>
-        public static readonly DependencyProperty CurrentStateBrushProperty = currentStateBrushPropertyKey.DependencyProperty;
-
-        /// <summary>
-        /// Gets the current state brush, which reflects the current visual state of the control.
-        /// </summary>
-        [Category("Process")]
-        public BlinkBrushState CurrentStateBrush
-        {
-            get => (BlinkBrushState)this.GetValue(CurrentStateBrushProperty);
-            protected set => this.SetValue(currentStateBrushPropertyKey, value);
-        }
 
         /// <summary>
         /// Gets or sets the collection of variable-to-property mappings for the control.
@@ -283,20 +261,7 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// Called when the control's state collection changes.
         /// Can be overridden in derived classes to update visual states.
         /// </summary>
-        protected virtual void OnControlStatesChanges() { }
-
-        /// <summary>
-        /// Updates the control's state based on a variable value.
-        /// </summary>
-        /// <param name="variableValue">The value to use for state selection.</param>
-        protected void UpdateControlStates(object variableValue)
-        {
-            var typeChangedValue = Convert.ChangeType(variableValue, typeof(int));
-            if (typeChangedValue != null)
-            {
-                this.UpdateControlStates((int)typeChangedValue);
-            }
-        }
+        protected abstract void OnControlStatesChanges();
 
         /// <summary>
         /// Called when the orientation property changes.
@@ -352,21 +317,6 @@ namespace VisiWin7.ProcessControls.WPF.Controls
             {
                 controlBase.OnControlStatesChanges();
             }
-        }
-
-        /// <summary>
-        /// Updates the control's state based on an integer value.
-        /// </summary>
-        /// <param name="variableValue">The integer value representing the state.</param>
-        private void UpdateControlStates(int variableValue)
-        {
-            if (this.StateBrushes == null)
-            {
-                return;
-            }
-
-            var currentState = this.StateBrushes.FirstOrDefaultByStateValue(variableValue);
-            this.SetValue(currentStateBrushPropertyKey, currentState);
         }
 
         /// <summary>

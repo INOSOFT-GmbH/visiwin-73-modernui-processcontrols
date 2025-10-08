@@ -49,12 +49,12 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// <returns>A task representing the asynchronous operation.</returns>
         protected virtual async Task InitializeVariableServiceAsync()
         {
-            if (this.VariableService == null )
+            if (this.VariableService == null)
             {
                 this.VariableService = ApplicationService.GetService<IVariableService>();
             }
 
-            if (this.Mapping == null)
+            if (this.Mapping == null || string.IsNullOrEmpty(this.StructVariableName))
             {
                 return;
             }
@@ -69,10 +69,7 @@ namespace VisiWin7.ProcessControls.WPF.Controls
                     var pluginContext = (string)this.GetValue(View.PluginContextProperty);
                     await variable.SetVariableNameAsync(PluginReplacement.ReplacePlaceHolder(pluginContext, variableName));
                     // TODO: Use weak event pattern to avoid memory leaks.
-                    variable.Change += (o, e) =>
-                        {
-                            this.OnVariableValueChanged(o, mapping.ControlPropertyName, e);
-                        };
+                    variable.Change += (o, e) => { this.OnVariableValueChanged(o, mapping.ControlPropertyName, e); };
                 }
 
                 this.Variables.TryAdd(mapping.ControlPropertyName, variable);
@@ -86,7 +83,9 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// <param name="sender">The variable that triggered the event.</param>
         /// <param name="controlPropertyName">The name of the control property mapped to the variable.</param>
         /// <param name="variableEventArgs">The event arguments containing variable change information.</param>
-        protected virtual void OnVariableValueChanged(object sender, string controlPropertyName, VariableEventArgs variableEventArgs) { }
+        protected virtual void OnVariableValueChanged(object sender, string controlPropertyName, VariableEventArgs variableEventArgs)
+        {
+        }
 
         /// <summary>
         /// Attaches all variables that are not currently attached.
@@ -98,7 +97,7 @@ namespace VisiWin7.ProcessControls.WPF.Controls
             this.IsAttaching = true;
             try
             {
-                if (this.Mapping == null)
+                if (this.Mapping == null || string.IsNullOrEmpty(this.StructVariableName))
                 {
                     return;
                 }
@@ -125,7 +124,7 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// <returns>A task representing the asynchronous operation.</returns>
         public async Task DetachVariablesAsync()
         {
-            if (this.Mapping == null)
+            if (this.Mapping == null || string.IsNullOrEmpty(this.StructVariableName))
             {
                 return;
             }

@@ -1,8 +1,7 @@
 ﻿<Application x:Class="HMI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:vw="http://inosoft.com/visiwin7"
-             xmlns:system="clr-namespace:System;assembly=mscorlib">
+             xmlns:vw="http://inosoft.com/visiwin7">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -15,7 +14,6 @@
                 <ResourceDictionary Source="/VisiWin7.PlainStyles.WPF;component/Styling.xaml" />        
                 <ResourceDictionary Source="/VisiWin7.ProcessControls.Development.WPF;component/Resources/Default_Theme.xaml" />
                 <ResourceDictionary Source="/VisiWin7.ProcessControls.Development.WPF;component/Resources/ProcessControls/ProcessControlStateBrushes.xaml" />
-                <ResourceDictionary Source="/VisiWin7.ProcessControls.Development.WPF;component/Resources/ProcessControls/ProcessControlCustomIndicator.xaml" />
                 <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/Styling.xaml" />
                 <ResourceDictionary Source="/VisiWin7.ProcessControls.Development.WPF;component/Resources/ProcessControls/ProcessControlsVariableMapping.xaml" />
             </ResourceDictionary.MergedDictionaries>

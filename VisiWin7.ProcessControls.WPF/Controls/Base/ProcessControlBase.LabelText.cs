@@ -15,19 +15,13 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// <summary>
         /// Identifies the <see cref="LabelText"/> dependency property.
         /// </summary>
-        public static readonly DependencyProperty LabelTextProperty = DependencyProperty.Register(
-            nameof(LabelText),
-            typeof(string),
-            typeof(ProcessControlBase),
+        public static readonly DependencyProperty LabelTextProperty = DependencyProperty.Register(nameof(LabelText), typeof(string), typeof(ProcessControlBase),
             new FrameworkPropertyMetadata(string.Empty, null, CoerceLabelTextProperty));
 
         /// <summary>
         /// Identifies the <see cref="LocalizableLabelText"/> dependency property.
         /// </summary>
-        public static readonly DependencyProperty LocalizableLabelTextProperty = DependencyProperty.Register(
-            nameof(LocalizableLabelText),
-            typeof(string),
-            typeof(ProcessControlBase),
+        public static readonly DependencyProperty LocalizableLabelTextProperty = DependencyProperty.Register(nameof(LocalizableLabelText), typeof(string), typeof(ProcessControlBase),
             new PropertyMetadata(string.Empty, OnLocalizableLabelTextPropertyChanged));
 
         /// <summary>

@@ -8,13 +8,13 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!--BeltConveyor-Style-->
-    <Style TargetType="pc:BeltConveyor" BasedOn="{StaticResource {x:Type controls:ProcessControlBase}}">
+    <Style TargetType="pc:BeltConveyor" BasedOn="{StaticResource {x:Type controls:DefaultProcessControlBase}}">
         <Style.Resources>
             <DataTemplate x:Key="StyleTemplate">
                 <Viewbox>
-                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
-                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
-                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:DefaultProcessControlBase}}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type controls:DefaultProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:DefaultProcessControlBase}}}"
                           Stretch="Uniform">
                         <Path.Data>
                             <PathGeometry Figures="m 0,0 A 10,10 360 1 1 0,1 z 
@@ -29,13 +29,13 @@
     </Style>
 
     <!--ScrewConveyor-Style-->
-    <Style TargetType="pc:ScrewConveyor" BasedOn="{StaticResource {x:Type controls:ProcessControlBase}}">
+    <Style TargetType="pc:ScrewConveyor" BasedOn="{StaticResource {x:Type controls:DefaultProcessControlBase}}">
         <Style.Resources>
             <DataTemplate x:Key="StyleTemplate">
                 <Viewbox>
-                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
-                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
-                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:DefaultProcessControlBase}}}"
+                          Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type controls:DefaultProcessControlBase}}}"
+                          Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:DefaultProcessControlBase}}}"
                           Stretch="Uniform">
                         <Path.Data>
                             <PathGeometry FillRule="Nonzero"
@@ -50,12 +50,12 @@
     </Style>
 
     <!--CeilingConveyor-Style-->
-    <Style TargetType="pc:CeilingConveyor" BasedOn="{StaticResource {x:Type controls:ProcessControlBase}}">
+    <Style TargetType="pc:CeilingConveyor" BasedOn="{StaticResource {x:Type controls:DefaultProcessControlBase}}">
         <Style.Resources>
             <DataTemplate x:Key="StyleTemplate">
                 <Viewbox>
-                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
-                          Stroke="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:ProcessControlBase}}}"
+                    <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type controls:DefaultProcessControlBase}}}"
+                          Stroke="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type controls:DefaultProcessControlBase}}}"
                           Stretch="Uniform">
                         <Path.Data>
                             <PathGeometry Figures="m 0,0 l 100,0

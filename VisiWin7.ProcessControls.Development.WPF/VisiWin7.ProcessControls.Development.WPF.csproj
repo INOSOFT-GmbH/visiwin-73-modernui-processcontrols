@@ -60,6 +60,9 @@
     <Reference Include="System.Windows.Interactivity" />
     <Reference Include="NLog" />
   </ItemGroup>
+  <PropertyGroup>
+   <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -217,10 +220,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </None>
-    <Page Include="Resources\ProcessControls\ProcessControlCustomIndicator.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Resources\ProcessControls\ProcessControlStateBrushes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -388,7 +387,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-      <UserProperties VisiWinVersion="7.3" VisiWinProjectName="VisiWin7.ProcessControls.Development.WPF" />
+      <UserProperties VisiWinProjectName="VisiWin7.ProcessControls.Development.WPF" VisiWinVersion="7.3" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

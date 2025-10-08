@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11018.127 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisiWin7.ProcessControls.Development.WPF", "VisiWin7.ProcessControls.Development.WPF\VisiWin7.ProcessControls.Development.WPF.csproj", "{3A0CB738-D9EE-473D-9741-2697659D0D9B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6BD96C55-1F03-46D2-BD1C-22A0420D3C0F} = {6BD96C55-1F03-46D2-BD1C-22A0420D3C0F}
+		{7247D015-6134-4160-978B-5C88785F9CE3} = {7247D015-6134-4160-978B-5C88785F9CE3}
+		{9CA5A3E1-8D17-4BAD-A6D6-F9A564A68B3A} = {9CA5A3E1-8D17-4BAD-A6D6-F9A564A68B3A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisiWin7.ProcessControls.Styles.WPF", "VisiWin7.ProcessControls.Styles.WPF\VisiWin7.ProcessControls.Styles.WPF.csproj", "{9CA5A3E1-8D17-4BAD-A6D6-F9A564A68B3A}"
 EndProject

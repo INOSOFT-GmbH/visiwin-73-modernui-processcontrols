@@ -49,6 +49,9 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
   </ItemGroup>
+  <PropertyGroup>
+   <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
+  </PropertyGroup>
   <ItemGroup>
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -57,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Async\AsyncLock.cs" />
+    <Compile Include="Controls\Base\Default\DefaultErrorProcessControlBase.cs" />
     <Compile Include="Controls\Conveyors\BeltConveyor.cs" />
     <Compile Include="Controls\Conveyors\CeilingConveyor.cs" />
     <Compile Include="Controls\Conveyors\ScrewConveyor.cs" />
@@ -88,7 +92,7 @@
     <Compile Include="Controls\Pipes\ThinPipeBridge.cs" />
     <Compile Include="Controls\Pipes\ThinPipeConnection.cs" />
     <Compile Include="Controls\Base\ProcessControlBase.cs" />
-    <Compile Include="Controls\Base\DefaultProcessControlBase.cs" />
+    <Compile Include="Controls\Base\Default\DefaultProcessControlBase.cs" />
     <Compile Include="Controls\Base\ProcessControlBase.Blink.cs" />
     <Compile Include="Controls\Base\ProcessControlBase.AttachController.cs" />
     <Compile Include="Controls\Base\ProcessControlBase.LabelText.cs" />
@@ -109,6 +113,7 @@
     <Compile Include="Controls\Valves\GlobeValve.cs" />
     <Compile Include="Controls\Valves\MotorValve.cs" />
     <Compile Include="Controls\Valves\PistonValve.cs" />
+    <Compile Include="Controls\Valves\ThreeWayValve.Variable.cs" />
     <Compile Include="Controls\Valves\Valve.cs" />
     <Compile Include="Controls\Valves\ThreeWayValve.cs" />
     <Compile Include="Mapping\VariableNameMappingCollection.cs" />

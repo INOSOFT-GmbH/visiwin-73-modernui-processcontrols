@@ -70,87 +70,207 @@ namespace VisiWin7.ProcessControls.WPF.VW7.Design
                 builder.AddCallback(typeof(ScrewConveyor), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(ScrewConveyorInitializer))));
                 builder.AddCallback(typeof(CeilingConveyor), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(CeilingConveyorInitializer))));
                 builder.AddCallback(typeof(Scale), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(ScaleInitializer))));
-                
+
                 builder.AddCustomAttributes(typeof(BeltConveyor), nameof(BeltConveyor.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Conveyor" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Arrow), nameof(Arrow.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Pump), nameof(Pump.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pump" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Compressor), nameof(Compressor.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pump" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Fan), nameof(Fan.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pump" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Tank), nameof(Tank.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Tank" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(RoundTank), nameof(RoundTank.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Tank" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Silo), nameof(Silo.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Tank" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Valve), nameof(Valve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Valve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(BallValve), nameof(BallValve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Valve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(GlobeValve), nameof(GlobeValve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Valve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(MotorValve), nameof(MotorValve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Valve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(AngleValve), nameof(AngleValve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Valve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(FlapValve), nameof(FlapValve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Valve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(GateValve), nameof(GateValve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Valve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(PistonValve), nameof(PistonValve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Valve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(ThreeWayValve), nameof(ThreeWayValve.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "ThreeWayValve" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Burner), nameof(Burner.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Cooler), nameof(Cooler.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(CoolingTower), nameof(CoolingTower.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(CoolingTowerWithInlet), nameof(CoolingTowerWithInlet.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(SprayCoolingTower), nameof(SprayCoolingTower.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(RotaryFeeder), nameof(RotaryFeeder.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "MechanicalEquipment" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Diverter), nameof(Diverter.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "MechanicalEquipment" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Centrifugal), nameof(Centrifugal.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "MechanicalEquipment" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(ThickPipe), nameof(ThickPipe.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(ThickPipeThreeWay), nameof(ThickPipeThreeWay.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(ThickPipeCorner), nameof(ThickPipeCorner.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(ThinPipe), nameof(ThinPipe.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(ThinPipeBridge), nameof(ThinPipeBridge.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(ThinPipeConnection), nameof(ThinPipeConnection.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Stirer), nameof(Stirer.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "MechanicalEquipment" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Scale), nameof(Scale.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "MechanicalEquipment" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(HeatExchangerTubes), nameof(HeatExchangerTubes.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(HeatExchangerTubes), nameof(HeatExchangerTubes.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(HeatExchangerTubes), nameof(HeatExchangerTubes.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Motor), nameof(Motor.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Engine" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(Turbine), nameof(Turbine.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Engine" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(ScrewConveyor), nameof(ScrewConveyor.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Conveyor" }
+                                                                 }));
                 builder.AddCustomAttributes(typeof(CeilingConveyor), nameof(CeilingConveyor.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings { ItemComplexFilter = ItemComplexFilter.Structure }));
+                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
+                                                                 {
+                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Conveyor" }
+                                                                 }));
 
 
                 this.SetCustomAttributes(builder, typeof(BeltConveyor));

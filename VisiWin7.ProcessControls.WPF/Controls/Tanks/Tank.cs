@@ -62,8 +62,8 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// <summary>
         /// Key for the read-only <see cref="RectangleHeight"/> dependency property.
         /// </summary>
-        private static readonly DependencyPropertyKey rectangleHeightPropertyKey = DependencyProperty.RegisterReadOnly(nameof(RectangleHeight), typeof(double),
-            typeof(Tank), new FrameworkPropertyMetadata(default(double), FrameworkPropertyMetadataOptions.None));
+        private static readonly DependencyPropertyKey rectangleHeightPropertyKey = DependencyProperty.RegisterReadOnly(nameof(RectangleHeight), typeof(double), typeof(Tank),
+            new FrameworkPropertyMetadata(default(double), FrameworkPropertyMetadataOptions.None));
 
         /// <summary>
         /// Handles changes to the <see cref="Volume"/> property.
@@ -77,7 +77,7 @@ namespace VisiWin7.ProcessControls.WPF.Controls
                 @this.OnVolumeChanged(e);
             }
         }
-        
+
         /// <summary>
         /// Identifies the <see cref="RectangleHeight"/> dependency property.
         /// </summary>
