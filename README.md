@@ -1,10 +1,10 @@
 <!-- Readme for open source repositories -->
 # VisiWin7.ProcessControls.ModernUI
 
-This repository demonstrates how to create and extend process controls for the VisiWin7 IDE using ModernUI (WPF) technology.
+This repository demonstrates how to create and extend process controls for the VisiWin7 IDE using ModernUI (WPF) technology. 
 It provides a comprehensive set of reusable industrial process control components that can be easily integrated into VisiWin7 Runtime 7.3 projects.
 
-The project serves as both a sample implementation and a foundation for developing custom process controls such as tanks, valves, pumps, conveyors, and other industrial automation components.
+The project serves as both a sample implementation and a foundation for developing custom process controls such as tanks, valves, pumps, conveyors, and other industrial automation components. 
 Useful for UI developers and automation engineers working with the VisiWin7 IDE who need to create custom visual representations of industrial processes.
 
 ## Related packages
@@ -63,13 +63,13 @@ This sample works with and was tested with VisiWin 7 2025-1 and later.
 </controls:BeltConveyor>
 ```
 
-Notes:
+**Notes:**
 - Set the control's `StructVariableName` to the base variable (e.g., a PLC structure). Each mapping's `VariableName` is the relative member name.
 - Design-time pickers are provided for `StructVariableName` in the IDE.
 
 ### Creating Custom Process Controls
 
-1. **Inherit from base classes** (pick the closest category):
+1. **Inherit from base classes (pick the closest category)**:
 
 ```csharp
 public class CustomValve : ValveBase { }
@@ -105,43 +105,86 @@ public static readonly DependencyProperty FillLevelProperty =
         typeof(CustomTank), new PropertyMetadata(0.0));
 ```
 
-3. **Override variable mapping behavior** (if needed for complex controls):
+3. **Implement Custom Variable Mapping Logic (Required for New Properties)**:
 
-For controls that handle multiple values or require custom mapping logic beyond the standard `ActualValue`/`SetValue` pattern, override the `OnVariableValueChanged` method:
+The `DefaultProcessControlBase` only automatically handles variable updates for `ActualValue` and `SetValue`. If you introduce any other custom dependency property and map a PLC variable to it (e.g., `FillLevel` or `IsTipped`), you **MUST** override `OnVariableValueChanged` to manually process the variable's value and assign it to the corresponding control property.
 
 ```csharp
 protected override void OnVariableValueChanged(object sender, string controlPropertyName, VariableEventArgs variableEventArgs)
 {
+    // 1. Always call the base implementation first! 
+    //    This ensures that ActualValue and SetValue (and Error in DefaultErrorProcessControlBase) 
+    //    are handled correctly by the base class logic.
     base.OnVariableValueChanged(sender, controlPropertyName, variableEventArgs);
+    
     if (this.IsAttaching)
     {
         return;
     }
 
+    // If the base class handled the property (e.g., ActualValue/SetValue), we stop here 
+    // to avoid redundant processing, UNLESS we need side effects.
+    
     var variableValue = this.Variables[controlPropertyName].Value;
-    var typeChangedValue = System.Convert.ChangeType(variableValue, typeof(int));
-    if (typeChangedValue == null)
-    {
-        return;
-    }
-
-    var intVariableValue = (int)typeChangedValue;
+    // Note: In the base implementation, value is converted to int. 
+    // Here we must handle the specific type needed for our custom properties.
+    
+    // Example: Handling custom properties that are mapped and need processing.
     switch (controlPropertyName)
     {
-        case nameof(this.CustomProperty1):
-            this.SetCurrentValue(CustomProperty1Property, intVariableValue);
-            this.UpdateControlStates(intVariableValue);
+        case nameof(this.FillLevel): // Example for mapping "FillLevel" from the PLC
+            var fillLevelValue = System.Convert.ChangeType(variableValue, typeof(double));
+            if (fillLevelValue is double doubleValue)
+            {
+                this.SetCurrentValue(FillLevelProperty, doubleValue);
+            }
             break;
-        case nameof(this.CustomProperty2):
-            this.SetCurrentValue(CustomProperty2Property, intVariableValue);
+        
+        case nameof(this.IsTipped): // Example for a custom boolean property
+            var tippedValue = System.Convert.ChangeType(variableValue, typeof(bool));
+            if (tippedValue is bool boolValue)
+            {
+                this.SetCurrentValue(IsTippedProperty, boolValue);
+            }
             break;
     }
 }
 ```
 
-This is particularly useful for controls like `ThreeWayValve` that have multiple ports with separate `ActualValue` and `SetValue` properties for each port.
+**Key Takeaway for Custom Properties:** When you define a new Dependency Property (e.g., `FillLevel`, `IsTipped`) and configure a variable mapping for it, the `OnVariableValueChanged` override is **MANDATORY** to read the variable value and set the property.
 
 4. **Create Visual Symbol**: Design the XAML symbol in the styles project
+
+Every process control needs a visual style that defines its appearance. Create a style file:
+
+**Basic Style Structure:**
+
+```xml
+<!--HeatExchanger-Style with multiple paths-->
+    <Style TargetType="pc:CustomHeatExchanger" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
+        <Style.Resources>
+            <DataTemplate x:Key="StyleTemplate">
+                <Viewbox>
+                    <Grid>
+                        <!--Main Circle-->
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}" Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}" Stretch="Uniform">
+                            <Path.Data>
+                                <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
+                            </Path.Data>
+                        </Path>
+                        <!--Internal Flow Lines-->
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}" Stretch="Uniform">
+                            <Path.Data>
+                                <PathGeometry Figures="m 0,50 l 10,0 l 20,-25 l 40,50 l 20,-25 l 10,0"/>
+                            </Path.Data>
+                        </Path>
+                    </Grid>
+                </Viewbox>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+```
+
 5. **Register in IDE**: Add configuration to make it available in toolbox
 6. **Test Integration**: Verify functionality in VisiWin7 IDE and runtime
 
@@ -167,6 +210,7 @@ The **core logic project** containing all process control classes and business l
 - `ProcessControlBase` – Root base with mapping (`StructVariableName` + `Mapping`), state system, orientation
 - `DefaultErrorProcessControlBase` – Error value (`Errors`) handling
 - `DefaultProcessControlBase` – Standard process values and visual state selection (`ActualValue`, `SetValue`, `CurrentStateBrush`)
+- Category-specific base classes for common control types
 
 ### [VisiWin7.ProcessControls.Styles.WPF](VisiWin7.ProcessControls.Styles.WPF/)
 
