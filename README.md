@@ -141,6 +141,10 @@ protected override void OnVariableValueChanged(object sender, string controlProp
 
 This is particularly useful for controls like `ThreeWayValve` that have multiple ports with separate `ActualValue` and `SetValue` properties for each port.
 
+4. **Create Visual Symbol**: Design the XAML symbol in the styles project
+5. **Register in IDE**: Add configuration to make it available in toolbox
+6. **Test Integration**: Verify functionality in VisiWin7 IDE and runtime
+
 ## Details
 
 This repository contains four main projects that work together to provide a complete process controls framework:
@@ -205,15 +209,6 @@ The **design-time support project** for VisiWin7 IDE integration.
   - Integration with VisiWin7 development environment
 
 ## Process Control Development Guide
-
-### Creating New Controls
-
-1. **Define the Control Class**: Inherit from the appropriate category base (or `DefaultProcessControlBase` for a new category)
-2. **Implement Custom Logic**: Add dependency properties and business logic
-3. **Create Visual Symbol**: Design the XAML symbol in the styles project
-4. **Configure Variable Mapping**: Set up PLC variable connections using `StructVariableName` and relative mapping names
-5. **Register in IDE**: Add configuration to make it available in toolbox
-6. **Test Integration**: Verify functionality in VisiWin7 IDE and runtime
 
 ### Variable Mapping System
 
