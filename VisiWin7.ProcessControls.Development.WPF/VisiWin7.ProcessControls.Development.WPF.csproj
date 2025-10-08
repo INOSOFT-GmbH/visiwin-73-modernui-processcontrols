@@ -61,7 +61,7 @@
     <Reference Include="NLog" />
   </ItemGroup>
   <PropertyGroup>
-   <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
+    <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -216,10 +216,10 @@
     <Resource Include="Images\LanguageSwitching\Flag-United-States.png" />
     <Resource Include="Images\Splashscreen.png" />
     <AppDesigner Include="Properties\" />
-    <None Include="AssetConfiguration.xaml">
+    <Content Include="AssetConfiguration.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </None>
+    </Content>
     <Page Include="Resources\ProcessControls\ProcessControlStateBrushes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -364,6 +364,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Content Include="VisiWin7.ProcessControls.Development.WPF_AssetConfigurationExtension.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -9,12 +9,9 @@
 
     <WrapPanel x:Name="LayoutRoot" Orientation="Horizontal" VerticalAlignment="Center" Height="588" Width="1024">
         <!--Röhren-->
-        <pc:ThinPipe Height="100" Width="100" />
-        <pc:ThinPipeConnection Height="100" Width="100"/>
+        <pc:Pipe Height="100" Width="100" />
+        <pc:PipeConnection Height="100" Width="100"/>
         <pc:Arrow Height="100" Width="100"/>
-        <pc:ThickPipe Height="100" Width="100"/>
-        <pc:ThickPipeCorner Height="100" Width="100"/>
-        <pc:ThickPipeThreeWay Height="100" Width="100"/>
 
         <!--Ventile-->
         <pc:Valve Height="100" Width="100"/>

@@ -8,11 +8,11 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("VisiWin7.ProcessControls.Development.WPF")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Process controls development project")]
 [assembly: AssemblyConfiguration("20240920.2")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("INOSOFT GmbH")]
 [assembly: AssemblyProduct("VisiWin7.ProcessControls.Development.WPF")]
-[assembly: AssemblyCopyright("Copyright 2015")]
+[assembly: AssemblyCopyright("Copyright© 1994-2025 INOSOFT® GmbH")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

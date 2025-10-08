@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Assets xmlns="clr-namespace:VisiWin.AssetService;assembly=VisiWin7.AssetService">
+  <DesignTabConfig>
+    <DesignTabConfig.DesignTabGroups>
+		<DesignTabGroup Name="Process Controls" ImageLarge="Ellipse.png" ImageSmall="EllipseSmall.png" Position="10">
+		<DesignTabGroup.PopUpButtonConfigurations>
+			<PopUpButtonConfiguration Name="Process Controls" ImageLarge="Valve.png" ImageSmall="Valve.png">
+            <ControlAssetInfo Category="Pipe" Description="Pipe" Type="VisiWin7.ProcessControls.WPF.Controls.Pipe" Assembly="VisiWin7.ProcessControls.WPF" />
+            <ControlAssetInfo Category="Pipe" Description="PipeBridge" Type="VisiWin7.ProcessControls.WPF.Controls.PipeBridge" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <ControlAssetInfo Category="Pipe" Description="PipeConnection" Type="VisiWin7.ProcessControls.WPF.Controls.PipeConnection" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <ControlAssetInfo Category="Pipe" Description="Arrow" Type="VisiWin7.ProcessControls.WPF.Controls.Arrow" Assembly="VisiWin7.ProcessControls.WPF"/>
+            
+            <ControlAssetInfo Category="Valve" Description="Valve" Type="VisiWin7.ProcessControls.WPF.Controls.Valve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Valve.png" ImageLarge="Valve.png" />
+            <ControlAssetInfo Category="Valve" Description="PistonValve" Type="VisiWin7.ProcessControls.WPF.Controls.PistonValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="PistonValve.png" ImageLarge="PistonValve.png"/>
+            <ControlAssetInfo Category="Valve" Description="MotorValve" Type="VisiWin7.ProcessControls.WPF.Controls.MotorValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="MotorValve.png" ImageLarge="MotorValve.png"/>
+            <ControlAssetInfo Category="Valve" Description="AngleValve" Type="VisiWin7.ProcessControls.WPF.Controls.AngleValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="AngleValve.png" ImageLarge="AngleValve.png"/>
+            <ControlAssetInfo Category="Valve" Description="3WayValve" Type="VisiWin7.ProcessControls.WPF.Controls.ThreeWayValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="ThreeWayValve.png" ImageLarge="ThreeWayValve.png"/>
+            <ControlAssetInfo Category="Valve" Description="GlobeValve" Type="VisiWin7.ProcessControls.WPF.Controls.GlobeValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="GlobeValve.png" ImageLarge="GlobeValve.png"/>
+            <ControlAssetInfo Category="Valve" Description="FlapValve" Type="VisiWin7.ProcessControls.WPF.Controls.FlapValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="FlapValve.png" ImageLarge="FlapValve.png"/>
+            <ControlAssetInfo Category="Valve" Description="GateValve" Type="VisiWin7.ProcessControls.WPF.Controls.GateValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="GateValve.png" ImageLarge="GateValve.png"/>
+            <ControlAssetInfo Category="Valve" Description="BallValve" Type="VisiWin7.ProcessControls.WPF.Controls.BallValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="BallValve.png" ImageLarge="BallValve.png"/>
+
+            <ControlAssetInfo Category="Pump" Description="Pump" Type="VisiWin7.ProcessControls.WPF.Controls.Pump" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Pump.png" ImageLarge="Pump.png"/>
+            <ControlAssetInfo Category="Pump" Description="Compressor" Type="VisiWin7.ProcessControls.WPF.Controls.Compressor" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Compressor.png" ImageLarge="Compressor.png"/>
+            <ControlAssetInfo Category="Pump" Description="Fan" Type="VisiWin7.ProcessControls.WPF.Controls.Fan" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Fan.png" ImageLarge="Fan.png"/>
+
+            <ControlAssetInfo Category="Temperature" Description="HeatExchanger" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchanger" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="HeatExchanger.png" ImageLarge="HeatExchanger.png"/>
+            <ControlAssetInfo Category="Temperature" Description="HeatExchangerWithoutCrossingFlow" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchangerWithoutCrossingFlow" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="HeatExchangerWithoutCrossingFlow.png" ImageLarge="HeatExchangerWithoutCrossingFlow.png"/>
+            <ControlAssetInfo Category="Temperature" Description="HeatExchangerTubes" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchangerTubes" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="HeatExchangerTubes.png" ImageLarge="HeatExchangerTubes.png"/>
+            <ControlAssetInfo Category="Temperature" Description="Burner" Type="VisiWin7.ProcessControls.WPF.Controls.Burner" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Burner.png" ImageLarge="Burner.png"/>
+            <ControlAssetInfo Category="Temperature" Description="Cooler" Type="VisiWin7.ProcessControls.WPF.Controls.Cooler" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Cooler.png" ImageLarge="Cooler.png"/>
+            <ControlAssetInfo Category="Temperature" Description="CoolingTower" Type="VisiWin7.ProcessControls.WPF.Controls.CoolingTower" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="CoolingTower.png" ImageLarge="CoolingTower.png"/>
+            <ControlAssetInfo Category="Temperature" Description="SprayCoolingTower" Type="VisiWin7.ProcessControls.WPF.Controls.SprayCoolingTower" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="SprayCoolingTower.png" ImageLarge="SprayCoolingTower.png"/>
+            <ControlAssetInfo Category="Temperature" Description="CoolingTowerWithInlet" Type="VisiWin7.ProcessControls.WPF.Controls.CoolingTowerWithInlet" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="CoolingTowerWithInlet.png" ImageLarge="CoolingTowerWithInlet.png"/>
+
+            <ControlAssetInfo Category="Tank" Description="Tank" Type="VisiWin7.ProcessControls.WPF.Controls.Tank" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Tank.png" ImageLarge="Tank.png"/>
+            <ControlAssetInfo Category="Tank" Description="RoundTank" Type="VisiWin7.ProcessControls.WPF.Controls.RoundTank" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="RoundTank.png" ImageLarge="RoundTank.png"/>
+            <ControlAssetInfo Category="Tank" Description="Silo" Type="VisiWin7.ProcessControls.WPF.Controls.Silo" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Silo.png" ImageLarge="Silo.png"/>
+
+            <ControlAssetInfo Category="Engine" Description="Motor" Type="VisiWin7.ProcessControls.WPF.Controls.Motor" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Motor.png" ImageLarge="Motor.png"/>
+            <ControlAssetInfo Category="Engine" Description="Turbine" Type="VisiWin7.ProcessControls.WPF.Controls.Turbine" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Turbine.png" ImageLarge="Turbine.png"/>
+
+            <ControlAssetInfo Category="Conveyor" Description="BeltConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.BeltConveyor" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="BeltConveyor.png" ImageLarge="BeltConveyor.png"/>
+            <ControlAssetInfo Category="Conveyor" Description="ScrewConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.ScrewConveyor" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="ScrewConveyor.png" ImageLarge="ScrewConveyor.png"/>
+            <ControlAssetInfo Category="Conveyor" Description="CeilingConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.CeilingConveyor" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="CeilingConveyor.png" ImageLarge="CeilingConveyor.png"/>
+
+            <ControlAssetInfo Category="MechanicalEquipment" Description="RotaryFeeder" Type="VisiWin7.ProcessControls.WPF.Controls.RotaryFeeder" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="RotaryFeeder.png" ImageLarge="RotaryFeeder.png"/>
+            <ControlAssetInfo Category="MechanicalEquipment" Description="Diverter" Type="VisiWin7.ProcessControls.WPF.Controls.Diverter" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Diverter.png" ImageLarge="Diverter.png"/>
+            <ControlAssetInfo Category="MechanicalEquipment" Description="Stirer" Type="VisiWin7.ProcessControls.WPF.Controls.Stirer" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Stirer.png" ImageLarge="Stirer.png"/>
+            <ControlAssetInfo Category="MechanicalEquipment" Description="Centrifugal" Type="VisiWin7.ProcessControls.WPF.Controls.Centrifugal" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Centrifugal.png" ImageLarge="Centrifugal.png"/>
+            <ControlAssetInfo Category="MechanicalEquipment" Description="Scale" Type="VisiWin7.ProcessControls.WPF.Controls.Scale" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Scale.png" ImageLarge="Scale.png"/>
+          </PopUpButtonConfiguration>
+		  </DesignTabGroup.PopUpButtonConfigurations>
+		</DesignTabGroup>
+    </DesignTabConfig.DesignTabGroups>
+  </DesignTabConfig>
+</Assets>

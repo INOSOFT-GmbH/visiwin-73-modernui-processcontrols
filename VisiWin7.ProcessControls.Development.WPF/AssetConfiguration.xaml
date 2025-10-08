@@ -78,57 +78,6 @@
             <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Layout" Description="GroupBox" Type="VisiWin.Controls.GroupBox" ImageLarge="GroupBox.png" ImageSmall="GroupBoxSmall.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c"></dt:ControlAssetInfo>
             <dt:ControlAssetInfo Category="@ControlAssetInfo.Category.Navigation" Description="NavigationContainer" Type="VisiWin.Controls.NavigationContainer" ImageLarge="NavigationContainer.png" Assembly="VisiWin7.View.WPF, Version=7.3.0.0, Culture=neutral, PublicKeyToken=3d70d0e64510241c"></dt:ControlAssetInfo>
           </dt:PopUpButtonConfiguration>
-
-          <dt:PopUpButtonConfiguration Name="ProcessControls" ImageLarge="Process.png" ImageSmall="ProcessSmall.png">
-            <dt:ControlAssetInfo Category="Pipe" Description="ThinPipe" Type="VisiWin7.ProcessControls.WPF.Controls.ThinPipe" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Pipe" Description="ThinPipeBridge" Type="VisiWin7.ProcessControls.WPF.Controls.ThinPipeBridge" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Pipe" Description="ThinPipeConnection" Type="VisiWin7.ProcessControls.WPF.Controls.ThinPipeConnection" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Pipe" Description="Arrow" Type="VisiWin7.ProcessControls.WPF.Controls.Arrow" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Pipe" Description="ThickPipe" Type="VisiWin7.ProcessControls.WPF.Controls.ThickPipe" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Pipe" Description="ThickPipeCorner" Type="VisiWin7.ProcessControls.WPF.Controls.ThickPipeCorner" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Pipe" Description="ThickPipe3Way" Type="VisiWin7.ProcessControls.WPF.Controls.ThickPipeThreeWay" Assembly="VisiWin7.ProcessControls.WPF"/>
-
-            <dt:ControlAssetInfo Category="Valve" Description="Valve" Type="VisiWin7.ProcessControls.WPF.Controls.Valve" ImageLarge="ValveBase.png" ImageSmall="ValveSmall.png" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Valve" Description="PistonValve" Type="VisiWin7.ProcessControls.WPF.Controls.PistonValve" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Valve" Description="MotorValve" Type="VisiWin7.ProcessControls.WPF.Controls.MotorValve" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Valve" Description="AngleValve" Type="VisiWin7.ProcessControls.WPF.Controls.AngleValve" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Valve" Description="3WayValve" Type="VisiWin7.ProcessControls.WPF.Controls.ThreeWayValve" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Valve" Description="GlobeValve" Type="VisiWin7.ProcessControls.WPF.Controls.GlobeValve" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Valve" Description="FlapValve" Type="VisiWin7.ProcessControls.WPF.Controls.FlapValve" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Valve" Description="GateValve" Type="VisiWin7.ProcessControls.WPF.Controls.GateValve" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Valve" Description="BallValve" Type="VisiWin7.ProcessControls.WPF.Controls.BallValve" Assembly="VisiWin7.ProcessControls.WPF" />
-
-            <dt:ControlAssetInfo Category="Pump" Description="Pump" Type="VisiWin7.ProcessControls.WPF.Controls.Pump" ImageLarge="PumpBase.png" ImageSmall="PumpSmall.png"  Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Pump" Description="Compressor" Type="VisiWin7.ProcessControls.WPF.Controls.Compressor" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Pump" Description="Fan" Type="VisiWin7.ProcessControls.WPF.Controls.Fan" Assembly="VisiWin7.ProcessControls.WPF" />
-
-            <dt:ControlAssetInfo Category="Temperature" Description="HeatExchanger" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchanger" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Temperature" Description="HeatExchangerWithoutCrossingFlow" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchangerWithoutCrossingFlow" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Temperature" Description="HeatExchangerTubes" Type="VisiWin7.ProcessControls.WPF.Controls.HeatExchangerTubes" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Temperature" Description="Burner" Type="VisiWin7.ProcessControls.WPF.Controls.Burner" ImageLarge="Burner.png" ImageSmall="BurnerSmall.png"  Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Temperature" Description="Cooler" Type="VisiWin7.ProcessControls.WPF.Controls.Cooler" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Temperature" Description="CoolingTower" Type="VisiWin7.ProcessControls.WPF.Controls.CoolingTower" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Temperature" Description="SprayCoolingTower" Type="VisiWin7.ProcessControls.WPF.Controls.SprayCoolingTower" Assembly="VisiWin7.ProcessControls.WPF" />
-            <dt:ControlAssetInfo Category="Temperature" Description="CoolingTowerWithInlet" Type="VisiWin7.ProcessControls.WPF.Controls.CoolingTowerWithInlet" Assembly="VisiWin7.ProcessControls.WPF" />
-
-                        <dt:ControlAssetInfo Category="Tank" Description="Tank" Type="VisiWin7.ProcessControls.WPF.Controls.Tank" ImageLarge="Tank.png" ImageSmall="TankSmall.png" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Tank" Description="RoundTank" Type="VisiWin7.ProcessControls.WPF.Controls.RoundTank" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Tank" Description="Silo" Type="VisiWin7.ProcessControls.WPF.Controls.Silo" Assembly="VisiWin7.ProcessControls.WPF"/>
-
-            <dt:ControlAssetInfo Category="Engine" Description="Motor" Type="VisiWin7.ProcessControls.WPF.Controls.Motor" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Engine" Description="Turbine" Type="VisiWin7.ProcessControls.WPF.Controls.Turbine" Assembly="VisiWin7.ProcessControls.WPF"/>
-
-            <dt:ControlAssetInfo Category="Conveyor" Description="BeltConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.BeltConveyor" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Conveyor" Description="ScrewConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.ScrewConveyor" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="Conveyor" Description="CeilingConveyor" Type="VisiWin7.ProcessControls.WPF.Controls.CeilingConveyor" Assembly="VisiWin7.ProcessControls.WPF"/>
-
-            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="RotaryFeeder" Type="VisiWin7.ProcessControls.WPF.Controls.RotaryFeeder" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="Diverter" Type="VisiWin7.ProcessControls.WPF.Controls.Diverter" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="Stirer" Type="VisiWin7.ProcessControls.WPF.Controls.Stirer" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="Centrifugal" Type="VisiWin7.ProcessControls.WPF.Controls.Centrifugal" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <dt:ControlAssetInfo Category="MechanicalEquipment" Description="Scale" Type="VisiWin7.ProcessControls.WPF.Controls.Scale" Assembly="VisiWin7.ProcessControls.WPF"/>
-          </dt:PopUpButtonConfiguration>
-
         </dt:DesignTabGroup.PopUpButtonConfigurations>
       </dt:DesignTabGroup>
       <dt:DesignTabGroup Name="@DesignTabGroup.Name.Functions" Position="3" ImageLarge="SetViewAction.png" ImageSmall="SetViewActionSmall.png">

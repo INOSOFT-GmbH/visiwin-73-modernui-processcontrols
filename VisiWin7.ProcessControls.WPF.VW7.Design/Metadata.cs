@@ -55,12 +55,9 @@ namespace VisiWin7.ProcessControls.WPF.VW7.Design
                 builder.AddCallback(typeof(RotaryFeeder), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(RotaryFeederInitializer))));
                 builder.AddCallback(typeof(Diverter), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(DiverterInitializer))));
                 builder.AddCallback(typeof(Centrifugal), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(CentrifugalInitializer))));
-                builder.AddCallback(typeof(ThickPipe), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(ThickPipeInitializer))));
-                builder.AddCallback(typeof(ThickPipeThreeWay), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(ThickPipeThreeWayInitializer))));
-                builder.AddCallback(typeof(ThickPipeCorner), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(ThickPipeCornerInitializer))));
-                builder.AddCallback(typeof(ThinPipe), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(ThinPipeInitializer))));
-                builder.AddCallback(typeof(ThinPipeBridge), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(ThinPipeBridgeInitializer))));
-                builder.AddCallback(typeof(ThinPipeConnection), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(ThinPipeConnectionInitializer))));
+                builder.AddCallback(typeof(Pipe), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(PipeInitializer))));
+                builder.AddCallback(typeof(PipeBridge), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(PipeBridgeInitializer))));
+                builder.AddCallback(typeof(PipeConnection), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(PipeConnectionInitializer))));
                 builder.AddCallback(typeof(Stirer), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(StirerInitializer))));
                 builder.AddCallback(typeof(HeatExchanger), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(HeatExchangerInitializer))));
                 builder.AddCallback(typeof(HeatExchangerTubes), blder => blder.AddCustomAttributes(new FeatureAttribute(typeof(HeatExchangerTubesInitializer))));
@@ -196,32 +193,17 @@ namespace VisiWin7.ProcessControls.WPF.VW7.Design
                                                                  {
                                                                      ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "MechanicalEquipment" }
                                                                  }));
-                builder.AddCustomAttributes(typeof(ThickPipe), nameof(ThickPipe.StructVariableName),
+                builder.AddCustomAttributes(typeof(Pipe), nameof(Pipe.StructVariableName),
                     new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
                                                                  {
                                                                      ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
                                                                  }));
-                builder.AddCustomAttributes(typeof(ThickPipeThreeWay), nameof(ThickPipeThreeWay.StructVariableName),
+                builder.AddCustomAttributes(typeof(PipeBridge), nameof(PipeBridge.StructVariableName),
                     new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
                                                                  {
                                                                      ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
                                                                  }));
-                builder.AddCustomAttributes(typeof(ThickPipeCorner), nameof(ThickPipeCorner.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
-                                                                 {
-                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
-                                                                 }));
-                builder.AddCustomAttributes(typeof(ThinPipe), nameof(ThinPipe.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
-                                                                 {
-                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
-                                                                 }));
-                builder.AddCustomAttributes(typeof(ThinPipeBridge), nameof(ThinPipeBridge.StructVariableName),
-                    new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
-                                                                 {
-                                                                     ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
-                                                                 }));
-                builder.AddCustomAttributes(typeof(ThinPipeConnection), nameof(ThinPipeConnection.StructVariableName),
+                builder.AddCustomAttributes(typeof(PipeConnection), nameof(PipeConnection.StructVariableName),
                     new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
                                                                  {
                                                                      ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Pipe" }
@@ -301,12 +283,9 @@ namespace VisiWin7.ProcessControls.WPF.VW7.Design
                 this.SetCustomAttributes(builder, typeof(RotaryFeeder));
                 this.SetCustomAttributes(builder, typeof(Diverter));
                 this.SetCustomAttributes(builder, typeof(Centrifugal));
-                this.SetCustomAttributes(builder, typeof(ThickPipe));
-                this.SetCustomAttributes(builder, typeof(ThickPipeThreeWay));
-                this.SetCustomAttributes(builder, typeof(ThickPipeCorner));
-                this.SetCustomAttributes(builder, typeof(ThinPipe));
-                this.SetCustomAttributes(builder, typeof(ThinPipeBridge));
-                this.SetCustomAttributes(builder, typeof(ThinPipeConnection));
+                this.SetCustomAttributes(builder, typeof(Pipe));
+                this.SetCustomAttributes(builder, typeof(PipeBridge));
+                this.SetCustomAttributes(builder, typeof(PipeConnection));
                 this.SetCustomAttributes(builder, typeof(Stirer));
                 this.SetCustomAttributes(builder, typeof(Motor));
                 this.SetCustomAttributes(builder, typeof(Turbine));

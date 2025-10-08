@@ -50,7 +50,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <PropertyGroup>
-   <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
+    <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
   </PropertyGroup>
   <ItemGroup>
     <Page Include="Themes\Generic.xaml">
@@ -85,12 +85,9 @@
     <Compile Include="Controls\MechanicalEquipment\Stirer.cs" />
     <Compile Include="Controls\Pipes\Base\PipeBase.cs" />
     <Compile Include="Controls\Pipes\Arrow.cs" />
-    <Compile Include="Controls\Pipes\ThickPipe.cs" />
-    <Compile Include="Controls\Pipes\ThickPipeCorner.cs" />
-    <Compile Include="Controls\Pipes\ThickPipeThreeWay.cs" />
-    <Compile Include="Controls\Pipes\ThinPipe.cs" />
-    <Compile Include="Controls\Pipes\ThinPipeBridge.cs" />
-    <Compile Include="Controls\Pipes\ThinPipeConnection.cs" />
+    <Compile Include="Controls\Pipes\Pipe.cs" />
+    <Compile Include="Controls\Pipes\PipeBridge.cs" />
+    <Compile Include="Controls\Pipes\PipeConnection.cs" />
     <Compile Include="Controls\Base\ProcessControlBase.cs" />
     <Compile Include="Controls\Base\Default\DefaultProcessControlBase.cs" />
     <Compile Include="Controls\Base\ProcessControlBase.Blink.cs" />

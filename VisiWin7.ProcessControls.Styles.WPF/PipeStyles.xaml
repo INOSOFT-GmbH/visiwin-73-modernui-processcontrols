@@ -7,7 +7,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <!--ThinPipe-Style-->
-    <Style TargetType="pc:ThinPipe" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
+    <Style TargetType="pc:Pipe" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
         <Setter Property="Padding" Value="0"/>
         <Style.Resources>
             <DataTemplate x:Key="StyleTemplate">
@@ -27,7 +27,7 @@
     </Style>
 
     <!--ThinPipeBridge-Style-->
-    <Style TargetType="pc:ThinPipeBridge" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
+    <Style TargetType="pc:PipeBridge" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
         <Setter Property="Padding" Value="0"/>
         <Style.Resources>
             <DataTemplate x:Key="StyleTemplate">
@@ -45,7 +45,7 @@
     </Style>
 
     <!--ThinPipeConnection-Style-->
-    <Style TargetType="pc:ThinPipeConnection" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
+    <Style TargetType="pc:PipeConnection" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
         <Setter Property="Padding" Value="0"/>
         <Style.Resources>
             <DataTemplate x:Key="StyleTemplate">
@@ -77,107 +77,6 @@
                             <PathGeometry Figures="m 20,0 l 20,20 l -40,0 z"/>
                         </Path.Data>
                     </Path>
-                </Viewbox>
-            </DataTemplate>
-        </Style.Resources>
-    </Style>
-
-    <!--ThickPipe-Style-->
-    <Style TargetType="pc:ThickPipe" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
-        <Setter Property="Padding" Value="0"/>
-        <Style.Resources>
-            <DataTemplate x:Key="StyleTemplate">
-                <Viewbox Stretch="Fill">
-                    <Grid>
-                        <!--Fill-->
-                        <Path Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
-                              Stretch="Fill">
-                            <Path.Data>
-                                <PathGeometry Figures="m 0,0 l 10,0 l 0,10 l -10,0 z"/>
-                            </Path.Data>
-                        </Path>
-
-                        <!--Stroke-->
-                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
-                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
-                              Stretch="Fill"
-                              StrokeStartLineCap="Square"
-                              StrokeEndLineCap="Square">
-                            <Path.Data>
-                                <PathGeometry Figures="m 0,0 l 0,100 m 100,0 l 0,-100"/>
-                            </Path.Data>
-                        </Path>
-                    </Grid>
-                </Viewbox>
-            </DataTemplate>
-        </Style.Resources>
-    </Style>
-
-    <!--ThickPipeCorner-Style-->
-    <Style TargetType="pc:ThickPipeCorner" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
-        <Setter Property="Padding" Value="0"/>
-        <Style.Resources>
-            <DataTemplate x:Key="StyleTemplate">
-                <Viewbox Stretch="Fill">
-                    <Grid>
-                        <!--Fill-->
-                        <Path Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
-                              Stretch="Fill">
-                            <Path.Data>
-                                <PathGeometry Figures="m 0,0 l 10,0 l 0,10 l -10,0 z"/>
-                            </Path.Data>
-                        </Path>
-
-                        <!--Stroke-->
-                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
-                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
-                              Stretch="Fill"
-                              StrokeStartLineCap="Square"
-                              StrokeEndLineCap="Square">
-                            <Path.Data>
-                                <GeometryGroup>
-                                    <LineGeometry StartPoint="0,0" EndPoint="100,0"/>
-                                    <LineGeometry StartPoint="100,0" EndPoint="100,100"/>
-                                    <LineGeometry StartPoint="0,100" EndPoint="0,100"/>
-                                </GeometryGroup>
-                            </Path.Data>
-                        </Path>
-                    </Grid>
-                </Viewbox>
-            </DataTemplate>
-        </Style.Resources>
-    </Style>
-
-    <!--ThickPipeThreeWay-Style-->
-    <Style TargetType="pc:ThickPipeThreeWay" BasedOn="{StaticResource {x:Type pc:DefaultProcessControlBase}}">
-        <Setter Property="Padding" Value="0"/>
-        <Style.Resources>
-            <DataTemplate x:Key="StyleTemplate">
-                <Viewbox Stretch="Fill">
-                    <Grid>
-                        <!--Fill-->
-                        <Path Fill="{Binding Background, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource ProcessControlForegroundBrush}}"
-                              Stretch="Fill">
-                            <Path.Data>
-                                <PathGeometry Figures="m 0,0 l 10,0 l 0,10 l -10,0 z"/>
-                            </Path.Data>
-                        </Path>
-
-                        <!--Stroke-->
-                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
-                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
-                              Stretch="Fill"
-                              StrokeStartLineCap="Square"
-                              StrokeEndLineCap="Square">
-                            <Path.Data>
-                                <GeometryGroup>
-                                    <LineGeometry StartPoint="0,0" EndPoint="100,0"/>
-                                    <LineGeometry StartPoint="100,100" EndPoint="100,100"/>
-                                    <LineGeometry StartPoint="0,100" EndPoint="0,100"/>
-                                </GeometryGroup>
-                            </Path.Data>
-                        </Path>
-                    </Grid>
                 </Viewbox>
             </DataTemplate>
         </Style.Resources>

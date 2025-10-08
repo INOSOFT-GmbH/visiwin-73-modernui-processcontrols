@@ -28,11 +28,11 @@
                                   Mapping="{DynamicResource ValveMapping}"
                                   Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="ValveOne" Orientation="Right"/>
 
-                <pc:ThinPipe Background="Blue" Width="4" Margin="188,126,1728,834"/>
+                <pc:Pipe Background="Blue" Width="4" Margin="188,126,1728,834"/>
 
-                <pc:ThinPipe Background="Blue" Width="4" Margin="190,295,1726,665"/>
+                <pc:Pipe Background="Blue" Width="4" Margin="190,295,1726,665"/>
 
-                <pc:ThinPipe Background="Blue" Height="4" Margin="190,359,1652,661"/>
+                <pc:Pipe Background="Blue" Height="4" Margin="190,359,1652,661"/>
 
                 <Border Style="{StaticResource TankBorder}" Margin="267,242,1470,407">
 
@@ -53,7 +53,7 @@
 
                 </Border>
 
-                <pc:ThinPipe Background="Orange" Height="4" Margin="399,550,1391,470"/>
+                <pc:Pipe Background="Orange" Height="4" Margin="399,550,1391,470"/>
 
                 <Border Style="{StaticResource TankBorder}" Margin="477,455,1303,407">
 
@@ -64,7 +64,7 @@
 
                 </Border>
 
-                <pc:ThinPipe Background="Orange" Width="4" Margin="547,617,1369,343"/>
+                <pc:Pipe Background="Orange" Width="4" Margin="547,617,1369,343"/>
 
                 <pc:Pump Margin="518,681,1340,242"
                          LabelText="ToDo" Orientation="Top"
@@ -72,9 +72,9 @@
                          Mapping="{DynamicResource PumpMapping}"
                          Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="PumpOne" />
 
-                <pc:ThinPipe Background="Orange" Width="4" Margin="547,782,1369,178"/>
+                <pc:Pipe Background="Orange" Width="4" Margin="547,782,1369,178"/>
 
-                <pc:ThinPipe Background="Orange" Height="4" Margin="123,844,497,176"/>
+                <pc:Pipe Background="Orange" Height="4" Margin="123,844,497,176"/>
 
                 <Border BorderBrush="Gray" BorderThickness="1"
                     Height="40" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="294,681,1498,303">
@@ -141,11 +141,11 @@
                                   Mapping="{DynamicResource ValveMapping}"
                                   Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="ValveOne" Orientation="Right"/>
 
-                <pc:ThinPipe Background="Blue" Width="4" Margin="623,126,1293,834"/>
+                <pc:Pipe Background="Blue" Width="4" Margin="623,126,1293,834"/>
 
-                <pc:ThinPipe Background="Blue" Width="4" Margin="625,295,1291,665"/>
+                <pc:Pipe Background="Blue" Width="4" Margin="625,295,1291,665"/>
 
-                <pc:ThinPipe Background="Blue" Height="4" Margin="625,359,1217,661"/>
+                <pc:Pipe Background="Blue" Height="4" Margin="625,359,1217,661"/>
 
                 <Border Style="{StaticResource TankBorder}" Margin="702,242,1035,407">
 
@@ -166,7 +166,7 @@
 
                 </Border>
 
-                <pc:ThinPipe Background="Orange" Height="4" Margin="834,550,956,470"/>
+                <pc:Pipe Background="Orange" Height="4" Margin="834,550,956,470"/>
 
                 <Border Style="{StaticResource TankBorder}" Margin="912,455,868,407">
 
@@ -181,7 +181,7 @@
 
                 </Border>
 
-                <pc:ThinPipe Background="Orange" Width="4" Margin="982,617,934,343"/>
+                <pc:Pipe Background="Orange" Width="4" Margin="982,617,934,343"/>
 
                 <pc:Pump Margin="953,681,905,242"
                          LabelText="ToDo" Orientation="Top"
@@ -189,7 +189,7 @@
                          Mapping="{DynamicResource PumpMapping}"
                          Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="PumpOne" />
 
-                <pc:ThinPipe Background="Orange" Width="4" Margin="982,782,934,178"/>
+                <pc:Pipe Background="Orange" Width="4" Margin="982,782,934,178"/>
 
                 <Border BorderBrush="Gray" BorderThickness="1"
                     Height="40" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="729,681,1063,303">
@@ -257,11 +257,11 @@
                                   Mapping="{DynamicResource ValveMapping}"
                                   Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="ValveOne" Orientation="Right"/>
 
-                <pc:ThinPipe Background="Blue" Width="4" Margin="1060,126,855,834"/>
+                <pc:Pipe Background="Blue" Width="4" Margin="1060,126,855,834"/>
 
-                <pc:ThinPipe Background="Blue" Width="4" Margin="1062,295,854,665"/>
+                <pc:Pipe Background="Blue" Width="4" Margin="1062,295,854,665"/>
 
-                <pc:ThinPipe Background="Blue" Height="4" Margin="1062,359,780,661"/>
+                <pc:Pipe Background="Blue" Height="4" Margin="1062,359,780,661"/>
 
                 <Border Style="{StaticResource TankBorder}" Margin="1139,242,598,407">
 
@@ -282,7 +282,7 @@
 
                 </Border>
 
-                <pc:ThinPipe Background="Orange" Height="4" Margin="1271,550,519,470"/>
+                <pc:Pipe Background="Orange" Height="4" Margin="1271,550,519,470"/>
 
                 <Border Style="{StaticResource TankBorder}" Margin="1349,455,431,407">
 
@@ -297,7 +297,7 @@
 
                 </Border>
 
-                <pc:ThinPipe Background="Orange" Width="4" Margin="1419,617,497,343"/>
+                <pc:Pipe Background="Orange" Width="4" Margin="1419,617,497,343"/>
 
                 <pc:Pump Margin="1390,681,468,242"
                          LabelText="ToDo" Orientation="Top"
@@ -305,7 +305,7 @@
                          Mapping="{DynamicResource PumpMapping}"
                          Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="PumpOne" />
 
-                <pc:ThinPipe Background="Orange" Width="4" Margin="1419,782,497,178"/>
+                <pc:Pipe Background="Orange" Width="4" Margin="1419,782,497,178"/>
 
                 <Border BorderBrush="Gray" BorderThickness="1"
                     Height="40" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="1166,681,626,303">
@@ -387,15 +387,15 @@
                                   Template="{DynamicResource FrameProcessControlTemplate}" StructVariableName="ValveOne" Orientation="Right"/>
 
 
-                <pc:ThinPipe Background="LightBlue" Width="4" Margin="1754,618,162,342"/>
-                <pc:ThinPipe Background="LightBlue" Width="4" Margin="1756,787,160,173"/>
-                <pc:ThinPipe Background="LightBlue" Width="4" Margin="358,60,1558,782"/>
-                <pc:ThinPipe Background="LightBlue" Width="4" Margin="789,60,1127,782"/>
-                <pc:ThinPipe Background="LightBlue" Width="4" Margin="1226,60,690,782"/>
-                <pc:ThinPipe Background="LightBlue" Width="4" Margin="1752,60,164,782"/>
-                <pc:ThinPipe Background="LightBlue" Height="4" Margin="358,60,166,960"/>
+                <pc:Pipe Background="LightBlue" Width="4" Margin="1754,618,162,342"/>
+                <pc:Pipe Background="LightBlue" Width="4" Margin="1756,787,160,173"/>
+                <pc:Pipe Background="LightBlue" Width="4" Margin="358,60,1558,782"/>
+                <pc:Pipe Background="LightBlue" Width="4" Margin="789,60,1127,782"/>
+                <pc:Pipe Background="LightBlue" Width="4" Margin="1226,60,690,782"/>
+                <pc:Pipe Background="LightBlue" Width="4" Margin="1752,60,164,782"/>
+                <pc:Pipe Background="LightBlue" Height="4" Margin="358,60,166,960"/>
 
-                <pc:ThinPipe Background="Blue" Height="4" Margin="123,124,856,896"/>
+                <pc:Pipe Background="Blue" Height="4" Margin="123,124,856,896"/>
                 <Line Style="{StaticResource DottedHorizontalLine}"
                   Stroke="Gray" Margin="1587,359,202,663" />
 

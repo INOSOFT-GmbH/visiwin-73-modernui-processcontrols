@@ -84,14 +84,11 @@
     <Compile Include="Initializer\SiloInitializer.cs" />
     <Compile Include="Initializer\SprayCoolingTowerInitializer.cs" />
     <Compile Include="Initializer\StirerInitializer.cs" />
-    <Compile Include="Initializer\ThickPipeCornerInitializer.cs" />
-    <Compile Include="Initializer\ThickPipeInitializer.cs" />
-    <Compile Include="Initializer\ThickPipeThreeWayInitializer.cs" />
-    <Compile Include="Initializer\ThinPipeBridgeInitializer.cs" />
-    <Compile Include="Initializer\ThinPipeInitializer.cs" />
+    <Compile Include="Initializer\PipeBridgeInitializer.cs" />
+    <Compile Include="Initializer\PipeInitializer.cs" />
     <Compile Include="Initializer\ThreeWayValveInitializer.cs" />
     <Compile Include="Initializer\ScaleInitializer.cs" />
-    <Compile Include="Initializer\ThinPipeConnectionInitializer.cs" />
+    <Compile Include="Initializer\PipeConnectionInitializer.cs" />
     <Compile Include="Initializer\PumpInitializer.cs" />
     <Compile Include="Initializer\RoundTankInitializer.cs" />
     <Compile Include="Initializer\TankInitializer.cs" />

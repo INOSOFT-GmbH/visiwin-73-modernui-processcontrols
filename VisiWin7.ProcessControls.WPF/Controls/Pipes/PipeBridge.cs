@@ -4,7 +4,7 @@
     /// Represents a thin pipe bridge control for process control applications.
     /// Inherits from <see cref="PipeBase"/>.
     /// </summary>
-    public class ThinPipeBridge : PipeBase
+    public class PipeBridge : PipeBase
     {
     }
 }
