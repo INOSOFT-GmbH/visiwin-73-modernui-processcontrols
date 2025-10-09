@@ -101,7 +101,7 @@ namespace VisiWin7.ProcessControls.WPF.Controls
                 return;
             }
 
-            if (variable != null)
+            if (variable?.Value != null)
             {
                 this.UpdateControlStates(variable.Value);
             }

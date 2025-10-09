@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -14,15 +14,15 @@ using VisiWin.ApplicationFramework;
 
 namespace HMI
 {
-	/// <summary>
-	/// Interaction logic for MachineShowcaseView.xaml
-	/// </summary>
-	[ExportView("MachineShowcaseView")]
-	public partial class MachineShowcaseView : VisiWin.Controls.View
-	{
-		public MachineShowcaseView()
-		{
-			this.InitializeComponent();
-		}
-	}
+    /// <summary>
+    /// Interaction logic for MechanicalEquipmentViewContext.xaml
+    /// </summary>
+    [ExportView("MechanicalEquipmentViewContext")]
+    public partial class MechanicalEquipmentViewContext : VisiWin.Controls.View
+    {
+        public MechanicalEquipmentViewContext()
+        {
+            this.InitializeComponent();
+        }
+    }
 }

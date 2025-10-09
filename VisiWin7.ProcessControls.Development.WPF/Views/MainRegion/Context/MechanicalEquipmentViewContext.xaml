@@ -1,0 +1,60 @@
+<vw:View x:Class="HMI.MechanicalEquipmentViewContext"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:adapter="clr-namespace:HMI.Adapter"
+         mc:Ignorable="d"
+         d:DesignWidth="1024" d:DesignHeight="588">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="10">
+
+        <GroupBox Header="Mechanical Equipment variable settings"
+                  FontSize="{DynamicResource FontSize_Subheader}"
+                  FontWeight="SemiBold">
+
+            <GroupBox.HeaderTemplate>
+                <DataTemplate>
+                    <Border Background="{DynamicResource Blue4Brush}"
+                            CornerRadius="3"
+                            Padding="10,5">
+                        <TextBlock Text="{Binding}"
+                                   FontWeight="SemiBold"
+                                   Foreground="{DynamicResource Blue5Brush}" />
+                    </Border>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
+
+            <Border Background="{DynamicResource Gray4Brush}"
+                    CornerRadius="{DynamicResource CornerRadius}">
+
+                <Grid>
+
+                    <vw:Switch x:Name="Switch" LabelText="FrameTemplate active" HorizontalAlignment="Left" Margin="10"
+                               DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
+                               IsChecked="{Binding IsFrameTemplateActive, Mode=TwoWay}" />
+
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+
+                        <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                                               VariableName="MechanicalEquipmentOne{.ActualValue}"
+                                               Margin="10" />
+
+                        <vw:UpDownNumericVarIn UseVariableText="True" Width="250" VariableName="MechanicalEquipmentOne{.SetValue}"
+                                               Margin="10" />
+
+                        <vw:UpDownNumericVarIn UseVariableText="True" Width="250" VariableName="MechanicalEquipmentOne{.Errors}"
+                                               Margin="10" />
+
+                    </StackPanel>
+
+                </Grid>
+
+            </Border>
+
+        </GroupBox>
+
+    </Grid>
+
+</vw:View>

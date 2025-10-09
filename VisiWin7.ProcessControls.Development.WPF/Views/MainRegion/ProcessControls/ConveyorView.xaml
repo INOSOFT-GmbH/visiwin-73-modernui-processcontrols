@@ -5,13 +5,162 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vw="http://inosoft.com/visiwin7"
     xmlns:pc="http://inosoft.com/ProcessControls"
+    xmlns:adapter="clr-namespace:HMI.Adapter"
     mc:Ignorable="d"
+    DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
     d:DesignWidth="1024" d:DesignHeight="588">
 
+    <vw:View.Resources>
+
+        <Style TargetType="pc:BeltConveyor" BasedOn="{StaticResource {x:Type pc:BeltConveyor}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:ScrewConveyor" BasedOn="{StaticResource {x:Type pc:ScrewConveyor}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:CeilingConveyor" BasedOn="{StaticResource {x:Type pc:CeilingConveyor}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </vw:View.Resources>
+
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
-	    <pc:BeltConveyor Width="154" Height="209" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,22,0,0"/>
-	    <pc:ScrewConveyor Height="218" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="259,31,0,0" Width="127"/>
-	    <pc:CeilingConveyor Width="187" Height="207" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="418,42,0,0"/>
+
+        <vw:ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="10"
+                         Style="{StaticResource ScrollViewerDefaultStyle}">
+
+            <StackPanel Orientation="Vertical">
+
+                <GroupBox Header="Conveyor Types"
+                          FontSize="{DynamicResource FontSize_Subheader}"
+                          FontWeight="SemiBold"
+                          Margin="0,0,0,30">
+
+                    <GroupBox.HeaderTemplate>
+                        <DataTemplate>
+                            <Border Background="{DynamicResource Blue4Brush}"
+                                    CornerRadius="3"
+                                    Padding="10,5">
+                                <TextBlock Text="{Binding}"
+                                           FontWeight="SemiBold"
+                                           Foreground="{DynamicResource Blue5Brush}" />
+                            </Border>
+                        </DataTemplate>
+                    </GroupBox.HeaderTemplate>
+
+                    <Border Background="{DynamicResource Gray4Brush}"
+                            CornerRadius="{DynamicResource CornerRadius}"
+                            Padding="0">
+                        <UniformGrid Rows="1" Columns="3">
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Belt Conveyor"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:BeltConveyor Width="150" Height="80" 
+                                                     StructVariableName="ConveyorOne" 
+                                                     StateBrushes="{StaticResource ProcessControlStates}"
+                                                     Mapping="{StaticResource BeltConveyorMapping}"
+                                                     HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Screw Conveyor"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:ScrewConveyor Height="80" Width="150" 
+                                                      StructVariableName="ConveyorOne" 
+                                                      StateBrushes="{StaticResource ProcessControlStates}"
+                                                      Mapping="{StaticResource ScrewConveyorMapping}"
+                                                      HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Ceiling Conveyor"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:CeilingConveyor Width="150" Height="80" 
+                                                        StructVariableName="ConveyorOne" 
+                                                        StateBrushes="{StaticResource ProcessControlStates}"
+                                                        Mapping="{StaticResource CeilingConveyorMapping}"
+                                                        HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                        </UniformGrid>
+
+                    </Border>
+
+                </GroupBox>
+
+            </StackPanel>
+
+        </vw:ScrollViewer>
+
     </Grid> 	
     
 </vw:View>

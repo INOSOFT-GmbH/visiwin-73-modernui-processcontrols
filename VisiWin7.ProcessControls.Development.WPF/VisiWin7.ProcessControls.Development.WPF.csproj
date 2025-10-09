@@ -64,6 +64,7 @@
     <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Adapter\ProcessControlAdapter.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -102,6 +103,30 @@
     <Compile Include="Views\HeaderRegion\HeaderView.xaml.cs">
       <DependentUpon>HeaderView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainRegion\Context\ConveyorViewContext.xaml.cs">
+      <DependentUpon>ConveyorViewContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Context\EngineViewContext.xaml.cs">
+      <DependentUpon>EngineViewContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Context\HeatExchangerViewContext.xaml.cs">
+      <DependentUpon>HeatExchangerViewContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Context\MechanicalEquipmentViewContext.xaml.cs">
+      <DependentUpon>MechanicalEquipmentViewContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Context\PipeViewContext.xaml.cs">
+      <DependentUpon>PipeViewContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Context\PumpViewContext.xaml.cs">
+      <DependentUpon>PumpViewContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Context\TankViewContext.xaml.cs">
+      <DependentUpon>TankViewContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Context\ValveViewContext.xaml.cs">
+      <DependentUpon>ValveViewContext.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainRegion\ProcessControls\ConveyorView.xaml.cs">
       <DependentUpon>ConveyorView.xaml</DependentUpon>
     </Compile>
@@ -116,12 +141,6 @@
     </Compile>
     <Compile Include="Views\MainRegion\SystemViews\ChangePassword.xaml.cs">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainRegion\ProcessControls\Showcases\GeneralShowcaseView.xaml.cs">
-      <DependentUpon>GeneralShowcaseView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainRegion\ProcessControls\Showcases\AllShowcaseView.xaml.cs">
-      <DependentUpon>AllShowcaseView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainRegion\SystemViews\HelpView.xaml.cs">
       <DependentUpon>HelpView.xaml</DependentUpon>
@@ -146,9 +165,6 @@
     </Compile>
     <Compile Include="Views\MainRegion\ProcessControls\PipeView.xaml.cs">
       <DependentUpon>PipeView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainRegion\ProcessControls\Showcases\MachineShowcaseView.xaml.cs">
-      <DependentUpon>MachineShowcaseView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainRegion\ProcessControls\PumpView.xaml.cs">
       <DependentUpon>PumpView.xaml</DependentUpon>
@@ -264,6 +280,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\MainRegion\Context\ConveyorViewContext.xaml">
+      <Generator>MSBuild:Compile</Generator>
+	  <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Context\EngineViewContext.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Context\HeatExchangerViewContext.xaml">
+      <Generator>MSBuild:Compile</Generator>
+	  <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Context\MechanicalEquipmentViewContext.xaml">
+      <Generator>MSBuild:Compile</Generator>
+	  <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Context\PipeViewContext.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainRegion\Context\PumpViewContext.xaml">
+      <Generator>MSBuild:Compile</Generator>
+	  <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Context\TankViewContext.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainRegion\Context\ValveViewContext.xaml">
+      <Generator>MSBuild:Compile</Generator>
+	  <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MainRegion\SystemViews\ChangePassword.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -281,14 +327,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainRegion\SystemViews\LogOnOff.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\MainRegion\ProcessControls\Showcases\GeneralShowcaseView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\MainRegion\ProcessControls\Showcases\AllShowcaseView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -321,10 +359,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainRegion\ProcessControls\PipeView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\MainRegion\ProcessControls\Showcases\MachineShowcaseView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -391,7 +425,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-      <UserProperties VisiWinProjectName="VisiWin7.ProcessControls.Development.WPF" VisiWinVersion="7.3" />
+      <UserProperties VisiWinVersion="7.3" VisiWinProjectName="VisiWin7.ProcessControls.Development.WPF" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

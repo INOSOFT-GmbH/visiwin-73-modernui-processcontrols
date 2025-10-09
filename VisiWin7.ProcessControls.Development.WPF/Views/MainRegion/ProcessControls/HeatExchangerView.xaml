@@ -5,18 +5,346 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vw="http://inosoft.com/visiwin7"
     xmlns:pc="http://inosoft.com/ProcessControls"
+    xmlns:adapter="clr-namespace:HMI.Adapter"
     mc:Ignorable="d"
+    DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
     d:DesignWidth="1024" d:DesignHeight="588">
 
+    <vw:View.Resources>
+
+        <Style TargetType="pc:HeatExchanger" BasedOn="{StaticResource {x:Type pc:HeatExchanger}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:HeatExchangerWithoutCrossingFlow" BasedOn="{StaticResource {x:Type pc:HeatExchangerWithoutCrossingFlow}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:HeatExchangerTubes" BasedOn="{StaticResource {x:Type pc:HeatExchangerTubes}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:Burner" BasedOn="{StaticResource {x:Type pc:Burner}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:Cooler" BasedOn="{StaticResource {x:Type pc:Cooler}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:CoolingTower" BasedOn="{StaticResource {x:Type pc:CoolingTower}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:SprayCoolingTower" BasedOn="{StaticResource {x:Type pc:SprayCoolingTower}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:CoolingTowerWithInlet" BasedOn="{StaticResource {x:Type pc:CoolingTowerWithInlet}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </vw:View.Resources>
+
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
-	    <pc:HeatExchanger Width="170" Height="155" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,31,0,0"/>
-	    <pc:HeatExchangerWithoutCrossingFlow Width="120" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="259,38,0,0"/>
-	    <pc:HeatExchangerTubes Width="120" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="383,57,0,0"/>
-	    <pc:Burner Width="122" Height="165" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="554,21,0,0"/>
-	    <pc:Cooler Height="195" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="724,45,0,0" Width="123"/>
-	    <pc:CoolingTower Width="106" Height="203" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="888,51,0,0"/>
-	    <pc:SprayCoolingTower Width="289" Height="132" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,349,0,0"/>
-	    <pc:CoolingTowerWithInlet Width="303" Height="178" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="387,255,0,0"/>
+
+        <vw:ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="10"
+                         Style="{StaticResource ScrollViewerDefaultStyle}">
+
+            <StackPanel Orientation="Vertical">
+
+                <GroupBox Header="Heat Exchanger Types"
+                          FontSize="{DynamicResource FontSize_Subheader}"
+                          FontWeight="SemiBold"
+                          Margin="0,0,0,30">
+
+                    <GroupBox.HeaderTemplate>
+                        <DataTemplate>
+                            <Border Background="{DynamicResource Blue4Brush}"
+                                    CornerRadius="3"
+                                    Padding="10,5">
+                                <TextBlock Text="{Binding}"
+                                           FontWeight="SemiBold"
+                                           Foreground="{DynamicResource Blue5Brush}" />
+                            </Border>
+                        </DataTemplate>
+                    </GroupBox.HeaderTemplate>
+
+                    <Border Background="{DynamicResource Gray4Brush}"
+                            CornerRadius="{DynamicResource CornerRadius}"
+                            Padding="0">
+                        <UniformGrid Rows="2" Columns="4">
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Heat Exchanger"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:HeatExchanger Width="150" Height="80" 
+                                                      StructVariableName="ExchangerOne" 
+                                                      StateBrushes="{StaticResource ProcessControlStates}"
+                                                      Mapping="{StaticResource HeatExchangerMapping}"
+                                                      HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Heat Exchanger (No Crossing)"
+                                               FontSize="{DynamicResource FontSize_Caption}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10"
+                                               TextWrapping="Wrap" />
+                                    <pc:HeatExchangerWithoutCrossingFlow Width="150" Height="80" 
+                                                                         StructVariableName="ExchangerOne" 
+                                                                         StateBrushes="{StaticResource ProcessControlStates}"
+                                                                         Mapping="{StaticResource HeatExchangerWithoutCrossingFlowMapping}"
+                                                                         HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Heat Exchanger Tubes"
+                                               FontSize="{DynamicResource FontSize_Caption}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10"
+                                               TextWrapping="Wrap" />
+                                    <pc:HeatExchangerTubes Width="150" Height="80" 
+                                                           StructVariableName="ExchangerOne" 
+                                                           StateBrushes="{StaticResource ProcessControlStates}"
+                                                           Mapping="{StaticResource HeatExchangerTubesMapping}"
+                                                           HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Burner"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:Burner Width="150" Height="80" 
+                                               StructVariableName="ExchangerOne" 
+                                               StateBrushes="{StaticResource ProcessControlStates}"
+                                               Mapping="{StaticResource BurnerMapping}"
+                                               HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Cooler"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:Cooler Width="150" Height="80" 
+                                               StructVariableName="ExchangerOne" 
+                                               StateBrushes="{StaticResource ProcessControlStates}"
+                                               Mapping="{StaticResource CoolerMapping}"
+                                               HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Cooling Tower"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:CoolingTower Width="150" Height="80" 
+                                                     StructVariableName="ExchangerOne" 
+                                                     StateBrushes="{StaticResource ProcessControlStates}"
+                                                     Mapping="{StaticResource CoolingTowerMapping}"
+                                                     HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Spray Cooling Tower"
+                                               FontSize="{DynamicResource FontSize_Caption}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10"
+                                               TextWrapping="Wrap" />
+                                    <pc:SprayCoolingTower Width="150" Height="80" 
+                                                          StructVariableName="ExchangerOne" 
+                                                          StateBrushes="{StaticResource ProcessControlStates}"
+                                                          Mapping="{StaticResource CoolingTowerMapping}"
+                                                          HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Cooling Tower with Inlet"
+                                               FontSize="{DynamicResource FontSize_Caption}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10"
+                                               TextWrapping="Wrap" />
+                                    <pc:CoolingTowerWithInlet Width="150" Height="80" 
+                                                              StructVariableName="ExchangerOne" 
+                                                              StateBrushes="{StaticResource ProcessControlStates}"
+                                                              Mapping="{StaticResource CoolingTowerWithInletMapping}"
+                                                              HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                        </UniformGrid>
+
+                    </Border>
+
+                </GroupBox>
+
+            </StackPanel>
+
+        </vw:ScrollViewer>
+
     </Grid> 	
     
 </vw:View>

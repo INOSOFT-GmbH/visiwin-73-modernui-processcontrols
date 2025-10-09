@@ -13,14 +13,16 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="100" />
 			<RowDefinition Height="*" />
-			<RowDefinition Height="100" />
-		</Grid.RowDefinitions>
-		<vw:Region x:Name="MainRegion" StartView="GeneralShowcaseView" DesignTimeView="GeneralShowcaseView" Grid.Row="1" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+		<vw:Region x:Name="MainRegion" Grid.Row="1" />
 		<vw:Region x:Name="HeaderRegion" StartView="HeaderView" DesignTimeView="HeaderView" Grid.Row="0" />
-		<vw:Region x:Name="FooterRegion" StartView="FooterView" DesignTimeView="FooterView" Grid.Row="2" />
-		<vw:Region x:Name="DialogRegion" Grid.Row="0" Grid.RowSpan="3" />
-		<vw:Region x:Name="TouchpadRegion" Grid.Row="0" Grid.RowSpan="3" />
-		<vw:Region x:Name="MessageBoxRegion" Grid.Row="0" Grid.RowSpan="3" />
+        <vw:Region x:Name="ContextRegion" Grid.Row="2" />
+        <vw:Region x:Name="FooterRegion" StartView="FooterView" DesignTimeView="FooterView" Grid.Row="3" />
+		<vw:Region x:Name="DialogRegion" Grid.Row="0" Grid.RowSpan="4" />
+		<vw:Region x:Name="TouchpadRegion" Grid.Row="0" Grid.RowSpan="4" />
+		<vw:Region x:Name="MessageBoxRegion" Grid.Row="0" Grid.RowSpan="4" />
 	</Grid>
 
 </vw:BaseWindow>

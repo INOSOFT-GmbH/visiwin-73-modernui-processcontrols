@@ -5,19 +5,378 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vw="http://inosoft.com/visiwin7"
     xmlns:pc="http://inosoft.com/ProcessControls"
+    xmlns:adapter="clr-namespace:HMI.Adapter"
     mc:Ignorable="d"
+    DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
     d:DesignWidth="1024" d:DesignHeight="588">
 
+    <vw:View.Resources>
+
+        <Style TargetType="pc:Valve" BasedOn="{StaticResource {x:Type pc:Valve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:PistonValve" BasedOn="{StaticResource {x:Type pc:PistonValve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:MotorValve" BasedOn="{StaticResource {x:Type pc:MotorValve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:AngleValve" BasedOn="{StaticResource {x:Type pc:AngleValve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:ThreeWayValve" BasedOn="{StaticResource {x:Type pc:ThreeWayValve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:GlobeValve" BasedOn="{StaticResource {x:Type pc:GlobeValve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:FlapValve" BasedOn="{StaticResource {x:Type pc:FlapValve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:GateValve" BasedOn="{StaticResource {x:Type pc:GateValve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:BallValve" BasedOn="{StaticResource {x:Type pc:BallValve}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </vw:View.Resources>
+
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
-	    <pc:Valve Width="133" Height="158" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,23,0,0"/>
-	    <pc:PistonValve Width="164" Height="182" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,35,0,0"/>
-	    <pc:MotorValve Width="173" Height="234" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,22,0,0" StructVariableName="ValveOne"/>
-	    <pc:AngleValve Height="198" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="651,61,0,0" Width="134"/>
-	    <pc:ThreeWayValve Width="162" Height="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="834,65,0,0"/>
-	    <pc:GlobeValve Width="158" Height="160" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,231,0,0"/>
-	    <pc:FlapValve Width="205" Height="184" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,241,0,0"/>
-	    <pc:GateValve Width="189" Height="184" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="505,251,0,0"/>
-	    <pc:BallValve Width="159" Height="199" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="774,256,0,0"/>
+
+        <vw:ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="10"
+                         Style="{StaticResource ScrollViewerDefaultStyle}">
+
+            <StackPanel Orientation="Vertical">
+
+                <GroupBox Header="Valve Types"
+                          FontSize="{DynamicResource FontSize_Subheader}"
+                          FontWeight="SemiBold"
+                          Margin="0,0,0,30">
+
+                    <GroupBox.HeaderTemplate>
+                        <DataTemplate>
+                            <Border Background="{DynamicResource Blue4Brush}"
+                                    CornerRadius="3"
+                                    Padding="10,5">
+                                <TextBlock Text="{Binding}"
+                                           FontWeight="SemiBold"
+                                           Foreground="{DynamicResource Blue5Brush}" />
+                            </Border>
+                        </DataTemplate>
+                    </GroupBox.HeaderTemplate>
+
+                    <Border Background="{DynamicResource Gray4Brush}"
+                            CornerRadius="{DynamicResource CornerRadius}"
+                            Padding="0">
+                        <UniformGrid Rows="3" Columns="3">
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:Valve Width="150" Height="80" 
+                                              StructVariableName="ValveOne" 
+                                              StateBrushes="{StaticResource ProcessControlStates}"
+                                              Mapping="{StaticResource DefaultMapping}"
+                                              HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Piston Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:PistonValve Width="150" Height="80" 
+                                                    StructVariableName="ValveOne" 
+                                                    StateBrushes="{StaticResource ProcessControlStates}"
+                                                    Mapping="{StaticResource PistonValveMapping}"
+                                                    HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Motor Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:MotorValve Width="150" Height="80" 
+                                                   StructVariableName="ValveOne" 
+                                                   StateBrushes="{StaticResource ProcessControlStates}"
+                                                   Mapping="{StaticResource MotorValveMapping}"
+                                                   HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Angle Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:AngleValve Width="150" Height="80" 
+                                                   StructVariableName="ValveOne" 
+                                                   StateBrushes="{StaticResource ProcessControlStates}"
+                                                   Mapping="{StaticResource AngleValveMapping}"
+                                                   HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Three Way Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:ThreeWayValve x:Name="Test" Width="150" Height="80" 
+                                                      StructVariableName="ThreeWayValveOne" 
+                                                      StateBrushes="{StaticResource ProcessControlStates}"
+                                                      Mapping="{StaticResource ThreeWayValveMapping}"
+                                                      HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Globe Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:GlobeValve Width="150" Height="80" 
+                                                   StructVariableName="ValveOne" 
+                                                   StateBrushes="{StaticResource ProcessControlStates}"
+                                                   Mapping="{StaticResource GlobeValveMapping}"
+                                                   HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Flap Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:FlapValve Width="150" Height="80" 
+                                                  StructVariableName="ValveOne" 
+                                                  StateBrushes="{StaticResource ProcessControlStates}"
+                                                  Mapping="{StaticResource FlapValveMapping}"
+                                                  HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Gate Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:GateValve Width="150" Height="80" 
+                                                  StructVariableName="ValveOne" 
+                                                  StateBrushes="{StaticResource ProcessControlStates}"
+                                                  Mapping="{StaticResource GateValveMapping}"
+                                                  HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Ball Valve"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:BallValve Width="150" Height="80" 
+                                                  StructVariableName="ValveOne" 
+                                                  StateBrushes="{StaticResource ProcessControlStates}"
+                                                  Mapping="{StaticResource BallValveMapping}"
+                                                  HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                        </UniformGrid>
+
+                    </Border>
+
+                </GroupBox>
+
+            </StackPanel>
+
+        </vw:ScrollViewer>
+
     </Grid> 	
     
 </vw:View>

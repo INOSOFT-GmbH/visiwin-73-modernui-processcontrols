@@ -5,13 +5,168 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vw="http://inosoft.com/visiwin7"
     xmlns:pc="http://inosoft.com/ProcessControls"
+    xmlns:adapter="clr-namespace:HMI.Adapter"
     mc:Ignorable="d"
+    DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
     d:DesignWidth="1024" d:DesignHeight="588">
 
+    <vw:View.Resources>
+
+        <Style TargetType="pc:Tank" BasedOn="{StaticResource {x:Type pc:Tank}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:RoundTank" BasedOn="{StaticResource {x:Type pc:RoundTank}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="pc:Silo" BasedOn="{StaticResource {x:Type pc:Silo}}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
+                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </vw:View.Resources>
+
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
-        <pc:Tank Width="245" Height="255" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,33,0,0" Orientation="Top" StructVariableName="" ActualValue="50"/>
-	    <pc:RoundTank Width="179" Height="255" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="285,33,0,0" Orientation="Top" StructVariableName="" ActualValue="50"/>
-	    <pc:Silo Width="241" Height="255" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="468,33,0,0" Orientation="Top" StructVariableName="" ActualValue="50"/>
+
+        <vw:ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="10"
+                         Style="{StaticResource ScrollViewerDefaultStyle}">
+
+            <StackPanel Orientation="Vertical">
+
+                <GroupBox Header="Tank Types"
+                          FontSize="{DynamicResource FontSize_Subheader}"
+                          FontWeight="SemiBold"
+                          Margin="0,0,0,30">
+
+                    <GroupBox.HeaderTemplate>
+                        <DataTemplate>
+                            <Border Background="{DynamicResource Blue4Brush}"
+                                    CornerRadius="3"
+                                    Padding="10,5">
+                                <TextBlock Text="{Binding}"
+                                           FontWeight="SemiBold"
+                                           Foreground="{DynamicResource Blue5Brush}" />
+                            </Border>
+                        </DataTemplate>
+                    </GroupBox.HeaderTemplate>
+
+                    <Border Background="{DynamicResource Gray4Brush}"
+                            CornerRadius="{DynamicResource CornerRadius}"
+                            Padding="0">
+                        <UniformGrid Rows="1" Columns="3">
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Tank"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:Tank Width="150" Height="160" 
+                                             StructVariableName="TankOne" 
+                                             StateBrushes="{StaticResource ProcessControlStates}"
+                                             Mapping="{StaticResource TankMapping}" 
+                                             Orientation="Top" 
+                                             ActualValue="50"
+                                             HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Round Tank"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:RoundTank Width="150" Height="160" 
+                                                  StructVariableName="TankOne" 
+                                                  StateBrushes="{StaticResource ProcessControlStates}"
+                                                  Mapping="{StaticResource RoundTankMapping}" 
+                                                  Orientation="Top" 
+                                                  ActualValue="50"
+                                                  HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                            <Border Background="{DynamicResource GrayBrush}"
+                                    CornerRadius="{DynamicResource CornerRadius}"
+                                    Margin="10"
+                                    Padding="15">
+
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="2"
+                                                      Direction="315"
+                                                      Color="Gray"
+                                                      Opacity="0.3"
+                                                      BlurRadius="8" />
+                                </Border.Effect>
+
+                                <StackPanel>
+                                    <TextBlock Text="Silo"
+                                               FontSize="{DynamicResource FontSize_Label}"
+                                               FontWeight="SemiBold"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,10" />
+                                    <pc:Silo Width="150" Height="160" 
+                                             StructVariableName="TankOne" 
+                                             StateBrushes="{StaticResource ProcessControlStates}"
+                                             Mapping="{StaticResource SiloMapping}" 
+                                             Orientation="Top" 
+                                             ActualValue="50"
+                                             HorizontalAlignment="Center" />
+                                </StackPanel>
+
+                            </Border>
+
+                        </UniformGrid>
+
+                    </Border>
+
+                </GroupBox>
+
+            </StackPanel>
+
+        </vw:ScrollViewer>
+
     </Grid> 	
-    
+	
 </vw:View>

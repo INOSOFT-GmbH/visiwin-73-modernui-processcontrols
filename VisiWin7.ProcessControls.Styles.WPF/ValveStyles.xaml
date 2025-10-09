@@ -105,7 +105,8 @@
 
                     <Canvas Width="100" Height="100">
 
-                        <Path StrokeThickness="0"
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultErrorProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultErrorProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
                               StrokeStartLineCap="Square"
                               Data="M 50,50 L 75,0 25,0 Z">
                             <Path.Style>
@@ -135,7 +136,8 @@
                             </Path.Style>
                         </Path>
 
-                        <Path StrokeThickness="0"
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultErrorProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultErrorProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
                               StrokeStartLineCap="Square"
                               Data="M 50,50 L 100,75 100,25 Z">
                             <Path.Style>
@@ -165,7 +167,8 @@
                             </Path.Style>
                         </Path>
 
-                        <Path StrokeThickness="0"
+                        <Path StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultErrorProcessControlBase}}, FallbackValue={StaticResource StrokeThicknessFallback}}"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultErrorProcessControlBase}}, FallbackValue={StaticResource ProcessControlStrokeBrush}}"
                               StrokeStartLineCap="Square"
                               Data="M 50,50 L 75,100 25,100 Z">
                             <Path.Style>
@@ -195,16 +198,30 @@
                             </Path.Style>
                         </Path>
 
-                        <Path Fill="Transparent" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}"
-                              StrokeThickness="{Binding StrokeThickness, RelativeSource={RelativeSource AncestorType={x:Type pc:DefaultProcessControlBase}}}"
-                              StrokeStartLineCap="Square"
-                              Data="M 50,50 L 75,100 25,100 Z M 50,50 L 100,75 100,25 Z M 50,50 L 75,0 25,0 Z" />
-
                     </Canvas>
 
                 </Viewbox>
             </DataTemplate>
         </Style.Resources>
+        <Style.Triggers>
+            <DataTrigger
+                Binding="{Binding Path=CurrentStateBrushPortA.IsBlinkEnabled, RelativeSource={RelativeSource Self}}"
+                Value="True">
+                <Setter Property="IsBlinkEnabled" Value="True" />
+            </DataTrigger>
+
+            <DataTrigger
+                Binding="{Binding Path=CurrentStateBrushPortB.IsBlinkEnabled, RelativeSource={RelativeSource Self}}"
+                Value="True">
+                <Setter Property="IsBlinkEnabled" Value="True" />
+            </DataTrigger>
+
+            <DataTrigger
+                Binding="{Binding Path=CurrentStateBrushPortC.IsBlinkEnabled, RelativeSource={RelativeSource Self}}"
+                Value="True">
+                <Setter Property="IsBlinkEnabled" Value="True" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
 
     <!--GlobeValve-Style-->

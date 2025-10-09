@@ -126,6 +126,7 @@
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="Volume" VariableName="Volume" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="ScaleMapping">
@@ -138,6 +139,7 @@
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="Volume" VariableName="Volume" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="StirerMapping">
@@ -153,37 +155,19 @@
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Volume" VariableName="Volume" />
     </pc:VariableNameMappingCollection>
 
-    <pc:VariableNameMappingCollection x:Key="ThickPipeCornerMapping">
+    <pc:VariableNameMappingCollection x:Key="PipeBridgeMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
-    <pc:VariableNameMappingCollection x:Key="ThickPipeMapping">
+    <pc:VariableNameMappingCollection x:Key="PipeConnectionMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
-    <pc:VariableNameMappingCollection x:Key="ThickPipeThreeWayMapping">
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
-    </pc:VariableNameMappingCollection>
-
-    <pc:VariableNameMappingCollection x:Key="ThinPipeBridgeMapping">
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
-    </pc:VariableNameMappingCollection>
-
-    <pc:VariableNameMappingCollection x:Key="ThinPipeConnectionMapping">
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
-    </pc:VariableNameMappingCollection>
-
-    <pc:VariableNameMappingCollection x:Key="ThinPipeMapping">
+    <pc:VariableNameMappingCollection x:Key="PipeMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
