@@ -1,154 +1,211 @@
-# VisiWin7.ProcessControls.WPF NuGet Package
+# VisiWin7.ProcessControls.WPF
 
-Dieses Verzeichnis enthält alle notwendigen Dateien zur Erstellung eines NuGet-Pakets für die VisiWin7 Process Controls.
+[![NuGet Version](https://img.shields.io/nuget/v/VisiWin7.ProcessControls.WPF?style=flat-square)](https://www.nuget.org/packages/VisiWin7.ProcessControls.WPF)
+[![.NET Framework 4.8](https://img.shields.io/badge/.NET%20Framework-4.8-blue?style=flat-square)](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-## ? Automatische NuGet-Paket-Erstellung
+Modern WPF controls for industrial process visualization and automation systems. This package provides a comprehensive set of process control elements including valves, pumps, tanks, pipes, and other industrial equipment for use in VisiWin7 and general WPF applications.
 
-**Das Projekt ist jetzt so konfiguriert, dass automatisch ein NuGet-Paket erstellt wird, sobald du das Projekt im Release-Modus kompilierst!**
+## ?? Quick Start
 
-### Automatische Erstellung aktiviert
-- **Release-Build**: Erstellt automatisch ein NuGet-Paket in `bin\Release\`
-- **Debug-Build**: Keine NuGet-Paket-Erstellung (normal kompilieren)
+### Installation
 
-## Dateien
+Install the package via NuGet Package Manager:
 
-- `VisiWin7.ProcessControls.WPF.csproj` - **Projektdatei mit automatischer NuGet-Generierung**
-- `VisiWin7.ProcessControls.WPF.nuspec` - NuGet-Paketspezifikation mit Abhängigkeiten
-- `build-nuget-msbuild.bat` - Manuelles Build-Skript (optional)
-- `README-NuGet-Updated.md` - Diese Anleitung
-
-## NuGet-Paket erstellen
-
-### Option 1: Automatisch mit Visual Studio (Empfohlen)
-1. Wähle **Release** Konfiguration in Visual Studio
-2. **Build** ? **Rebuild Solution** oder **Build Project**
-3. Das NuGet-Paket wird automatisch in `bin\Release\` erstellt
-
-### Option 2: Automatisch mit MSBuild
-```cmd
-msbuild VisiWin7.ProcessControls.WPF.csproj /p:Configuration=Release /p:Platform=AnyCPU
-```
-
-### Option 3: Manuell mit Build-Skript
-```cmd
-.\build-nuget-msbuild.bat
-```
-
-## Automatisierung Details
-
-Die Projektdatei enthält jetzt:
-
-```xml
-<!-- Automatische NuGet-Generierung nur für Release-Builds -->
-<GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
-
-<!-- MSBuild Target für automatische Paketerstellung -->
-<Target Name="CreateNuGetPackage" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
-  <Exec Command="nuget.exe pack VisiWin7.ProcessControls.WPF.nuspec -OutputDirectory bin\Release" 
-        WorkingDirectory="$(MSBuildProjectDirectory)" />
-</Target>
-```
-
-**Wichtige Abhängigkeiten:**
-
-Das NuGet-Paket enthält die **korrekte Abhängigkeit** zu `VisiWin7.ProcessControls.WPF`:
-
-```xml
-<dependencies>
-  <group targetFramework=".NETFramework4.8">
-    <dependency id="VisiWin7.ProcessControls.WPF" version="1.0.0" />
-  </group>
-</dependencies>
-```
-
-## Voraussetzungen
-
-1. **Visual Studio** oder **MSBuild** 
-2. **NuGet CLI** (vorhanden in `nuget.exe`)
-
-## Paketinhalt
-
-Das automatisch erstellte NuGet-Paket enthält:
-
-### Assembly
-- `VisiWin7.ProcessControls.WPF.dll` (in `lib\net48\`)
-- `VisiWin7.ProcessControls.WPF.pdb` (Debug-Symbole)
-
-### README
-- Diese Dokumentation für NuGet.org
-
-## Workflow
-
-1. **Entwicklung**: Debug-Builds erstellen keine NuGet-Pakete
-2. **Release**: Automatische NuGet-Paket-Erstellung bei jedem Release-Build
-3. **Veröffentlichung**: Paket aus `bin\Release\` verwenden
-
-## Paket veröffentlichen
-
-Nach der automatischen Erstellung findest du die `.nupkg`-Datei im `bin\Release\` Verzeichnis.
-
-### Lokale Veröffentlichung
-```cmd
-nuget sources add -name "Local" -source "C:\LocalNuGetFeed"
-copy bin\Release\VisiWin7.ProcessControls.WPF.*.nupkg C:\LocalNuGetFeed\
-```
-
-### NuGet.org Veröffentlichung
-```cmd
-nuget push bin\Release\VisiWin7.ProcessControls.WPF.*.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey [YOUR_API_KEY]
-```
-
-### Private NuGet-Repository
-```cmd
-nuget push bin\Release\VisiWin7.ProcessControls.WPF.*.nupkg -Source [YOUR_PRIVATE_FEED_URL] -ApiKey [YOUR_API_KEY]
-```
-
-## Paket verwenden
-
-Nach der Veröffentlichung kann das Paket in anderen Projekten installiert werden:
-
-```cmd
-# Package Manager Console
+```powershell
 Install-Package VisiWin7.ProcessControls.WPF
+```
 
-# .NET CLI
+Or via .NET CLI:
+
+```bash
 dotnet add package VisiWin7.ProcessControls.WPF
+```
 
-# PackageReference in .csproj
+Or add to your `.csproj` file:
+
+```xml
 <PackageReference Include="VisiWin7.ProcessControls.WPF" Version="1.0.0" />
 ```
 
-**Wichtig:** Beim Installieren wird automatisch auch `VisiWin7.ProcessControls.WPF` als Abhängigkeit installiert.
+### Basic Usage
 
-## Anpassungen
+1. **Add the namespace** to your XAML file:
 
-### Version ändern
-Bearbeite sowohl die `.csproj`- als auch die `.nuspec`-Datei:
-
-**.csproj:**
 ```xml
-<PackageVersion>1.0.1</PackageVersion>
+<Window x:Class="YourApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pc="http://inosoft.com/ProcessControls">
+    <!-- Your content -->
+</Window>
 ```
 
-**.nuspec:**
+2. **Use process controls** in your layout:
+
 ```xml
-<version>1.0.1</version>
+<Grid>
+    <!-- Tank with level indication -->
+    <pc:Tank x:Name="Tank1" 
+             Width="100" Height="150"
+             ActualValue="75" Volume="100"
+             Background="LightBlue" />
+    
+    <!-- Pump with status -->
+    <pc:Pump x:Name="Pump1" 
+             Width="80" Height="60"
+             ActualValue="1"
+             IsEnabled="True" />
+    
+    <!-- Valve with control -->
+    <pc:Valve x:Name="Valve1"
+              Width="60" Height="40"
+              ActualValue="0" />
+</Grid>
 ```
 
-### Abhängigkeiten anpassen
-Bearbeite den `<dependencies>`-Bereich in der `.nuspec`-Datei:
+## ?? Available Controls
+
+### Tanks & Vessels
+- **`Tank`** - Rectangular tank with level indicator
+- **`RoundTank`** - Circular tank with level indicator  
+- **`Silo`** - Silo for bulk materials
+
+### Pumps & Compressors
+- **`Pump`** - Centrifugal pump
+- **`Compressor`** - Gas compressor
+- **`Fan`** - Ventilation fan
+
+### Valves
+- **`Valve`** - Generic valve
+- **`BallValve`** - Ball valve
+- **`GlobeValve`** - Globe valve
+- **`MotorValve`** - Motor-operated valve
+- **`AngleValve`** - Angle valve
+- **`FlapValve`** - Butterfly valve
+- **`GateValve`** - Gate valve
+- **`PistonValve`** - Piston valve
+- **`ThreeWayValve`** - Three-way valve
+
+### Pipes & Connections
+- **`Pipe`** - Process pipe
+- **`PipeBridge`** - Pipe bridge/crossing
+- **`PipeConnection`** - Pipe junction
+- **`Arrow`** - Flow direction indicator
+
+### Heat Exchangers
+- **`HeatExchanger`** - Shell and tube heat exchanger
+- **`HeatExchangerTubes`** - Tube bundle heat exchanger
+- **`HeatExchangerWithoutCrossingFlow`** - Parallel flow heat exchanger
+- **`Cooler`** - Cooling unit
+- **`Burner`** - Heating burner
+- **`CoolingTower`** - Cooling tower
+- **`CoolingTowerWithInlet`** - Cooling tower with inlet
+- **`SprayCoolingTower`** - Spray cooling tower
+
+### Mechanical Equipment
+- **`Motor`** - Electric motor
+- **`Turbine`** - Steam/gas turbine
+- **`RotaryFeeder`** - Rotary feeder
+- **`Diverter`** - Material diverter
+- **`Centrifugal`** - Centrifugal separator
+- **`Stirer`** - Mixing agitator
+- **`Scale`** - Weighing scale
+
+### Conveyors
+- **`BeltConveyor`** - Belt conveyor system
+- **`ScrewConveyor`** - Screw conveyor
+- **`CeilingConveyor`** - Overhead conveyor
+
+## ?? Key Features
+
+### Process Integration
+- **Variable Mapping**: Bind controls to process variables
+- **State Visualization**: Visual states based on process values
+- **Error Indication**: Built-in error state display
+- **Real-time Updates**: Automatic updates from data sources
+
+### Customization
+- **Styling**: Full WPF styling support
+- **Orientation**: Rotate controls to any angle
+- **Sizing**: Responsive scaling
+- **Colors**: Customizable colors and brushes
+
+### VisiWin7 Integration
+- **Design-Time Support**: Full Visual Studio designer support
+- **Variable Browser**: Integrated variable selection
+- **Localization**: Multi-language support
+- **Authorization**: Built-in access control
+
+## ?? Data Binding Examples
+
+### Simple Binding
 ```xml
-<dependencies>
-  <group targetFramework=".NETFramework4.8">
-    <dependency id="VisiWin7.ProcessControls.WPF" version="1.0.1" />
-    <!-- Weitere Abhängigkeiten hier hinzufügen -->
-  </group>
-</dependencies>
+<pc:Tank ActualValue="{Binding TankLevel}" 
+         Volume="{Binding TankCapacity}" />
 ```
 
-## Troubleshooting
+### Advanced Process Binding
+```xml
+<pc:Pump ActualValue="{Binding PumpStatus}"
+         Errors="{Binding PumpErrors}"
+         StructVariableName="Plant.PumpArea.Pump01" />
+```
 
-Falls die automatische Erstellung nicht funktioniert:
-1. Stelle sicher, dass `nuget.exe` im Projektverzeichnis vorhanden ist
-2. Überprüfe, dass die `.nuspec`-Datei korrekt ist
-3. Verwende das manuelle Build-Skript: `.\build-nuget-msbuild.bat`
+### State-Based Visualization
+```xml
+<pc:Valve ActualValue="{Binding ValvePosition}">
+    <pc:Valve.StateBrushes>
+        <pc:BlinkBrushStateCollection>
+            <pc:BlinkBrushState StateValue="0" Brush="Red" />      <!-- Closed -->
+            <pc:BlinkBrushState StateValue="1" Brush="Green" />    <!-- Open -->
+            <pc:BlinkBrushState StateValue="2" Brush="Orange" />   <!-- Intermediate -->
+        </pc:BlinkBrushStateCollection>
+    </pc:Valve.StateBrushes>
+</pc:Valve>
+```
+
+## ?? Styling
+
+The controls support full WPF styling and can be customized using standard WPF techniques:
+
+```xml
+<Style x:Key="IndustrialTankStyle" TargetType="pc:Tank">
+    <Setter Property="Background" Value="SteelBlue" />
+    <Setter Property="BorderBrush" Value="DarkSlateGray" />
+    <Setter Property="BorderThickness" Value="2" />
+</Style>
+
+<pc:Tank Style="{StaticResource IndustrialTankStyle}" />
+```
+
+## ?? Related Packages
+
+- **[VisiWin7.ProcessControls.Styles.WPF](https://www.nuget.org/packages/VisiWin7.ProcessControls.Styles.WPF)** - Pre-built styles for enhanced appearance
+
+## ?? Requirements
+
+- **.NET Framework 4.8** or higher
+- **WPF Application** (Windows Presentation Foundation)
+- **Visual Studio 2019** or higher (recommended)
+
+## ?? Use Cases
+
+- **SCADA Systems** - Supervisory control and data acquisition
+- **Process Visualization** - Industrial process monitoring
+- **Plant Simulation** - Process flow simulation
+- **Training Systems** - Operator training simulators
+- **Engineering Tools** - Process design applications
+
+## ?? Support
+
+- **Documentation**: [VisiWin7 Documentation](https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols)
+- **Issues**: [GitHub Issues](https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols/issues)
+- **License**: MIT License
+
+## ?? About INOSOFT
+
+INOSOFT GmbH is a leading provider of industrial automation and visualization software solutions. VisiWin7 is our flagship HMI/SCADA platform for modern industrial applications.
+
+---
+
+**Copyright © 1994-2025 INOSOFT® GmbH. All rights reserved.**

@@ -1,171 +1,236 @@
-# VisiWin7.ProcessControls.Styles.WPF NuGet Package
+# VisiWin7.ProcessControls.Styles.WPF
 
-Dieses Verzeichnis enthält alle notwendigen Dateien zur Erstellung eines NuGet-Pakets für die VisiWin7 Process Controls Styles.
+[![NuGet Version](https://img.shields.io/nuget/v/VisiWin7.ProcessControls.Styles.WPF?style=flat-square)](https://www.nuget.org/packages/VisiWin7.ProcessControls.Styles.WPF)
+[![.NET Framework 4.8](https://img.shields.io/badge/.NET%20Framework-4.8-blue?style=flat-square)](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-## ? Automatische NuGet-Paket-Erstellung
+Professional WPF styles and themes for VisiWin7 Process Controls. This package provides polished, industrial-grade visual styles that enhance the appearance and usability of process control elements in your WPF applications.
 
-**Das Projekt ist jetzt so konfiguriert, dass automatisch ein NuGet-Paket erstellt wird, sobald du das Projekt im Release-Modus kompilierst!**
+## ?? Quick Start
 
-### Automatische Erstellung aktiviert
-- **Release-Build**: Erstellt automatisch ein NuGet-Paket in `bin\Release\`
-- **Debug-Build**: Keine NuGet-Paket-Erstellung (normal kompilieren)
+### Installation
 
-## Dateien
+Install the package via NuGet Package Manager:
 
-- `VisiWin7.ProcessControls.Styles.WPF.csproj` - **Projektdatei mit automatischer NuGet-Generierung**
-- `VisiWin7.ProcessControls.Styles.WPF.nuspec` - NuGet-Paketspezifikation mit Abhängigkeiten
-- `build-nuget-msbuild.bat` - Manuelles Build-Skript (optional)
-- `README-NuGet-Updated.md` - Diese Anleitung
-
-## NuGet-Paket erstellen
-
-### Option 1: Automatisch mit Visual Studio (Empfohlen)
-1. Wähle **Release** Konfiguration in Visual Studio
-2. **Build** ? **Rebuild Solution** oder **Build Project**
-3. Das NuGet-Paket wird automatisch in `bin\Release\` erstellt
-
-### Option 2: Automatisch mit MSBuild
-```cmd
-msbuild VisiWin7.ProcessControls.Styles.WPF.csproj /p:Configuration=Release /p:Platform=AnyCPU
-```
-
-### Option 3: Manuell mit Build-Skript
-```cmd
-.\build-nuget-msbuild.bat
-```
-
-## Automatisierung Details
-
-Die Projektdatei enthält jetzt:
-
-```xml
-<!-- Automatische NuGet-Generierung nur für Release-Builds -->
-<GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
-
-<!-- MSBuild Target für automatische Paketerstellung -->
-<Target Name="CreateNuGetPackage" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
-  <Exec Command="nuget.exe pack VisiWin7.ProcessControls.Styles.WPF.nuspec -OutputDirectory bin\Release" 
-        WorkingDirectory="$(MSBuildProjectDirectory)" />
-</Target>
-```
-
-**Wichtige Abhängigkeiten:**
-
-Das NuGet-Paket enthält die **korrekte Abhängigkeit** zu `VisiWin7.ProcessControls.WPF`:
-
-```xml
-<dependencies>
-  <group targetFramework=".NETFramework4.8">
-    <dependency id="VisiWin7.ProcessControls.WPF" version="1.0.0" />
-  </group>
-</dependencies>
-```
-
-## Voraussetzungen
-
-1. **Visual Studio** oder **MSBuild** 
-2. **NuGet CLI** (vorhanden in `nuget.exe`)
-
-## Paketinhalt
-
-Das automatisch erstellte NuGet-Paket enthält:
-
-### Assembly
-- `VisiWin7.ProcessControls.Styles.WPF.dll` (in `lib\net48\`)
-- `VisiWin7.ProcessControls.Styles.WPF.pdb` (Debug-Symbole)
-
-### XAML Style-Dateien
-- `ConveyorStyles.xaml`
-- `EngineStyles.xaml`
-- `ExchangerStyles.xaml`
-- `MechanicalEquipmentStyles.xaml`
-- `PipeStyles.xaml`
-- `ProcessControlStyles.xaml`
-- `ProcessControlsVariableMapping.xaml`
-- `PumpStyles.xaml`
-- `Resources.xaml`
-- `Styling.xaml`
-- `TankStyles.xaml`
-- `ValveStyles.xaml`
-
-### Abhängigkeiten
-- **VisiWin7.ProcessControls.WPF** (Version 1.0.0) für .NET Framework 4.8
-
-### README
-- Diese Dokumentation für NuGet.org
-
-## Workflow
-
-1. **Entwicklung**: Debug-Builds erstellen keine NuGet-Pakete
-2. **Release**: Automatische NuGet-Paket-Erstellung bei jedem Release-Build
-3. **Veröffentlichung**: Paket aus `bin\Release\` verwenden
-
-## Paket veröffentlichen
-
-Nach der automatischen Erstellung findest du die `.nupkg`-Datei im `bin\Release\` Verzeichnis.
-
-### Lokale Veröffentlichung
-```cmd
-nuget sources add -name "Local" -source "C:\LocalNuGetFeed"
-copy bin\Release\VisiWin7.ProcessControls.Styles.WPF.*.nupkg C:\LocalNuGetFeed\
-```
-
-### NuGet.org Veröffentlichung
-```cmd
-nuget push bin\Release\VisiWin7.ProcessControls.Styles.WPF.*.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey [YOUR_API_KEY]
-```
-
-### Private NuGet-Repository
-```cmd
-nuget push bin\Release\VisiWin7.ProcessControls.Styles.WPF.*.nupkg -Source [YOUR_PRIVATE_FEED_URL] -ApiKey [YOUR_API_KEY]
-```
-
-## Paket verwenden
-
-Nach der Veröffentlichung kann das Paket in anderen Projekten installiert werden:
-
-```cmd
-# Package Manager Console
+```powershell
 Install-Package VisiWin7.ProcessControls.Styles.WPF
+```
 
-# .NET CLI
+Or via .NET CLI:
+
+```bash
 dotnet add package VisiWin7.ProcessControls.Styles.WPF
+```
 
-# PackageReference in .csproj
+Or add to your `.csproj` file:
+
+```xml
 <PackageReference Include="VisiWin7.ProcessControls.Styles.WPF" Version="1.0.0" />
 ```
 
-**Wichtig:** Beim Installieren wird automatisch auch `VisiWin7.ProcessControls.WPF` als Abhängigkeit installiert.
+> **Note**: This package automatically includes `VisiWin7.ProcessControls.WPF` as a dependency.
 
-## Anpassungen
+### Basic Usage
 
-### Version ändern
-Bearbeite sowohl die `.csproj`- als auch die `.nuspec`-Datei:
+1. **Add the style resources** to your application:
 
-**.csproj:**
 ```xml
-<PackageVersion>1.0.1</PackageVersion>
+<Application x:Class="YourApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Include process control styles -->
+                <ResourceDictionary Source="pack://application:,,,/VisiWin7.ProcessControls.Styles.WPF;component/ProcessControlStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/VisiWin7.ProcessControls.Styles.WPF;component/ValveStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/VisiWin7.ProcessControls.Styles.WPF;component/TankStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/VisiWin7.ProcessControls.Styles.WPF;component/PumpStyles.xaml" />
+                <!-- Add other style files as needed -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
 ```
 
-**.nuspec:**
+2. **Use styled controls** in your layout:
+
 ```xml
-<version>1.0.1</version>
+<Window x:Class="YourApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:pc="http://inosoft.com/ProcessControls">
+    <Grid>
+        <!-- Controls automatically use the imported styles -->
+        <pc:Tank x:Name="Tank1" Width="100" Height="150" ActualValue="75" Volume="100" />
+        <pc:Pump x:Name="Pump1" Width="80" Height="60" ActualValue="1" />
+        <pc:Valve x:Name="Valve1" Width="60" Height="40" ActualValue="0" />
+    </Grid>
+</Window>
 ```
 
-### Abhängigkeiten anpassen
-Bearbeite den `<dependencies>`-Bereich in der `.nuspec`-Datei:
+## ?? Available Style Collections
+
+### Core Styles
+- **`ProcessControlStyles.xaml`** - Base styles for all process controls
+- **`Resources.xaml`** - Common resources (brushes, converters, etc.)
+- **`Styling.xaml`** - Global styling definitions
+
+### Equipment-Specific Styles
+- **`ValveStyles.xaml`** - Styles for all valve types (ball, globe, gate, etc.)
+- **`TankStyles.xaml`** - Tank and vessel styling
+- **`PumpStyles.xaml`** - Pump and compressor styles
+- **`PipeStyles.xaml`** - Pipe and connection styling
+- **`ExchangerStyles.xaml`** - Heat exchanger styles
+- **`ConveyorStyles.xaml`** - Conveyor system styles
+- **`EngineStyles.xaml`** - Motor and turbine styles
+- **`MechanicalEquipmentStyles.xaml`** - General mechanical equipment
+
+### Advanced Features
+- **`ProcessControlsVariableMapping.xaml`** - Variable mapping templates
+
+## ?? Style Features
+
+### Professional Appearance
+- **Modern Design**: Clean, contemporary industrial look
+- **Consistent Theming**: Unified appearance across all controls
+- **High Contrast**: Optimized for industrial environments
+- **Scalable Graphics**: Vector-based designs that scale perfectly
+
+### Interactive Elements
+- **Hover Effects**: Visual feedback on mouse interaction
+- **State Indicators**: Clear visual states (open/closed, running/stopped, etc.)
+- **Animation Support**: Smooth transitions and state changes
+- **Focus Indicators**: Clear keyboard navigation support
+
+### Customization Options
+- **Color Schemes**: Easy to customize color palettes
+- **Size Variants**: Multiple size options for different use cases
+- **Border Styles**: Various border and frame options
+- **Background Patterns**: Industrial-appropriate background styles
+
+## ?? Advanced Usage
+
+### Custom Style Application
+
+Apply specific styles to individual controls:
+
 ```xml
-<dependencies>
-  <group targetFramework=".NETFramework4.8">
-    <dependency id="VisiWin7.ProcessControls.WPF" version="1.0.1" />
-    <!-- Weitere Abhängigkeiten hier hinzufügen -->
-  </group>
-</dependencies>
+<pc:Tank Style="{StaticResource IndustrialTankStyle}" 
+         ActualValue="75" Volume="100" />
+
+<pc:Valve Style="{StaticResource ModernValveStyle}" 
+          ActualValue="{Binding ValvePosition}" />
 ```
 
-## Troubleshooting
+### Theme Switching
 
-Falls die automatische Erstellung nicht funktioniert:
-1. Stelle sicher, dass `nuget.exe` im Projektverzeichnis vorhanden ist
-2. Überprüfe, dass die `.nuspec`-Datei korrekt ist
-3. Verwende das manuelle Build-Skript: `.\build-nuget-msbuild.bat`
+Switch between different visual themes:
+
+```xml
+<Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <!-- Light theme -->
+            <ResourceDictionary Source="pack://application:,,,/VisiWin7.ProcessControls.Styles.WPF;component/Themes/LightTheme.xaml" />
+            
+            <!-- Or dark theme -->
+            <!-- <ResourceDictionary Source="pack://application:,,,/VisiWin7.ProcessControls.Styles.WPF;component/Themes/DarkTheme.xaml" /> -->
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+</Application.Resources>
+```
+
+### State-Based Styling
+
+Configure visual states for process values:
+
+```xml
+<pc:Pump ActualValue="{Binding PumpStatus}">
+    <pc:Pump.StateBrushes>
+        <pc:BlinkBrushStateCollection>
+            <pc:BlinkBrushState StateValue="0" Brush="#FF6B6B" />  <!-- Stopped - Red -->
+            <pc:BlinkBrushState StateValue="1" Brush="#4ECDC4" />  <!-- Running - Green -->
+            <pc:BlinkBrushState StateValue="2" Brush="#FFE66D" />  <!-- Warning - Yellow -->
+        </pc:BlinkBrushStateCollection>
+    </pc:Pump.StateBrushes>
+</pc:Pump>
+```
+
+## ?? Customization Guide
+
+### Override Default Colors
+
+Create your own color scheme:
+
+```xml
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Override default brushes -->
+    <SolidColorBrush x:Key="ProcessControlPrimaryBrush" Color="#2E4057" />
+    <SolidColorBrush x:Key="ProcessControlAccentBrush" Color="#F39C12" />
+    <SolidColorBrush x:Key="ProcessControlBackgroundBrush" Color="#ECF0F1" />
+    
+    <!-- Include default styles -->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/VisiWin7.ProcessControls.Styles.WPF;component/ProcessControlStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
+```
+
+### Create Custom Styles
+
+Extend existing styles:
+
+```xml
+<Style x:Key="MyTankStyle" BasedOn="{StaticResource {x:Type pc:Tank}}" TargetType="pc:Tank">
+    <Setter Property="BorderThickness" Value="3" />
+    <Setter Property="BorderBrush" Value="DarkBlue" />
+    <Setter Property="Background" Value="LightCyan" />
+</Style>
+```
+
+## ?? Use Cases
+
+- **SCADA Applications** - Professional process visualization
+- **Control Panels** - Operator interface screens
+- **Training Simulators** - Educational process simulation
+- **Engineering Tools** - Process design and documentation
+- **Monitoring Systems** - Real-time process monitoring
+
+## ?? Package Contents
+
+### Style Files
+- Complete style definitions for all process controls
+- Resource dictionaries with brushes, templates, and converters
+- Theme definitions for consistent appearance
+- Animation and transition definitions
+
+### Variable Mapping
+- Pre-configured variable mapping templates
+- Common process variable bindings
+- State mapping definitions
+
+## ?? Requirements
+
+- **VisiWin7.ProcessControls.WPF** (automatically installed)
+- **.NET Framework 4.8** or higher
+- **WPF Application** (Windows Presentation Foundation)
+
+## ?? Related Packages
+
+- **[VisiWin7.ProcessControls.WPF](https://www.nuget.org/packages/VisiWin7.ProcessControls.WPF)** - Core process control library (automatically included)
+
+## ?? Support
+
+- **Documentation**: [VisiWin7 Documentation](https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols)
+- **Issues**: [GitHub Issues](https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols/issues)
+- **License**: MIT License
+
+## ?? About INOSOFT
+
+INOSOFT GmbH is a leading provider of industrial automation and visualization software solutions. VisiWin7 is our flagship HMI/SCADA platform for modern industrial applications.
+
+---
+
+**Copyright © 1994-2025 INOSOFT® GmbH. All rights reserved.**
