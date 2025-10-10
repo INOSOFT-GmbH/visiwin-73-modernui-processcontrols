@@ -8,7 +8,7 @@
     xmlns:adapter="clr-namespace:HMI.Adapter"
     mc:Ignorable="d"
     DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
-    d:DesignWidth="1024" d:DesignHeight="588">
+    d:DesignWidth="1920" d:DesignHeight="880">
 
     <vw:View.Resources>
 
@@ -61,22 +61,22 @@
 
             <StackPanel Orientation="Vertical">
 
-                <GroupBox Header="Mechanical Equipment Types"
+                <vw:GroupBox Header="@Views.ProcessControls.MechanicalEquipmentTypes" Foreground="{DynamicResource ForegroundDarkBrush}"
                           FontSize="{DynamicResource FontSize_Subheader}"
                           FontWeight="SemiBold"
                           Margin="0,0,0,30">
 
-                    <GroupBox.HeaderTemplate>
+                    <vw:GroupBox.HeaderTemplate>
                         <DataTemplate>
                             <Border Background="{DynamicResource Blue4Brush}"
                                     CornerRadius="3"
                                     Padding="10,5">
-                                <TextBlock Text="{Binding}"
+                                <vw:TextBlock LocalizableText="{Binding}"
                                            FontWeight="SemiBold"
                                            Foreground="{DynamicResource Blue5Brush}" />
                             </Border>
                         </DataTemplate>
-                    </GroupBox.HeaderTemplate>
+                    </vw:GroupBox.HeaderTemplate>
 
                     <Border Background="{DynamicResource Gray4Brush}"
                             CornerRadius="{DynamicResource CornerRadius}"
@@ -97,16 +97,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Rotary Feeder"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:RotaryFeeder Width="150" Height="80" 
+                                    
+                                    <pc:RotaryFeeder Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                      StructVariableName="MechanicalEquipmentOne" 
                                                      StateBrushes="{StaticResource ProcessControlStates}"
                                                      Mapping="{StaticResource RotaryFeederMapping}"
-                                                     HorizontalAlignment="Center" />
+                                                     HorizontalAlignment="Center" LocalizableLabelText="@Variables.RotaryFeeder"/>
                                 </StackPanel>
 
                             </Border>
@@ -125,16 +121,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Diverter"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Diverter Width="150" Height="80" 
+                                    
+                                    <pc:Diverter Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                  StructVariableName="MechanicalEquipmentOne" 
                                                  StateBrushes="{StaticResource ProcessControlStates}"
                                                  Mapping="{StaticResource DiverterMapping}"
-                                                 HorizontalAlignment="Center" />
+                                                 HorizontalAlignment="Center" LocalizableLabelText="@Variables.Diverter"/>
                                 </StackPanel>
 
                             </Border>
@@ -153,16 +145,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Stirrer"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Stirer Width="150" Height="80" 
+                                    
+                                    <pc:Stirer Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                StructVariableName="MechanicalEquipmentOne" 
                                                StateBrushes="{StaticResource ProcessControlStates}"
                                                Mapping="{StaticResource StirerMapping}"
-                                               HorizontalAlignment="Center" />
+                                               HorizontalAlignment="Center" LocalizableLabelText="@Variables.Stirer"/>
                                 </StackPanel>
 
                             </Border>
@@ -181,16 +169,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Centrifugal"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Centrifugal Width="150" Height="80" 
+                                    
+                                    <pc:Centrifugal Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                     StructVariableName="MechanicalEquipmentOne" 
                                                     StateBrushes="{StaticResource ProcessControlStates}"
                                                     Mapping="{StaticResource CentrifugalMapping}"
-                                                    HorizontalAlignment="Center" />
+                                                    HorizontalAlignment="Center" LocalizableLabelText="@Variables.Centrifugal"/>
                                 </StackPanel>
 
                             </Border>
@@ -209,16 +193,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Scale"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Scale Width="150" Height="80" 
+                                   
+                                    <pc:Scale Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                               StructVariableName="MechanicalEquipmentOne" 
                                               StateBrushes="{StaticResource ProcessControlStates}"
                                               Mapping="{StaticResource ScaleMapping}"
-                                              HorizontalAlignment="Center" />
+                                              HorizontalAlignment="Center" LocalizableLabelText="@Variables.Scale"/>
                                 </StackPanel>
 
                             </Border>
@@ -227,7 +207,7 @@
 
                     </Border>
 
-                </GroupBox>
+                </vw:GroupBox>
 
             </StackPanel>
 

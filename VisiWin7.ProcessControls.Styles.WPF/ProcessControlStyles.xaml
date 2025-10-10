@@ -333,14 +333,22 @@
 
             <Grid>
 
-                <TextBlock TextWrapping="Wrap" TextTrimming="CharacterEllipsis"
-                           Foreground="{TemplateBinding Foreground}"
-                           Text="{TemplateBinding LabelText}"
-                           VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+                <Grid Margin="{TemplateBinding Padding}" >
 
-                <ContentPresenter x:Name="PART_ContentPresenter"
-                                  ContentTemplate="{DynamicResource StyleTemplate}"
-                                  Margin="{TemplateBinding Padding}" />
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"
+                               Foreground="{TemplateBinding Foreground}"
+                               Text="{TemplateBinding LabelText}"
+                               VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+                    <ContentPresenter Grid.Row="1" x:Name="PART_ContentPresenter"
+                                  ContentTemplate="{DynamicResource StyleTemplate}" Margin="5"/>
+
+                </Grid>
 
                 <vw:NotificationItem x:Name="NotificationItem"
                                      Background="{DynamicResource ErrorBrush}"
@@ -353,6 +361,10 @@
         </Border>
 
         <ControlTemplate.Triggers>
+
+            <Trigger Property="LabelText" Value="">
+                <Setter TargetName="PART_ContentPresenter" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
 
             <Trigger Property="Orientation" Value="Top">
                 <Setter Property="LayoutTransform" TargetName="PART_ContentPresenter">

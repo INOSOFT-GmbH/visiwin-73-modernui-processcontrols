@@ -8,7 +8,7 @@
          xmlns:adapter="clr-namespace:HMI.Adapter"
          mc:Ignorable="d"
          DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
-         d:DesignWidth="1024" d:DesignHeight="588">
+         d:DesignWidth="1920" d:DesignHeight="880">
 
     <vw:View.Resources>
 
@@ -37,22 +37,22 @@
 
             <StackPanel Orientation="Vertical">
 
-                <GroupBox Header="Engine Types"
+                <vw:GroupBox Header="@Views.ProcessControls.EngineTypes" Foreground="{DynamicResource ForegroundDarkBrush}"
                           FontSize="{DynamicResource FontSize_Subheader}"
                           FontWeight="SemiBold"
                           Margin="0,0,0,30">
 
-                    <GroupBox.HeaderTemplate>
+                    <vw:GroupBox.HeaderTemplate>
                         <DataTemplate>
                             <Border Background="{DynamicResource Blue4Brush}"
                                     CornerRadius="3"
                                     Padding="10,5">
-                                <TextBlock Text="{Binding}"
+                                <vw:TextBlock LocalizableText="{Binding}"
                                            FontWeight="SemiBold"
                                            Foreground="{DynamicResource Blue5Brush}" />
                             </Border>
                         </DataTemplate>
-                    </GroupBox.HeaderTemplate>
+                    </vw:GroupBox.HeaderTemplate>
 
                     <Border Background="{DynamicResource Gray4Brush}"
                             CornerRadius="{DynamicResource CornerRadius}"
@@ -73,16 +73,11 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Motor"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Motor Width="150" Height="80"
+                                    <pc:Motor Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}"
                                           StructVariableName="EngineOne"
                                           StateBrushes="{StaticResource ProcessControlStates}"
                                           Mapping="{StaticResource MotorMapping}"
-                                          HorizontalAlignment="Center" />
+                                          HorizontalAlignment="Center" LocalizableLabelText="@Variables.Engine" />
                                 </StackPanel>
 
                             </Border>
@@ -102,16 +97,11 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Turbine"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Turbine Width="150" Height="80"
+                                    <pc:Turbine Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}"
                                             StructVariableName="EngineOne"
                                             StateBrushes="{StaticResource ProcessControlStates}"
                                             Mapping="{StaticResource TurbineMapping}"
-                                            HorizontalAlignment="Center" />
+                                            HorizontalAlignment="Center" LocalizableLabelText="@Variables.Turbine"/>
                                 </StackPanel>
 
                             </Border>
@@ -120,7 +110,7 @@
 
                     </Border>
 
-                </GroupBox>
+                </vw:GroupBox>
 
             </StackPanel>
 

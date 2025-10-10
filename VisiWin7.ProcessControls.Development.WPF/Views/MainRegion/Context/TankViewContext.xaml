@@ -6,50 +6,50 @@
          xmlns:vw="http://inosoft.com/visiwin7"
          xmlns:adapter="clr-namespace:HMI.Adapter"
          mc:Ignorable="d"
-         d:DesignWidth="1024" d:DesignHeight="588">
+         d:DesignWidth="1920" d:DesignHeight="880">
 
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="10">
 
-        <GroupBox Header="Tank variable settings"
+        <vw:GroupBox Header="@Views.ProcessControls.TankVariableSettings" Foreground="{DynamicResource ForegroundDarkBrush}"
                   FontSize="{DynamicResource FontSize_Subheader}"
                   FontWeight="SemiBold">
 
-            <GroupBox.HeaderTemplate>
+            <vw:GroupBox.HeaderTemplate>
                 <DataTemplate>
                     <Border Background="{DynamicResource Blue4Brush}"
                             CornerRadius="3"
                             Padding="10,5">
-                        <TextBlock Text="{Binding}"
+                        <vw:TextBlock LocalizableText="{Binding}"
                                    FontWeight="SemiBold"
                                    Foreground="{DynamicResource Blue5Brush}" />
                     </Border>
                 </DataTemplate>
-            </GroupBox.HeaderTemplate>
+            </vw:GroupBox.HeaderTemplate>
 
             <Border Background="{DynamicResource Gray4Brush}"
                     CornerRadius="{DynamicResource CornerRadius}">
 
                 <Grid>
 
-                    <vw:Switch x:Name="Switch" LabelText="FrameTemplate active" HorizontalAlignment="Left" Margin="10"
+                    <vw:Switch x:Name="Switch" LocalizableText="@Views.ProcessControls.FrameTemplateActive" HorizontalAlignment="Left" Margin="10"
                                DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
                                IsChecked="{Binding IsFrameTemplateActive, Mode=TwoWay}" />
 
                     <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
 
-                        <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                        <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                VariableName="TankOne{.Volume}" 
                                                RawValue="10"
                                                Margin="10" />
 
-						<vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+						<vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                VariableName="TankOne{.ActualValue}"
                                                Margin="10" />
 
-                        <vw:UpDownNumericVarIn UseVariableText="True" Width="250" VariableName="TankOne{.SetValue}"
+                        <vw:UpDownNumericVarIn UseVariableText="True" Width="300" VariableName="TankOne{.SetValue}"
                                                Margin="10" />
 
-                        <vw:UpDownNumericVarIn UseVariableText="True" Width="250" VariableName="TankOne{.Errors}"
+                        <vw:UpDownNumericVarIn UseVariableText="True" Width="300" VariableName="TankOne{.Errors}"
                                                Margin="10" />
 
                     </StackPanel>
@@ -58,7 +58,7 @@
 
             </Border>
 
-        </GroupBox>
+        </vw:GroupBox>
 
     </Grid>
 

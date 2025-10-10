@@ -6,27 +6,27 @@
          xmlns:vw="http://inosoft.com/visiwin7"
          xmlns:adapter="clr-namespace:HMI.Adapter"
          mc:Ignorable="d"
-         d:DesignWidth="1024" d:DesignHeight="588">
+         d:DesignWidth="1920" d:DesignHeight="880">
 
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="10">
 
         <StackPanel Orientation="Vertical">
 
-            <GroupBox Header="Valve variable settings"
+            <vw:GroupBox Header="@Views.ProcessControls.ValveVariableSettings" Foreground="{DynamicResource ForegroundDarkBrush}"
                       FontSize="{DynamicResource FontSize_Subheader}"
                       FontWeight="SemiBold">
 
-                <GroupBox.HeaderTemplate>
+                <vw:GroupBox.HeaderTemplate>
                     <DataTemplate>
                         <Border Background="{DynamicResource Blue4Brush}"
                                 CornerRadius="3"
                                 Padding="10,5">
-                            <TextBlock Text="{Binding}"
+                            <vw:TextBlock LocalizableText="{Binding}"
                                        FontWeight="SemiBold"
                                        Foreground="{DynamicResource Blue5Brush}" />
                         </Border>
                     </DataTemplate>
-                </GroupBox.HeaderTemplate>
+                </vw:GroupBox.HeaderTemplate>
 
                 <Border Background="{DynamicResource Gray4Brush}"
                         CornerRadius="{DynamicResource CornerRadius}">
@@ -40,15 +40,15 @@
 
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
 
-                            <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                            <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                    VariableName="ValveOne{.ActualValue}"
                                                    Margin="10" />
 
-                            <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                            <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                    VariableName="ValveOne{.SetValue}"
                                                    Margin="10" />
 
-                            <vw:UpDownNumericVarIn UseVariableText="True" Width="250" VariableName="ValveOne{.Errors}"
+                            <vw:UpDownNumericVarIn UseVariableText="True" Width="300" VariableName="ValveOne{.Errors}"
                                                    Margin="10" />
 
                         </StackPanel>
@@ -57,31 +57,31 @@
 
                 </Border>
 
-            </GroupBox>
+            </vw:GroupBox>
 
-            <GroupBox Header="Three-Way Valve variable settings"
+            <vw:GroupBox Header="@Views.ProcessControls.ThreeWayValveVariableSettings" Foreground="{DynamicResource ForegroundDarkBrush}"
                       FontSize="{DynamicResource FontSize_Subheader}"
                       FontWeight="SemiBold"
                       Margin="0,10,0,0">
 
-                <GroupBox.HeaderTemplate>
+                <vw:GroupBox.HeaderTemplate>
                     <DataTemplate>
                         <Border Background="{DynamicResource Blue4Brush}"
                                 CornerRadius="3"
                                 Padding="10,5">
-                            <TextBlock Text="{Binding}"
+                            <vw:TextBlock LocalizableText="{Binding}"
                                        FontWeight="SemiBold"
                                        Foreground="{DynamicResource Blue5Brush}" />
                         </Border>
                     </DataTemplate>
-                </GroupBox.HeaderTemplate>
+                </vw:GroupBox.HeaderTemplate>
 
                 <Border Background="{DynamicResource Gray4Brush}"
                         CornerRadius="{DynamicResource CornerRadius}">
 
                     <Grid>
 
-                        <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                        <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                VariableName="ThreeWayValveOne{.Errors}"
                                                Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
@@ -89,15 +89,15 @@
 
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
 
-                                <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                                <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                        VariableName="ThreeWayValveOne{.ActualValuePortA}"
                                                        Margin="10" />
 
-                                <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                                <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                        VariableName="ThreeWayValveOne{.ActualValuePortB}"
                                                        Margin="10" />
 
-                                <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                                <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                        VariableName="ThreeWayValveOne{.ActualValuePortC}"
                                                        Margin="10" />
 
@@ -105,15 +105,15 @@
 
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
 
-                                <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                                <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                        VariableName="ThreeWayValveOne{.SetValuePortA}"
                                                        Margin="10" />
 
-                                <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                                <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                        VariableName="ThreeWayValveOne{.SetValuePortB}"
                                                        Margin="10" />
 
-                                <vw:UpDownNumericVarIn UseVariableText="True" Width="250"
+                                <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                        VariableName="ThreeWayValveOne{.SetValuePortC}"
                                                        Margin="10" />
 
@@ -126,7 +126,7 @@
 
 				</Border>
 
-            </GroupBox>
+            </vw:GroupBox>
 
         </StackPanel>
 

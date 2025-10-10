@@ -1,7 +1,8 @@
 ﻿<Application x:Class="HMI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:vw="http://inosoft.com/visiwin7">
+             xmlns:vw="http://inosoft.com/visiwin7"
+             xmlns:system="clr-namespace:System;assembly=mscorlib">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -18,6 +19,8 @@
                 <ResourceDictionary Source="/VisiWin7.ProcessControls.Development.WPF;component/Resources/ProcessControls/ProcessControlsVariableMapping.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <vw:ApplicationManager x:Key="ApplicationManager" ProjectName="VisiWin7.ProcessControls.Development.WPF" SplashWindowEnabled="True" UseTouchkeyboard="True"/>
+            <system:Double x:Key="ControlHeight">125</system:Double>
+            <system:Double x:Key="ControlWidth">350</system:Double>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

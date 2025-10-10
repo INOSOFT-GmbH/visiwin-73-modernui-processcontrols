@@ -8,7 +8,7 @@
     xmlns:adapter="clr-namespace:HMI.Adapter"
     mc:Ignorable="d"
     DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
-    d:DesignWidth="1024" d:DesignHeight="588">
+    d:DesignWidth="1920" d:DesignHeight="880">
 
     <vw:View.Resources>
 
@@ -85,22 +85,22 @@
 
             <StackPanel Orientation="Vertical">
 
-                <GroupBox Header="Heat Exchanger Types"
+                <vw:GroupBox Header="@Views.ProcessControls.HeatExchangerTypes" Foreground="{DynamicResource ForegroundDarkBrush}"
                           FontSize="{DynamicResource FontSize_Subheader}"
                           FontWeight="SemiBold"
                           Margin="0,0,0,30">
 
-                    <GroupBox.HeaderTemplate>
+                    <vw:GroupBox.HeaderTemplate>
                         <DataTemplate>
                             <Border Background="{DynamicResource Blue4Brush}"
                                     CornerRadius="3"
                                     Padding="10,5">
-                                <TextBlock Text="{Binding}"
+                                <vw:TextBlock LocalizableText="{Binding}"
                                            FontWeight="SemiBold"
                                            Foreground="{DynamicResource Blue5Brush}" />
                             </Border>
                         </DataTemplate>
-                    </GroupBox.HeaderTemplate>
+                    </vw:GroupBox.HeaderTemplate>
 
                     <Border Background="{DynamicResource Gray4Brush}"
                             CornerRadius="{DynamicResource CornerRadius}"
@@ -121,16 +121,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Heat Exchanger"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:HeatExchanger Width="150" Height="80" 
+                                    
+                                    <pc:HeatExchanger Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                       StructVariableName="ExchangerOne" 
                                                       StateBrushes="{StaticResource ProcessControlStates}"
                                                       Mapping="{StaticResource HeatExchangerMapping}"
-                                                      HorizontalAlignment="Center" />
+                                                      HorizontalAlignment="Center" LocalizableLabelText="@Variables.HeatExchanger"/>
                                 </StackPanel>
 
                             </Border>
@@ -149,17 +145,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Heat Exchanger (No Crossing)"
-                                               FontSize="{DynamicResource FontSize_Caption}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10"
-                                               TextWrapping="Wrap" />
-                                    <pc:HeatExchangerWithoutCrossingFlow Width="150" Height="80" 
+                                    
+                                    <pc:HeatExchangerWithoutCrossingFlow Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                                          StructVariableName="ExchangerOne" 
                                                                          StateBrushes="{StaticResource ProcessControlStates}"
                                                                          Mapping="{StaticResource HeatExchangerWithoutCrossingFlowMapping}"
-                                                                         HorizontalAlignment="Center" />
+                                                                         HorizontalAlignment="Center" LocalizableLabelText="@Variables.HeatExchangerWithoutCrossingFlow"/>
                                 </StackPanel>
 
                             </Border>
@@ -178,17 +169,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Heat Exchanger Tubes"
-                                               FontSize="{DynamicResource FontSize_Caption}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10"
-                                               TextWrapping="Wrap" />
-                                    <pc:HeatExchangerTubes Width="150" Height="80" 
+                                    
+                                    <pc:HeatExchangerTubes Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                            StructVariableName="ExchangerOne" 
                                                            StateBrushes="{StaticResource ProcessControlStates}"
                                                            Mapping="{StaticResource HeatExchangerTubesMapping}"
-                                                           HorizontalAlignment="Center" />
+                                                           HorizontalAlignment="Center" LocalizableLabelText="@Variables.HeatExchangerTubes"/>
                                 </StackPanel>
 
                             </Border>
@@ -207,16 +193,11 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Burner"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Burner Width="150" Height="80" 
+                                    <pc:Burner Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                StructVariableName="ExchangerOne" 
                                                StateBrushes="{StaticResource ProcessControlStates}"
                                                Mapping="{StaticResource BurnerMapping}"
-                                               HorizontalAlignment="Center" />
+                                               HorizontalAlignment="Center" LocalizableLabelText="@Variables.Burner"/>
                                 </StackPanel>
 
                             </Border>
@@ -235,16 +216,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Cooler"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Cooler Width="150" Height="80" 
+                                    
+                                    <pc:Cooler Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                StructVariableName="ExchangerOne" 
                                                StateBrushes="{StaticResource ProcessControlStates}"
                                                Mapping="{StaticResource CoolerMapping}"
-                                               HorizontalAlignment="Center" />
+                                               HorizontalAlignment="Center" LocalizableLabelText="@Variables.Cooler"/>
                                 </StackPanel>
 
                             </Border>
@@ -263,16 +240,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Cooling Tower"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:CoolingTower Width="150" Height="80" 
+
+                                    <pc:CoolingTower Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                      StructVariableName="ExchangerOne" 
                                                      StateBrushes="{StaticResource ProcessControlStates}"
                                                      Mapping="{StaticResource CoolingTowerMapping}"
-                                                     HorizontalAlignment="Center" />
+                                                     HorizontalAlignment="Center" LocalizableLabelText="@Variables.CoolingTower"/>
                                 </StackPanel>
 
                             </Border>
@@ -291,17 +264,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Spray Cooling Tower"
-                                               FontSize="{DynamicResource FontSize_Caption}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10"
-                                               TextWrapping="Wrap" />
-                                    <pc:SprayCoolingTower Width="150" Height="80" 
+                                   
+                                    <pc:SprayCoolingTower Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                           StructVariableName="ExchangerOne" 
                                                           StateBrushes="{StaticResource ProcessControlStates}"
                                                           Mapping="{StaticResource CoolingTowerMapping}"
-                                                          HorizontalAlignment="Center" />
+                                                          HorizontalAlignment="Center" LocalizableLabelText="@Variables.SprayCoolingTower"/>
                                 </StackPanel>
 
                             </Border>
@@ -320,17 +288,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Cooling Tower with Inlet"
-                                               FontSize="{DynamicResource FontSize_Caption}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10"
-                                               TextWrapping="Wrap" />
-                                    <pc:CoolingTowerWithInlet Width="150" Height="80" 
+                                   
+                                    <pc:CoolingTowerWithInlet Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                               StructVariableName="ExchangerOne" 
                                                               StateBrushes="{StaticResource ProcessControlStates}"
                                                               Mapping="{StaticResource CoolingTowerWithInletMapping}"
-                                                              HorizontalAlignment="Center" />
+                                                              HorizontalAlignment="Center" LocalizableLabelText="@Variables.CoolingTowerWithInlet"/>
                                 </StackPanel>
 
                             </Border>
@@ -339,7 +302,7 @@
 
                     </Border>
 
-                </GroupBox>
+                </vw:GroupBox>
 
             </StackPanel>
 

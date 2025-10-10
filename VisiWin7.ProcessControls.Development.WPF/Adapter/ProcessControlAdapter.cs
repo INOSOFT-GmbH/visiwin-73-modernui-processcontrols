@@ -11,7 +11,7 @@ namespace HMI.Adapter
     [ExportAdapter(nameof(ProcessControlAdapter))]
     public class ProcessControlAdapter : AdapterBase
     {
-        private bool isFrameTemplateActive;
+        private bool isFrameTemplateActive = true;
 
         /// <summary>
         /// Gets or sets a value indicating whether the frame template is currently active.

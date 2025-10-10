@@ -8,7 +8,7 @@
     xmlns:adapter="clr-namespace:HMI.Adapter"
     mc:Ignorable="d"
     DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
-    d:DesignWidth="1024" d:DesignHeight="588">
+    d:DesignWidth="1920" d:DesignHeight="880">
 
     <vw:View.Resources>
 
@@ -45,22 +45,22 @@
 
             <StackPanel Orientation="Vertical">
 
-                <GroupBox Header="Pump Types"
+                <vw:GroupBox Header="@Views.ProcessControls.PumpTypes" Foreground="{DynamicResource ForegroundDarkBrush}"
                           FontSize="{DynamicResource FontSize_Subheader}"
                           FontWeight="SemiBold"
                           Margin="0,0,0,30">
 
-                    <GroupBox.HeaderTemplate>
+                    <vw:GroupBox.HeaderTemplate>
                         <DataTemplate>
                             <Border Background="{DynamicResource Blue4Brush}"
                                     CornerRadius="3"
                                     Padding="10,5">
-                                <TextBlock Text="{Binding}"
+                                <vw:TextBlock LocalizableText="{Binding}"
                                            FontWeight="SemiBold"
                                            Foreground="{DynamicResource Blue5Brush}" />
                             </Border>
                         </DataTemplate>
-                    </GroupBox.HeaderTemplate>
+                    </vw:GroupBox.HeaderTemplate>
 
                     <Border Background="{DynamicResource Gray4Brush}"
                             CornerRadius="{DynamicResource CornerRadius}"
@@ -81,16 +81,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Pump"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Pump Width="150" Height="80" 
+                                    
+                                    <pc:Pump Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                              StructVariableName="PumpOne" 
                                              StateBrushes="{StaticResource ProcessControlStates}"
                                              Mapping="{StaticResource PumpMapping}"
-                                             HorizontalAlignment="Center" />
+                                             HorizontalAlignment="Center" LocalizableLabelText="@Variables.Pump"/>
                                 </StackPanel>
 
                             </Border>
@@ -109,16 +105,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Compressor"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Compressor Width="150" Height="80" 
+                                    
+                                    <pc:Compressor Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                    StructVariableName="PumpOne" 
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource CompressorMapping}"
-                                                   HorizontalAlignment="Center" />
+                                                   HorizontalAlignment="Center" LocalizableLabelText="@Variables.Compressor"/>
                                 </StackPanel>
 
                             </Border>
@@ -137,16 +129,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Fan"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Fan Width="150" Height="80" 
+                                    
+                                    <pc:Fan Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                             StructVariableName="PumpOne" 
                                             StateBrushes="{StaticResource ProcessControlStates}"
                                             Mapping="{StaticResource FanMapping}"
-                                            HorizontalAlignment="Center" />
+                                            HorizontalAlignment="Center" LocalizableLabelText="@Variables.Fan"/>
                                 </StackPanel>
 
                             </Border>
@@ -155,7 +143,7 @@
 
                     </Border>
 
-                </GroupBox>
+                </vw:GroupBox>
 
             </StackPanel>
 

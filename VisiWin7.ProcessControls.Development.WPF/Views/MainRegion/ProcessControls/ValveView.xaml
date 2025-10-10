@@ -8,7 +8,7 @@
     xmlns:adapter="clr-namespace:HMI.Adapter"
     mc:Ignorable="d"
     DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
-    d:DesignWidth="1024" d:DesignHeight="588">
+    d:DesignWidth="1920" d:DesignHeight="880">
 
     <vw:View.Resources>
 
@@ -93,22 +93,22 @@
 
             <StackPanel Orientation="Vertical">
 
-                <GroupBox Header="Valve Types"
+                <vw:GroupBox Header="@Views.ProcessControls.ValveTypes" Foreground="{DynamicResource ForegroundDarkBrush}"
                           FontSize="{DynamicResource FontSize_Subheader}"
                           FontWeight="SemiBold"
                           Margin="0,0,0,30">
 
-                    <GroupBox.HeaderTemplate>
+                    <vw:GroupBox.HeaderTemplate>
                         <DataTemplate>
                             <Border Background="{DynamicResource Blue4Brush}"
                                     CornerRadius="3"
                                     Padding="10,5">
-                                <TextBlock Text="{Binding}"
+                                <vw:TextBlock LocalizableText="{Binding}"
                                            FontWeight="SemiBold"
                                            Foreground="{DynamicResource Blue5Brush}" />
                             </Border>
                         </DataTemplate>
-                    </GroupBox.HeaderTemplate>
+                    </vw:GroupBox.HeaderTemplate>
 
                     <Border Background="{DynamicResource Gray4Brush}"
                             CornerRadius="{DynamicResource CornerRadius}"
@@ -129,16 +129,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:Valve Width="150" Height="80" 
+                                    
+                                    <pc:Valve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                               StructVariableName="ValveOne" 
                                               StateBrushes="{StaticResource ProcessControlStates}"
                                               Mapping="{StaticResource DefaultMapping}"
-                                              HorizontalAlignment="Center" />
+                                              HorizontalAlignment="Center" LocalizableLabelText="@Variables.Valve"/>
                                 </StackPanel>
 
                             </Border>
@@ -157,16 +153,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Piston Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:PistonValve Width="150" Height="80" 
+                                    
+                                    <pc:PistonValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                     StructVariableName="ValveOne" 
                                                     StateBrushes="{StaticResource ProcessControlStates}"
                                                     Mapping="{StaticResource PistonValveMapping}"
-                                                    HorizontalAlignment="Center" />
+                                                    HorizontalAlignment="Center" LocalizableLabelText="@Variables.PistonValve"/>
                                 </StackPanel>
 
                             </Border>
@@ -185,16 +177,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Motor Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:MotorValve Width="150" Height="80" 
+                                    
+                                    <pc:MotorValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                    StructVariableName="ValveOne" 
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource MotorValveMapping}"
-                                                   HorizontalAlignment="Center" />
+                                                   HorizontalAlignment="Center" LocalizableLabelText="@Variables.MotorValve"/>
                                 </StackPanel>
 
                             </Border>
@@ -213,16 +201,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Angle Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:AngleValve Width="150" Height="80" 
+                                    
+                                    <pc:AngleValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                    StructVariableName="ValveOne" 
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource AngleValveMapping}"
-                                                   HorizontalAlignment="Center" />
+                                                   HorizontalAlignment="Center" LocalizableLabelText="@Variables.AngleValve"/>
                                 </StackPanel>
 
                             </Border>
@@ -241,16 +225,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Three Way Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:ThreeWayValve x:Name="Test" Width="150" Height="80" 
+                                    
+                                    <pc:ThreeWayValve x:Name="Test" Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                       StructVariableName="ThreeWayValveOne" 
                                                       StateBrushes="{StaticResource ProcessControlStates}"
                                                       Mapping="{StaticResource ThreeWayValveMapping}"
-                                                      HorizontalAlignment="Center" />
+                                                      HorizontalAlignment="Center" LocalizableLabelText="@Variables.ThreeWayValve"/>
                                 </StackPanel>
 
                             </Border>
@@ -269,16 +249,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Globe Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:GlobeValve Width="150" Height="80" 
+                                    
+                                    <pc:GlobeValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                    StructVariableName="ValveOne" 
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource GlobeValveMapping}"
-                                                   HorizontalAlignment="Center" />
+                                                   HorizontalAlignment="Center" LocalizableLabelText="@Variables.GlobeValve"/>
                                 </StackPanel>
 
                             </Border>
@@ -297,16 +273,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Flap Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:FlapValve Width="150" Height="80" 
+                                    
+                                    <pc:FlapValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                   StructVariableName="ValveOne" 
                                                   StateBrushes="{StaticResource ProcessControlStates}"
                                                   Mapping="{StaticResource FlapValveMapping}"
-                                                  HorizontalAlignment="Center" />
+                                                  HorizontalAlignment="Center" LocalizableLabelText="@Variables.FlapValve"/>
                                 </StackPanel>
 
                             </Border>
@@ -325,16 +297,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Gate Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:GateValve Width="150" Height="80" 
+                                    
+                                    <pc:GateValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                   StructVariableName="ValveOne" 
                                                   StateBrushes="{StaticResource ProcessControlStates}"
                                                   Mapping="{StaticResource GateValveMapping}"
-                                                  HorizontalAlignment="Center" />
+                                                  HorizontalAlignment="Center" LocalizableLabelText="@Variables.GateValve"/>
                                 </StackPanel>
 
                             </Border>
@@ -353,16 +321,12 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <TextBlock Text="Ball Valve"
-                                               FontSize="{DynamicResource FontSize_Label}"
-                                               FontWeight="SemiBold"
-                                               HorizontalAlignment="Center"
-                                               Margin="0,0,0,10" />
-                                    <pc:BallValve Width="150" Height="80" 
+                                    
+                                    <pc:BallValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
                                                   StructVariableName="ValveOne" 
                                                   StateBrushes="{StaticResource ProcessControlStates}"
                                                   Mapping="{StaticResource BallValveMapping}"
-                                                  HorizontalAlignment="Center" />
+                                                  HorizontalAlignment="Center" LocalizableLabelText="@Variables.BallValve"/>
                                 </StackPanel>
 
                             </Border>
@@ -371,7 +335,7 @@
 
                     </Border>
 
-                </GroupBox>
+                </vw:GroupBox>
 
             </StackPanel>
 

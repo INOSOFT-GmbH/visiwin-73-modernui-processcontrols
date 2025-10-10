@@ -8,43 +8,7 @@
          xmlns:adapter="clr-namespace:HMI.Adapter"
          mc:Ignorable="d"
          DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
-         d:DesignWidth="1024" d:DesignHeight="588">
-
-    <vw:View.Resources>
-
-        <Style TargetType="pc:Pipe" BasedOn="{StaticResource {x:Type pc:Pipe}}">
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
-                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>
-
-        <Style TargetType="pc:Arrow" BasedOn="{StaticResource {x:Type pc:Arrow}}">
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
-                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>
-
-        <Style TargetType="pc:PipeBridge" BasedOn="{StaticResource {x:Type pc:PipeBridge}}">
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
-                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>
-
-        <Style TargetType="pc:PipeConnection" BasedOn="{StaticResource {x:Type pc:PipeConnection}}">
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding IsFrameTemplateActive}" Value="True">
-                    <Setter Property="Template" Value="{StaticResource FrameProcessControlTemplate}"/>
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>
-
-    </vw:View.Resources>
+         d:DesignWidth="1920" d:DesignHeight="880">
 
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
 
@@ -53,22 +17,22 @@
 
             <StackPanel Orientation="Vertical">
 
-                <GroupBox Header="Pipe System Example"
+                <vw:GroupBox Header="@Views.ProcessControls.PipeSystemExample" Foreground="{DynamicResource ForegroundDarkBrush}"
                           FontSize="{DynamicResource FontSize_Subheader}"
                           FontWeight="SemiBold"
                           Margin="0,0,0,30">
 
-                    <GroupBox.HeaderTemplate>
+                    <vw:GroupBox.HeaderTemplate>
                         <DataTemplate>
                             <Border Background="{DynamicResource Blue4Brush}"
                                     CornerRadius="3"
                                     Padding="10,5">
-                                <TextBlock Text="{Binding}"
+                                <vw:TextBlock LocalizableText="{Binding}"
                                            FontWeight="SemiBold"
                                            Foreground="{DynamicResource Blue5Brush}" />
                             </Border>
                         </DataTemplate>
-                    </GroupBox.HeaderTemplate>
+                    </vw:GroupBox.HeaderTemplate>
 
                     <Border Background="{DynamicResource Gray4Brush}"
                             CornerRadius="{DynamicResource CornerRadius}"
@@ -164,7 +128,7 @@
 
                     </Border>
 
-                </GroupBox>
+                </vw:GroupBox>
 
             </StackPanel>
 
