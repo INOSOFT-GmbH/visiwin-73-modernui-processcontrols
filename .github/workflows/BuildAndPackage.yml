@@ -37,8 +37,10 @@ jobs:
         project: 
           - name: 'VisiWin7.ProcessControls.WPF'
             path: 'VisiWin7.ProcessControls.WPF/VisiWin7.ProcessControls.WPF.csproj'
+            dir: 'VisiWin7.ProcessControls.WPF'
           - name: 'VisiWin7.ProcessControls.Styles.WPF'
             path: 'VisiWin7.ProcessControls.Styles.WPF/VisiWin7.ProcessControls.Styles.WPF.csproj'
+            dir: 'VisiWin7.ProcessControls.Styles.WPF'
     
     steps:
     - name: Checkout
@@ -67,7 +69,12 @@ jobs:
         
         # Update .csproj version
         $content = Get-Content $projectFile -Raw
-        $content = $content -replace '<PackageVersion>.*?</PackageVersion>', "<PackageVersion>$version</PackageVersion>"
+        if ($content -match '<PackageVersion>.*?</PackageVersion>') {
+          $content = $content -replace '<PackageVersion>.*?</PackageVersion>', "<PackageVersion>$version</PackageVersion>"
+        } else {
+          # Add PackageVersion if it doesn't exist
+          $content = $content -replace '(<PropertyGroup[^>]*>)', "`$1`n    <PackageVersion>$version</PackageVersion>"
+        }
         Set-Content $projectFile $content
         
         # Update .nuspec version if exists
@@ -108,7 +115,7 @@ jobs:
       with:
         name: nuget-packages-${{ matrix.project.name }}
         path: |
-          ${{ matrix.project.path | replace('.csproj', '') }}/bin/${{ env.BUILD_CONFIGURATION }}/*.nupkg
+          ${{ matrix.project.dir }}/bin/${{ env.BUILD_CONFIGURATION }}/*.nupkg
         retention-days: 30
 
     - name: Validate NuGet package
@@ -151,7 +158,6 @@ jobs:
         nuget-version: 'latest'
 
     - name: Publish to GitHub Packages
-      if: env.GITHUB_TOKEN != ''
       shell: powershell
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
