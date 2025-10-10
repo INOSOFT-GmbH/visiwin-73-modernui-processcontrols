@@ -340,7 +340,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"
+                    <TextBlock x:Name="TextBlock" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"
                                Foreground="{TemplateBinding Foreground}"
                                Text="{TemplateBinding LabelText}"
                                VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,0,0,10"/>
@@ -363,7 +363,7 @@
         <ControlTemplate.Triggers>
 
             <Trigger Property="LabelText" Value="">
-                <Setter TargetName="PART_ContentPresenter" Property="Visibility" Value="Collapsed"/>
+                <Setter TargetName="TextBlock" Property="Visibility" Value="Collapsed"/>
             </Trigger>
 
             <Trigger Property="Orientation" Value="Top">

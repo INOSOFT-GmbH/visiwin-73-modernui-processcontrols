@@ -159,6 +159,12 @@
     </None>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="README-NuGet-Updated.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   
   <!-- Custom NuGet pack target for Release builds -->
