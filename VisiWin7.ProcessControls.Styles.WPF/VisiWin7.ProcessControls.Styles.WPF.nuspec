@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VisiWin7.ProcessControls.Styles.WPF</id>
+    <version>1.0.0</version>
+    <title>VisiWin7 Process Controls Styles</title>
+    <authors>INOSOFT GmbH</authors>
+    <owners>INOSOFT GmbH</owners>
+    <description>WPF Styles for VisiWin7 Process Controls including pipes, valves, tanks, pumps, and other industrial control elements</description>
+    <projectUrl>https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols</projectUrl>
+    <repository type="git" url="https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols" />
+    <license type="expression">MIT</license>
+    <copyright>Copyright 1994-2025 INOSOFT GmbH</copyright>
+    <tags>VisiWin7 WPF Styles ProcessControls Industrial XAML</tags>
+    <releaseNotes>Initial release of VisiWin7 Process Controls Styles package</releaseNotes>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <readme>README-NuGet-Updated.md</readme>
+    <dependencies>
+      <group targetFramework=".NETFramework4.8">
+        <dependency id="VisiWin7.ProcessControls.WPF" version="1.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- README for NuGet package -->
+    <file src="README-NuGet-Updated.md" target="" />
+    
+    <!-- Assembly -->
+    <file src="bin\Release\VisiWin7.ProcessControls.Styles.WPF.dll" target="lib\net48\VisiWin7.ProcessControls.Styles.WPF.dll" />    
+    
+    <!-- XAML Style files for content -->
+    <file src="ConveyorStyles.xaml" target="content\Styles\ConveyorStyles.xaml" />
+    <file src="EngineStyles.xaml" target="content\Styles\EngineStyles.xaml" />
+    <file src="ExchangerStyles.xaml" target="content\Styles\ExchangerStyles.xaml" />
+    <file src="MechanicalEquipmentStyles.xaml" target="content\Styles\MechanicalEquipmentStyles.xaml" />
+    <file src="PipeStyles.xaml" target="content\Styles\PipeStyles.xaml" />
+    <file src="ProcessControlStyles.xaml" target="content\Styles\ProcessControlStyles.xaml" />
+    <file src="ProcessControlsVariableMapping.xaml" target="content\Styles\ProcessControlsVariableMapping.xaml" />
+    <file src="PumpStyles.xaml" target="content\Styles\PumpStyles.xaml" />
+    <file src="Resources.xaml" target="content\Styles\Resources.xaml" />
+    <file src="Styling.xaml" target="content\Styles\Styling.xaml" />
+    <file src="TankStyles.xaml" target="content\Styles\TankStyles.xaml" />
+    <file src="ValveStyles.xaml" target="content\Styles\ValveStyles.xaml" />
+  </files>
+</package>

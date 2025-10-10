@@ -13,6 +13,25 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
+    
+    <!-- NuGet Package Properties -->
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+    <PackageId>VisiWin7.ProcessControls.Styles.WPF</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>VisiWin7 Process Controls Styles</Title>
+    <Authors>INOSOFT GmbH</Authors>
+    <Company>INOSOFT GmbH</Company>
+    <Product>VisiWin7 Process Controls Styles</Product>
+    <Description>WPF Styles for VisiWin7 Process Controls including pipes, valves, tanks, pumps, and other industrial control elements</Description>
+    <Copyright>Copyright© 1994-2025 INOSOFT® GmbH</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>VisiWin7;WPF;Styles;ProcessControls;Industrial;XAML</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Initial release of VisiWin7 Process Controls Styles package</PackageReleaseNotes>
+    <PackageReadmeFile>README-NuGet-Updated.md</PackageReadmeFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,7 +70,7 @@
     <Reference Include="VisiWin7.PlainStyles.WPF" />
   </ItemGroup>
   <PropertyGroup>
-   <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
+    <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -132,5 +151,23 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="README-NuGet-Updated.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  
+  <!-- Custom NuGet pack target for Release builds -->
+  <Target Name="CreateNuGetPackage" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Message Text="Creating NuGet package automatically..." Importance="high" />
+    
+    <!-- Use working directory approach to avoid path issues -->
+    <Exec Command="nuget.exe pack VisiWin7.ProcessControls.Styles.WPF.nuspec -OutputDirectory bin\Release"
+          WorkingDirectory="$(MSBuildProjectDirectory)"
+          ContinueOnError="false" />
+          
+    <Message Text="NuGet package created in $(OutputPath)" Importance="high" />
+  </Target>
 </Project>
