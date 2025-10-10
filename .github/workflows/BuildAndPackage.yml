@@ -87,7 +87,7 @@ jobs:
 
     - name: Build solution
       run: |
-        msbuild VisiWin7.ProcessControls.sln /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:Platform="Any CPU" /p:RestorePackages=false
+        msbuild VisiWin7.ProcessControls.sln /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:Platform="x86" /p:RestorePackages=false
 
     - name: Create NuGet package for ${{ matrix.project.name }}
       shell: powershell
