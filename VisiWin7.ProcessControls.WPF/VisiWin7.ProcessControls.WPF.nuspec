@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VisiWin7.ProcessControls.WPF</id>
+    <version>1.0.0</version>
+    <title>VisiWin7 Process Controls</title>
+    <authors>INOSOFT GmbH</authors>
+    <owners>INOSOFT GmbH</owners>
+    <description>WPF VisiWin7 Process Controls including pipes, valves, tanks, pumps, and other industrial control elements</description>
+    <projectUrl>https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols</projectUrl>
+    <repository type="git" url="https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols" />
+    <license type="expression">MIT</license>
+    <copyright>Copyright 1994-2025 INOSOFT GmbH</copyright>
+    <tags>VisiWin7 WPF ProcessControls Industrial XAML</tags>
+    <releaseNotes>Initial release of VisiWin7 Process Controls package</releaseNotes>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <readme>README-NuGet-Updated.md</readme>    
+  </metadata>
+  <files>
+    <!-- README for NuGet package -->
+    <file src="README-NuGet-Updated.md" target="" />
+    
+    <!-- Assembly -->
+    <file src="bin\Release\VisiWin7.ProcessControls.WPF.dll" target="lib\net48\VisiWin7.ProcessControls.WPF.dll" />    
+    
+  </files>
+</package>
