@@ -41,4 +41,37 @@ echo The package includes:
 echo - VisiWin7.ProcessControls.Styles.WPF assembly
 echo - All XAML style files
 echo - Dependency on VisiWin7.ProcessControls.WPF
+echo.
+
+REM Optionales Publishing zu GitHub Packages
+set /p PUBLISH_CHOICE="Möchten Sie das Paket zu GitHub Packages hochladen? (y/n): "
+if /i "%PUBLISH_CHOICE%"=="y" (
+    echo.
+    echo ?? Publishing to GitHub Packages...
+    
+    if "%GITHUB_TOKEN%"=="" (
+        echo ? GITHUB_TOKEN environment variable is required!
+        echo Please set it with: set GITHUB_TOKEN=your_token_here
+        pause
+        exit /b 1
+    )
+    
+    REM GitHub Packages Source konfigurieren
+    .\nuget.exe sources add -Name "github" -Source "https://nuget.pkg.github.com/INOSOFT-GmbH/index.json" -Username INOSOFT-GmbH -Password %GITHUB_TOKEN% -StorePasswordInClearText 2>nul
+    
+    REM Alle .nupkg Dateien hochladen
+    for %%f in (bin\Release\*.nupkg) do (
+        echo ?? Uploading %%f...
+        .\nuget.exe push "%%f" -Source "github" -ApiKey %GITHUB_TOKEN% -SkipDuplicate
+        if %ERRORLEVEL% equ 0 (
+            echo ? Successfully published %%f
+        ) else (
+            echo ? Failed to publish %%f
+        )
+    )
+    
+    echo ? Publishing completed!
+    echo ?? View packages at: https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols/packages
+)
+
 pause
