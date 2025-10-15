@@ -5,7 +5,7 @@
 
 Modern WPF controls for industrial process visualization and automation systems. This package provides a comprehensive set of process control elements including valves, pumps, tanks, pipes, and other industrial equipment for use in VisiWin7 and general WPF applications.
 
-## ?? Quick Start
+## Quick Start
 
 ### Installation
 
@@ -63,7 +63,7 @@ Or add to your `.csproj` file:
 </Grid>
 ```
 
-## ?? Available Controls
+## Available Controls
 
 ### Tanks & Vessels
 - **`Tank`** - Rectangular tank with level indicator
@@ -116,7 +116,7 @@ Or add to your `.csproj` file:
 - **`ScrewConveyor`** - Screw conveyor
 - **`CeilingConveyor`** - Overhead conveyor
 
-## ?? Key Features
+## Key Features
 
 ### Process Integration
 - **Variable Mapping**: Bind controls to process variables
@@ -136,7 +136,7 @@ Or add to your `.csproj` file:
 - **Localization**: Multi-language support
 - **Authorization**: Built-in access control
 
-## ?? Data Binding Examples
+## Data Binding Examples
 
 ### Simple Binding
 ```xml
@@ -164,7 +164,7 @@ Or add to your `.csproj` file:
 </pc:Valve>
 ```
 
-## ?? Styling
+## Styling
 
 The controls support full WPF styling and can be customized using standard WPF techniques:
 
@@ -178,17 +178,17 @@ The controls support full WPF styling and can be customized using standard WPF t
 <pc:Tank Style="{StaticResource IndustrialTankStyle}" />
 ```
 
-## ?? Related Packages
+## Related Packages
 
 - **[VisiWin7.ProcessControls.Styles.WPF](https://www.nuget.org/packages/VisiWin7.ProcessControls.Styles.WPF)** - Pre-built styles for enhanced appearance
 
-## ?? Requirements
+## Requirements
 
 - **.NET Framework 4.8** or higher
 - **WPF Application** (Windows Presentation Foundation)
 - **Visual Studio 2019** or higher (recommended)
 
-## ?? Use Cases
+## Use Cases
 
 - **SCADA Systems** - Supervisory control and data acquisition
 - **Process Visualization** - Industrial process monitoring
@@ -196,13 +196,13 @@ The controls support full WPF styling and can be customized using standard WPF t
 - **Training Systems** - Operator training simulators
 - **Engineering Tools** - Process design applications
 
-## ?? Support
+## Support
 
 - **Documentation**: [VisiWin7 Documentation](https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols)
 - **Issues**: [GitHub Issues](https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols/issues)
 - **License**: MIT License
 
-## ?? About INOSOFT
+## About INOSOFT
 
 INOSOFT GmbH is a leading provider of industrial automation and visualization software solutions. VisiWin7 is our flagship HMI/SCADA platform for modern industrial applications.
 

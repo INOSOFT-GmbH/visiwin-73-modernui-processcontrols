@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -15,7 +15,6 @@
     <Deterministic>true</Deterministic>
     
     <!-- NuGet Package Properties -->
-    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
     <PackageId>VisiWin7.ProcessControls.Styles.WPF</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Title>VisiWin7 Process Controls Styles</Title>
@@ -157,17 +156,5 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  
-  <!-- Custom NuGet pack target for Release builds -->
-  <Target Name="CreateNuGetPackage" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
-    <Message Text="Creating NuGet package automatically..." Importance="high" />
-    
-    <!-- Use working directory approach to avoid path issues -->
-    <Exec Command="nuget.exe pack VisiWin7.ProcessControls.Styles.WPF.nuspec -OutputDirectory bin\Release"
-          WorkingDirectory="$(MSBuildProjectDirectory)"
-          ContinueOnError="false" />
-          
-    <Message Text="NuGet package created in $(OutputPath)" Importance="high" />
-  </Target>
-</Project>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /></Project>
+

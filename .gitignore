@@ -389,3 +389,5 @@ UserManagerRuntimeConfig.urc
 #/Data
 
 /References/VisiWin7.View.WPF.xml
+/VisiWin7.ProcessControls.Styles.WPF/nuget.exe
+/VisiWin7.ProcessControls.WPF/nuget.exe

@@ -5,7 +5,7 @@
 
 Professional WPF styles and themes for VisiWin7 Process Controls. This package provides polished, industrial-grade visual styles that enhance the appearance and usability of process control elements in your WPF applications.
 
-## ?? Quick Start
+## Quick Start
 
 ### Installation
 
@@ -68,7 +68,7 @@ Or add to your `.csproj` file:
 </Window>
 ```
 
-## ?? Available Style Collections
+## Available Style Collections
 
 ### Core Styles
 - **`ProcessControlStyles.xaml`** - Base styles for all process controls
@@ -88,7 +88,7 @@ Or add to your `.csproj` file:
 ### Advanced Features
 - **`ProcessControlsVariableMapping.xaml`** - Variable mapping templates
 
-## ?? Style Features
+## Style Features
 
 ### Professional Appearance
 - **Modern Design**: Clean, contemporary industrial look
@@ -108,7 +108,7 @@ Or add to your `.csproj` file:
 - **Border Styles**: Various border and frame options
 - **Background Patterns**: Industrial-appropriate background styles
 
-## ?? Advanced Usage
+## Advanced Usage
 
 ### Custom Style Application
 
@@ -156,7 +156,7 @@ Configure visual states for process values:
 </pc:Pump>
 ```
 
-## ?? Customization Guide
+## Customization Guide
 
 ### Override Default Colors
 
@@ -190,7 +190,7 @@ Extend existing styles:
 </Style>
 ```
 
-## ?? Use Cases
+## Use Cases
 
 - **SCADA Applications** - Professional process visualization
 - **Control Panels** - Operator interface screens
@@ -198,7 +198,7 @@ Extend existing styles:
 - **Engineering Tools** - Process design and documentation
 - **Monitoring Systems** - Real-time process monitoring
 
-## ?? Package Contents
+## Package Contents
 
 ### Style Files
 - Complete style definitions for all process controls
@@ -211,23 +211,23 @@ Extend existing styles:
 - Common process variable bindings
 - State mapping definitions
 
-## ?? Requirements
+## Requirements
 
 - **VisiWin7.ProcessControls.WPF** (automatically installed)
 - **.NET Framework 4.8** or higher
 - **WPF Application** (Windows Presentation Foundation)
 
-## ?? Related Packages
+## Related Packages
 
 - **[VisiWin7.ProcessControls.WPF](https://www.nuget.org/packages/VisiWin7.ProcessControls.WPF)** - Core process control library (automatically included)
 
-## ?? Support
+## Support
 
 - **Documentation**: [VisiWin7 Documentation](https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols)
 - **Issues**: [GitHub Issues](https://github.com/INOSOFT-GmbH/visiwin-73-modernui-processcontrols/issues)
 - **License**: MIT License
 
-## ?? About INOSOFT
+## About INOSOFT
 
 INOSOFT GmbH is a leading provider of industrial automation and visualization software solutions. VisiWin7 is our flagship HMI/SCADA platform for modern industrial applications.
 
