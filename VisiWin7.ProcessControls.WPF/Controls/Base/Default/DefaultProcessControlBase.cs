@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows;
 using VisiWin.DataAccess;
 using VisiWin7.ProcessControls.WPF.States;
@@ -38,7 +39,21 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// Identifies the <see cref="ActualValue"/> dependency property.
         /// </summary>
         public static readonly DependencyProperty ActualValueProperty = DependencyProperty.Register(
-            nameof(ActualValue), typeof(int), typeof(DefaultProcessControlBase), new PropertyMetadata(0));
+            nameof(ActualValue), typeof(int), typeof(DefaultProcessControlBase), new PropertyMetadata(0, OnActualValueChanged));
+
+        /// <summary>
+        /// Static callback for changes to the <see cref="ActualValue"/> property.
+        /// Invokes the instance method to handle the change.
+        /// </summary>
+        /// <param name="d">The dependency object.</param>
+        /// <param name="e">The event data.</param>
+        private static void OnActualValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is DefaultProcessControlBase @this)
+            {
+                @this.OnActualValueChanged(e);
+            }
+        }
 
         /// <summary>
         /// Gets or sets the setpoint value for the process variable.
@@ -78,6 +93,16 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         }
 
         /// <summary>
+        /// Called when the <see cref="ActualValue"/> property changes.
+        /// Updates the control's state based on the new actual value.
+        /// </summary>
+        /// <param name="e">The event arguments containing the old and new values.</param>
+        protected virtual void OnActualValueChanged(DependencyPropertyChangedEventArgs e)
+        {
+            this.UpdateControlStates(this.ActualValue);
+        }
+
+        /// <summary>
         /// Updates the control's state based on a variable value.
         /// </summary>
         /// <param name="variableValue">The value to use for state selection.</param>
@@ -88,6 +113,17 @@ namespace VisiWin7.ProcessControls.WPF.Controls
             {
                 this.UpdateControlStates((int)typeChangedValue);
             }
+        }
+
+        /// <summary>
+        /// Called when the control is loaded. 
+        /// Initializes services and updates the control's state based on the current actual value.
+        /// </summary>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        protected override async Task OnLoaded()
+        {
+            await base.OnLoaded();
+            this.UpdateControlStates(this.ActualValue);
         }
 
         /// <summary>

@@ -14,7 +14,7 @@
         <!--Error + On-->
         <pc:BlinkBrushState Value="5" Brush="LightGreen" IsBlinkEnabled="true"  BlinkBrush="Red"/>
         <!--Default-->
-        <pc:BlinkBrushState  Brush="Magenta" />
+        <pc:BlinkBrushState  Brush="{DynamicResource PrimaryBrush}" />
     </pc:BlinkBrushStateCollection>
 
     <pc:BlinkBrushStateCollection x:Key="CustomProcessControlStates">

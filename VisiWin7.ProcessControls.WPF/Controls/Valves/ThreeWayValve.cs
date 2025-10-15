@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows;
 using VisiWin7.ProcessControls.WPF.States;
 
@@ -34,7 +35,21 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// Identifies the <see cref="ActualValuePortA"/> dependency property.
         /// </summary>
         public static readonly DependencyProperty ActualValuePortAProperty = DependencyProperty.Register(
-            nameof(ActualValuePortA), typeof(int), typeof(ThreeWayValve), new PropertyMetadata(0));
+            nameof(ActualValuePortA), typeof(int), typeof(ThreeWayValve), new PropertyMetadata(0, OnActualValuePortAChanged));
+        
+        /// <summary>
+        /// Static callback for changes to the <see cref="ActualValuePortA"/> property.
+        /// Invokes the instance method to handle the change.
+        /// </summary>
+        /// <param name="d">The dependency object.</param>
+        /// <param name="e">The event data.</param>
+        private static void OnActualValuePortAChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is ThreeWayValve @this)
+            {
+                @this.OnActualValuePortAChanged(e);
+            }
+        }
 
         /// <summary>
         /// Gets or sets the actual value (measured value) for port B.
@@ -50,7 +65,21 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// Identifies the <see cref="ActualValuePortB"/> dependency property.
         /// </summary>
         public static readonly DependencyProperty ActualValuePortBProperty = DependencyProperty.Register(
-            nameof(ActualValuePortB), typeof(int), typeof(ThreeWayValve), new PropertyMetadata(0));
+            nameof(ActualValuePortB), typeof(int), typeof(ThreeWayValve), new PropertyMetadata(0, OnActualValuePortBChanged));
+        
+        /// <summary>
+        /// Static callback for changes to the <see cref="ActualValuePortB"/> property.
+        /// Invokes the instance method to handle the change.
+        /// </summary>
+        /// <param name="d">The dependency object.</param>
+        /// <param name="e">The event data.</param>
+        private static void OnActualValuePortBChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is ThreeWayValve @this)
+            {
+                @this.OnActualValuePortBChanged(e);
+            }
+        }
 
         /// <summary>
         /// Gets or sets the actual value (measured value) for port C.
@@ -66,7 +95,21 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         /// Identifies the <see cref="ActualValuePortC"/> dependency property.
         /// </summary>
         public static readonly DependencyProperty ActualValuePortCProperty = DependencyProperty.Register(
-            nameof(ActualValuePortC), typeof(int), typeof(ThreeWayValve), new PropertyMetadata(0));
+            nameof(ActualValuePortC), typeof(int), typeof(ThreeWayValve), new PropertyMetadata(0, OnActualValuePortCChanged));
+        
+        /// <summary>
+        /// Static callback for changes to the <see cref="ActualValuePortC"/> property.
+        /// Invokes the instance method to handle the change.
+        /// </summary>
+        /// <param name="d">The dependency object.</param>
+        /// <param name="e">The event data.</param>
+        private static void OnActualValuePortCChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is ThreeWayValve @this)
+            {
+                @this.OnActualValuePortCChanged(e);
+            }
+        }
 
         /// <summary>
         /// Gets or sets the setpoint value for port A.
@@ -174,6 +217,50 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         {
             get => (BlinkBrushState)this.GetValue(CurrentStateBrushPortCProperty);
             protected set => this.SetValue(currentStateBrushPortCPropertyKey, value);
+        }
+
+        /// <summary>
+        /// Called when the <see cref="ActualValuePortA"/> property changes.
+        /// Updates the control's state for port A based on the new actual value.
+        /// </summary>
+        /// <param name="e">The event arguments containing the old and new values.</param>
+        protected virtual void OnActualValuePortAChanged(DependencyPropertyChangedEventArgs e)
+        {
+            this.UpdateControlStates(this.ActualValuePortA, currentStateBrushPortAPropertyKey);
+        }
+
+        /// <summary>
+        /// Called when the <see cref="ActualValuePortB"/> property changes.
+        /// Updates the control's state for port B based on the new actual value.
+        /// </summary>
+        /// <param name="e">The event arguments containing the old and new values.</param>
+        protected virtual void OnActualValuePortBChanged(DependencyPropertyChangedEventArgs e)
+        {
+            this.UpdateControlStates(this.ActualValuePortB, currentStateBrushPortBPropertyKey);
+        }
+
+        /// <summary>
+        /// Called when the <see cref="ActualValuePortC"/> property changes.
+        /// Updates the control's state for port C based on the new actual value.
+        /// </summary>
+        /// <param name="e">The event arguments containing the old and new values.</param>
+        protected virtual void OnActualValuePortCChanged(DependencyPropertyChangedEventArgs e)
+        {
+            this.UpdateControlStates(this.ActualValuePortC, currentStateBrushPortCPropertyKey);
+        }
+
+        /// <summary>
+        /// Called when the control is loaded.
+        /// Initializes services and updates the control's state for all ports based on their current actual values.
+        /// </summary>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        protected override async Task OnLoaded()
+        {
+            await base.OnLoaded();
+
+            this.UpdateControlStates(this.ActualValuePortA, currentStateBrushPortAPropertyKey);
+            this.UpdateControlStates(this.ActualValuePortB, currentStateBrushPortBPropertyKey);
+            this.UpdateControlStates(this.ActualValuePortC, currentStateBrushPortCPropertyKey);
         }
 
         /// <summary>
