@@ -5,10 +5,10 @@
 		<DesignTabGroup Name="Process Controls" ImageLarge="Ellipse.png" ImageSmall="EllipseSmall.png" Position="10">
 		<DesignTabGroup.PopUpButtonConfigurations>
 			<PopUpButtonConfiguration Name="Process Controls" ImageLarge="Valve.png" ImageSmall="Valve.png">
-            <ControlAssetInfo Category="Pipe" Description="Pipe" Type="VisiWin7.ProcessControls.WPF.Controls.Pipe" Assembly="VisiWin7.ProcessControls.WPF" />
-            <ControlAssetInfo Category="Pipe" Description="PipeBridge" Type="VisiWin7.ProcessControls.WPF.Controls.PipeBridge" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <ControlAssetInfo Category="Pipe" Description="PipeConnection" Type="VisiWin7.ProcessControls.WPF.Controls.PipeConnection" Assembly="VisiWin7.ProcessControls.WPF"/>
-            <ControlAssetInfo Category="Pipe" Description="Arrow" Type="VisiWin7.ProcessControls.WPF.Controls.Arrow" Assembly="VisiWin7.ProcessControls.WPF"/>
+            <ControlAssetInfo Category="Pipe" Description="Pipe" Type="VisiWin7.ProcessControls.WPF.Controls.Pipe" Assembly="VisiWin7.ProcessControls.WPF"  ImageSmall="Pipe.png" ImageLarge="Pipe.png"/>
+            <ControlAssetInfo Category="Pipe" Description="PipeBridge" Type="VisiWin7.ProcessControls.WPF.Controls.PipeBridge" Assembly="VisiWin7.ProcessControls.WPF"  ImageSmall="PipeBridge.png" ImageLarge="PipeBridge.png"/>
+            <ControlAssetInfo Category="Pipe" Description="PipeConnection" Type="VisiWin7.ProcessControls.WPF.Controls.PipeConnection" Assembly="VisiWin7.ProcessControls.WPF"  ImageSmall="PipeConnection.png" ImageLarge="PipeConnection.png"/>
+            <ControlAssetInfo Category="Pipe" Description="Arrow" Type="VisiWin7.ProcessControls.WPF.Controls.Arrow" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Arrow.png" ImageLarge="Arrow.png"/>
             
             <ControlAssetInfo Category="Valve" Description="Valve" Type="VisiWin7.ProcessControls.WPF.Controls.Valve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="Valve.png" ImageLarge="Valve.png" />
             <ControlAssetInfo Category="Valve" Description="PistonValve" Type="VisiWin7.ProcessControls.WPF.Controls.PistonValve" Assembly="VisiWin7.ProcessControls.WPF" ImageSmall="PistonValve.png" ImageLarge="PistonValve.png"/>
