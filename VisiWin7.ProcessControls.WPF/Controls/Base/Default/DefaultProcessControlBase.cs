@@ -153,10 +153,6 @@ namespace VisiWin7.ProcessControls.WPF.Controls
         protected override void OnVariableValueChanged(object sender, string controlPropertyName, VariableEventArgs variableEventArgs)
         {
             base.OnVariableValueChanged(sender, controlPropertyName, variableEventArgs);
-            if (this.IsAttaching)
-            {
-                return;
-            }
 
             var variableValue = this.Variables[controlPropertyName].Value;
 
