@@ -25,32 +25,61 @@
 
             <vw:NavigationContainer.Items>
 
-                <vw:NavigationContainerItem Width="108" ViewName="EngineView"
-                                            Text="Engine" RegionName="MainRegion" ContextRegionName="ContextRegion"
+                <vw:NavigationContainerItem Width="108" 
+                                            ViewName="EngineView"
+                                            RegionName="MainRegion" 
+                                            Text="Engine" 
+                                            ContextRegionName="ContextRegion"
                                             ContextViewName="EngineViewContext" IsChecked="True" />
 
-                <vw:NavigationContainerItem Width="108" ViewName="ConveyorView" Text="Conveyor" ContextRegionName="ContextRegion"
-                                            ContextViewName="ConveyorViewContext" RegionName="MainRegion" />
+                <vw:NavigationContainerItem Width="108" 
+                                            ViewName="ConveyorView" 
+                                            RegionName="MainRegion"  
+                                            Text="Conveyor" 
+                                            ContextRegionName="ContextRegion"
+                                            ContextViewName="ConveyorViewContext"/>
 
-                <vw:NavigationContainerItem Width="108" ViewName="HeatExchangerView" ContextRegionName="ContextRegion"
-                                            ContextViewName="HeatExchangerViewContext" Text="Exchanger"
-                                            RegionName="MainRegion" />
+                <vw:NavigationContainerItem Width="108" 
+                                            ViewName="HeatExchangerView" 
+                                            RegionName="MainRegion" 
+                                            Text="Exchanger"
+                                            ContextRegionName="ContextRegion"
+                                            ContextViewName="HeatExchangerViewContext" />
 
-                <vw:NavigationContainerItem Width="108" ViewName="MechanicalEquipmentView" ContextRegionName="ContextRegion"
-                                            ContextViewName="MechanicalEquipmentViewContext" Text="Equipment"
-                                            RegionName="MainRegion" />
+                <vw:NavigationContainerItem Width="108" 
+                                            ViewName="MechanicalEquipmentView"
+                                            RegionName="MainRegion" 
+                                            Text="Equipment"
+                                            ContextRegionName="ContextRegion"
+                                            ContextViewName="MechanicalEquipmentViewContext" />
 
-                <vw:NavigationContainerItem Width="108" ViewName="PipeView" ContextRegionName="ContextRegion"
-                                            ContextViewName="PipeViewContext" Text="Pipe" RegionName="MainRegion" />
+                <vw:NavigationContainerItem Width="108" 
+                                            ViewName="PipeView" 
+                                            RegionName="MainRegion"
+                                            Text="Pipe" 
+                                            ContextRegionName="ContextRegion"
+                                            ContextViewName="PipeViewContext" />
 
-                <vw:NavigationContainerItem Width="108" ViewName="PumpView" ContextRegionName="ContextRegion"
-                                            ContextViewName="PumpViewContext" Text="Pump" RegionName="MainRegion" />
+                <vw:NavigationContainerItem Width="108" 
+                                            ViewName="PumpView" 
+                                            RegionName="MainRegion" 
+                                            Text="Pump" 
+                                            ContextRegionName="ContextRegion"
+                                            ContextViewName="PumpViewContext" />
 
-                <vw:NavigationContainerItem Width="108" ViewName="TankView" ContextRegionName="ContextRegion"
-                                            ContextViewName="TankViewContext" Text="Tank" RegionName="MainRegion" />
+                <vw:NavigationContainerItem Width="108" 
+                                            ViewName="TankView" 
+                                            RegionName="MainRegion" 
+                                            Text="Tank" 
+                                            ContextRegionName="ContextRegion"
+                                            ContextViewName="TankViewContext" />
 
-                <vw:NavigationContainerItem Width="108" ViewName="ValveView" ContextRegionName="ContextRegion"
-                                            ContextViewName="ValveViewContext" Text="Valve" RegionName="MainRegion" />
+                <vw:NavigationContainerItem Width="108" 
+                                            ViewName="ValveView" 
+                                            RegionName="MainRegion"
+                                            Text="Valve"  
+                                            ContextRegionName="ContextRegion"
+                                            ContextViewName="ValveViewContext"/>
 
             </vw:NavigationContainer.Items>
 

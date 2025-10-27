@@ -82,7 +82,7 @@
 
                                 <StackPanel>
                                    
-                                    <pc:BeltConveyor Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:BeltConveyor Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                      StructVariableName="ConveyorOne" 
                                                      StateBrushes="{StaticResource ProcessControlStates}"
                                                      Mapping="{StaticResource BeltConveyorMapping}"
@@ -106,7 +106,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:ScrewConveyor Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:ScrewConveyor Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                       StructVariableName="ConveyorOne" 
                                                       StateBrushes="{StaticResource ProcessControlStates}"
                                                       Mapping="{StaticResource ScrewConveyorMapping}"
@@ -130,7 +130,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:CeilingConveyor Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:CeilingConveyor Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                         StructVariableName="ConveyorOne" 
                                                         StateBrushes="{StaticResource ProcessControlStates}"
                                                         Mapping="{StaticResource CeilingConveyorMapping}"

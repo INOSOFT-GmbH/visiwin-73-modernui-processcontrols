@@ -8,7 +8,7 @@
         <!--On-->
         <pc:BlinkBrushState Value="2" Brush="LightGreen" />
         <!--Error-->
-        <pc:BlinkBrushState Value="3" Brush="Red" IsBlinkEnabled="true"/>
+        <pc:BlinkBrushState Value="3" Brush="Blue" IsBlinkEnabled="true" BlinkBrush="Red"/>
         <!--Error + Off-->
         <pc:BlinkBrushState Value="4" Brush="LightGray" IsBlinkEnabled="true" BlinkBrush="Red"/>
         <!--Error + On-->
@@ -23,7 +23,7 @@
         <!--Aus-->
         <pc:BlinkBrushState Value="2" Brush="LightGreen" />
         <!--Fehler-->
-        <pc:BlinkBrushState Value="4" Brush="Red" IsBlinkEnabled="true"/>
+        <pc:BlinkBrushState Value="4" Brush="Blue" IsBlinkEnabled="true" BlinkBrush="Red"/>
         <!--Fehler + AUS-->
         <pc:BlinkBrushState Value="5" Brush="DarkGray" IsBlinkEnabled="true" BlinkBrush="Maroon"/>
         <!--Fehler + EIN-->

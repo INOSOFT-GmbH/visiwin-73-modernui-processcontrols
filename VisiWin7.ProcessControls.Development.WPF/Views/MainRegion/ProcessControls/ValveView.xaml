@@ -130,7 +130,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:Valve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:Valve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                               StructVariableName="ValveOne" 
                                               StateBrushes="{StaticResource ProcessControlStates}"
                                               Mapping="{StaticResource DefaultMapping}"
@@ -154,7 +154,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:PistonValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:PistonValve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                     StructVariableName="ValveOne" 
                                                     StateBrushes="{StaticResource ProcessControlStates}"
                                                     Mapping="{StaticResource PistonValveMapping}"
@@ -178,7 +178,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:MotorValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:MotorValve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                    StructVariableName="ValveOne" 
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource MotorValveMapping}"
@@ -202,7 +202,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:AngleValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:AngleValve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                    StructVariableName="ValveOne" 
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource AngleValveMapping}"
@@ -226,7 +226,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:ThreeWayValve x:Name="Test" Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:ThreeWayValve x:Name="Test" Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                       StructVariableName="ThreeWayValveOne" 
                                                       StateBrushes="{StaticResource ProcessControlStates}"
                                                       Mapping="{StaticResource ThreeWayValveMapping}"
@@ -250,7 +250,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:GlobeValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:GlobeValve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                    StructVariableName="ValveOne" 
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource GlobeValveMapping}"
@@ -274,7 +274,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:FlapValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:FlapValve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                   StructVariableName="ValveOne" 
                                                   StateBrushes="{StaticResource ProcessControlStates}"
                                                   Mapping="{StaticResource FlapValveMapping}"
@@ -298,7 +298,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:GateValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:GateValve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                   StructVariableName="ValveOne" 
                                                   StateBrushes="{StaticResource ProcessControlStates}"
                                                   Mapping="{StaticResource GateValveMapping}"
@@ -322,7 +322,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:BallValve Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:BallValve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                   StructVariableName="ValveOne" 
                                                   StateBrushes="{StaticResource ProcessControlStates}"
                                                   Mapping="{StaticResource BallValveMapping}"

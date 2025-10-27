@@ -73,7 +73,7 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <pc:Motor Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}"
+                                    <pc:Motor Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}"
                                           StructVariableName="EngineOne"
                                           StateBrushes="{StaticResource ProcessControlStates}"
                                           Mapping="{StaticResource MotorMapping}"
@@ -97,7 +97,7 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <pc:Turbine Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}"
+                                    <pc:Turbine Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}"
                                             StructVariableName="EngineOne"
                                             StateBrushes="{StaticResource ProcessControlStates}"
                                             Mapping="{StaticResource TurbineMapping}"

@@ -82,7 +82,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:Pump Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:Pump Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                              StructVariableName="PumpOne" 
                                              StateBrushes="{StaticResource ProcessControlStates}"
                                              Mapping="{StaticResource PumpMapping}"
@@ -106,7 +106,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:Compressor Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:Compressor Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                    StructVariableName="PumpOne" 
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource CompressorMapping}"
@@ -130,7 +130,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:Fan Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:Fan Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                             StructVariableName="PumpOne" 
                                             StateBrushes="{StaticResource ProcessControlStates}"
                                             Mapping="{StaticResource FanMapping}"

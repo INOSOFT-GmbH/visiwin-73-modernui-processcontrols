@@ -8,6 +8,7 @@
          xmlns:adapter="clr-namespace:HMI.Adapter"
          mc:Ignorable="d"
          DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
+         UseLayoutRounding="True" SnapsToDevicePixels="True"
          d:DesignWidth="1920" d:DesignHeight="880">
 
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}">
@@ -17,10 +18,11 @@
 
             <StackPanel Orientation="Vertical">
 
-                <vw:GroupBox Header="@Views.ProcessControls.PipeSystemExample" Foreground="{DynamicResource ForegroundDarkBrush}"
-                          FontSize="{DynamicResource FontSize_Subheader}"
-                          FontWeight="SemiBold"
-                          Margin="0,0,0,30">
+                <vw:GroupBox Header="@Views.ProcessControls.PipeSystemExample"
+                             Foreground="{DynamicResource ForegroundDarkBrush}"
+                             FontSize="{DynamicResource FontSize_Subheader}"
+                             FontWeight="SemiBold"
+                             Margin="0,0,0,30">
 
                     <vw:GroupBox.HeaderTemplate>
                         <DataTemplate>
@@ -28,8 +30,8 @@
                                     CornerRadius="3"
                                     Padding="10,5">
                                 <vw:TextBlock LocalizableText="{Binding}"
-                                           FontWeight="SemiBold"
-                                           Foreground="{DynamicResource Blue5Brush}" />
+                                              FontWeight="SemiBold"
+                                              Foreground="{DynamicResource Blue5Brush}" />
                             </Border>
                         </DataTemplate>
                     </vw:GroupBox.HeaderTemplate>
@@ -54,69 +56,90 @@
 
                             <Grid Width="354" Height="229">
 
-                                <pc:Pipe Width="100" Height="6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,78,0,0"
+                                <pc:Pipe Width="95" Height="11" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                         Margin="145,78,0,0"
                                          StructVariableName="PipeOne"
                                          StateBrushes="{StaticResource ProcessControlStates}"
                                          Mapping="{StaticResource PipeMapping}"
-                                         Orientation="Right" />
+                                         Orientation="Right"
+                                         Template="{StaticResource NotificationLessBaseControlTemplate}" />
 
-                                <pc:Pipe Width="8" Height="121" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,80,0,0"
+                                <pc:Pipe Width="11" Height="121" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                         Margin="145,80,0,0"
                                          StructVariableName="PipeOne"
                                          StateBrushes="{StaticResource ProcessControlStates}"
-                                         Mapping="{StaticResource PipeMapping}" />
+                                         Mapping="{StaticResource PipeMapping}"
+                                         Template="{StaticResource NotificationLessBaseControlTemplate}" />
 
-                                <pc:Arrow Width="30" Height="26" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="134,183,0,0"
+                                <pc:Arrow Width="30" Height="26" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                          Margin="135,183,0,0"
                                           StructVariableName="PipeOne"
                                           StateBrushes="{StaticResource ProcessControlStates}"
                                           Mapping="{StaticResource ArrowMapping}" />
 
-                                <pc:Pipe Height="182" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="254,19,0,0" Width="8"
+                                <pc:Pipe HorizontalAlignment="Left" VerticalAlignment="Top"
+                                         Margin="253,19,0,0" Width="11"
                                          StructVariableName="PipeOne"
                                          StateBrushes="{StaticResource ProcessControlStates}"
-                                         Mapping="{StaticResource PipeMapping}" />
+                                         Mapping="{StaticResource PipeMapping}"
+                                         Template="{StaticResource NotificationLessBaseControlTemplate}" d:LayoutOverrides="Height" />
 
-                                <pc:Pipe Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="274,77,0,0" Height="7"
-                                         StructVariableName="PipeOne"
-                                         StateBrushes="{StaticResource ProcessControlStates}"
-                                         Mapping="{StaticResource PipeMapping}" />
-
-                                <pc:PipeBridge Width="37" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                <pc:PipeBridge Width="56" Height="41" HorizontalAlignment="Left"
+                                               VerticalAlignment="Top"
+                                               Margin="124,112,0,0"
+                                               StrokeThickness="10"
                                                StructVariableName="PipeOne"
                                                StateBrushes="{StaticResource ProcessControlStates}"
-                                               Mapping="{StaticResource PipeBridgeMapping}"
-                                               Margin="241,54,0,0"
-                                               StrokeThickness="4" />
+                                               Template="{StaticResource NotificationLessBaseControlTemplate}"
+                                               Mapping="{StaticResource PipeBridgeMapping}" />
 
-                                <pc:Pipe Width="174" Height="10" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="174,134,0,0"
+                                <pc:Pipe Width="80" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                         Margin="276,78,0,0" Height="11"
                                          StructVariableName="PipeOne"
                                          StateBrushes="{StaticResource ProcessControlStates}"
-                                         Mapping="{StaticResource PipeMapping}" />
+                                         Mapping="{StaticResource PipeMapping}"
+                                         Template="{StaticResource NotificationLessBaseControlTemplate}" />
 
-                                <pc:PipeConnection Width="16" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,130,0,0"
+                                <pc:Pipe Height="11" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                         Margin="174,133,0,0"
+                                         StructVariableName="PipeOne"
+                                         StateBrushes="{StaticResource ProcessControlStates}"
+                                         Mapping="{StaticResource PipeMapping}"
+                                         Template="{StaticResource NotificationLessBaseControlTemplate}" />
+
+                                <pc:PipeConnection Width="16" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                   Margin="250,130,0,0"
                                                    StructVariableName="PipeOne"
                                                    StateBrushes="{StaticResource ProcessControlStates}"
                                                    Mapping="{StaticResource PipeConnectionMapping}"
+                                                   Template="{StaticResource NotificationLessBaseControlTemplate}"
                                                    Height="18" />
 
-                                <pc:Pipe Width="120" Height="12" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,132,0,0"
+                                <pc:Pipe Width="120" Height="12" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                         Margin="10,132,0,0"
                                          StructVariableName="PipeOne"
                                          StateBrushes="{StaticResource ProcessControlStates}"
+                                         Template="{StaticResource NotificationLessBaseControlTemplate}"
                                          Mapping="{StaticResource PipeMapping}" />
 
-                                <pc:PipeBridge Width="56" Height="41" HorizontalAlignment="Left" VerticalAlignment="Top"
-                                               Margin="124,107,0,0"
-                                               StrokeThickness="4"
+                                <pc:PipeBridge Width="56" Height="41" HorizontalAlignment="Left"
+                                               VerticalAlignment="Top"
+                                               Margin="230,52,0,0"
+                                               StrokeThickness="10"
                                                StructVariableName="PipeOne"
                                                StateBrushes="{StaticResource ProcessControlStates}"
-                                               Mapping="{StaticResource PipeBridgeMapping}" />
+                                               Template="{StaticResource NotificationLessBaseControlTemplate}"
+                                               Mapping="{StaticResource PipeBridgeMapping}" d:LayoutOverrides="VerticalAlignment" />
 
-                                <pc:Arrow Width="20" Height="42" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,117,0,0"
+                                <pc:Arrow Width="20" Height="42" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                          Margin="0,117,0,0"
                                           Orientation="Left"
                                           StructVariableName="PipeOne"
                                           StateBrushes="{StaticResource ProcessControlStates}"
                                           Mapping="{StaticResource ArrowMapping}" />
 
-                                <pc:Arrow Height="47" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="243,0,0,0" Width="31"
+                                <pc:Arrow Height="47" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                          Margin="243,0,0,0" Width="31"
                                           Orientation="Bottom"
                                           StructVariableName="PipeOne"
                                           StateBrushes="{StaticResource ProcessControlStates}"

@@ -122,7 +122,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:HeatExchanger Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:HeatExchanger Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                       StructVariableName="ExchangerOne" 
                                                       StateBrushes="{StaticResource ProcessControlStates}"
                                                       Mapping="{StaticResource HeatExchangerMapping}"
@@ -146,7 +146,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:HeatExchangerWithoutCrossingFlow Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:HeatExchangerWithoutCrossingFlow Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                                          StructVariableName="ExchangerOne" 
                                                                          StateBrushes="{StaticResource ProcessControlStates}"
                                                                          Mapping="{StaticResource HeatExchangerWithoutCrossingFlowMapping}"
@@ -170,7 +170,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:HeatExchangerTubes Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:HeatExchangerTubes Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                            StructVariableName="ExchangerOne" 
                                                            StateBrushes="{StaticResource ProcessControlStates}"
                                                            Mapping="{StaticResource HeatExchangerTubesMapping}"
@@ -193,7 +193,7 @@
                                 </Border.Effect>
 
                                 <StackPanel>
-                                    <pc:Burner Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:Burner Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                StructVariableName="ExchangerOne" 
                                                StateBrushes="{StaticResource ProcessControlStates}"
                                                Mapping="{StaticResource BurnerMapping}"
@@ -217,7 +217,7 @@
 
                                 <StackPanel>
                                     
-                                    <pc:Cooler Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:Cooler Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                StructVariableName="ExchangerOne" 
                                                StateBrushes="{StaticResource ProcessControlStates}"
                                                Mapping="{StaticResource CoolerMapping}"
@@ -241,7 +241,7 @@
 
                                 <StackPanel>
 
-                                    <pc:CoolingTower Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:CoolingTower Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                      StructVariableName="ExchangerOne" 
                                                      StateBrushes="{StaticResource ProcessControlStates}"
                                                      Mapping="{StaticResource CoolingTowerMapping}"
@@ -265,7 +265,7 @@
 
                                 <StackPanel>
                                    
-                                    <pc:SprayCoolingTower Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:SprayCoolingTower Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                           StructVariableName="ExchangerOne" 
                                                           StateBrushes="{StaticResource ProcessControlStates}"
                                                           Mapping="{StaticResource CoolingTowerMapping}"
@@ -289,7 +289,7 @@
 
                                 <StackPanel>
                                    
-                                    <pc:CoolingTowerWithInlet Width="{StaticResource ControlWidth}" Height="{StaticResource ControlHeight}" 
+                                    <pc:CoolingTowerWithInlet Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                                               StructVariableName="ExchangerOne" 
                                                               StateBrushes="{StaticResource ProcessControlStates}"
                                                               Mapping="{StaticResource CoolingTowerWithInletMapping}"
