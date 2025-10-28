@@ -31,6 +31,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\Development\bin\</ReferencePath>
+    <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime\</ReferencePath>
+    <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\Development\bin\AddIns\WPFDesignAddIn\</ReferencePath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
