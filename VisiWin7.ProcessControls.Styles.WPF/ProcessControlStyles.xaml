@@ -374,8 +374,22 @@
 
         <Grid ClipToBounds="False">
 
-            <ContentPresenter x:Name="PART_ContentPresenter" ContentTemplate="{DynamicResource StyleTemplate}"
-                              Margin="{TemplateBinding Padding}" />
+            <Grid Margin="{TemplateBinding Padding}" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="TextBlock" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"
+                           Foreground="{TemplateBinding Foreground}"
+                           Text="{TemplateBinding LabelText}"
+                           VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+                <ContentPresenter Grid.Row="1" x:Name="PART_ContentPresenter"
+                                  ContentTemplate="{DynamicResource StyleTemplate}" />
+
+            </Grid>
 
             <vw:NotificationItem x:Name="NotificationItem" Background="{DynamicResource ErrorBrush}"
                                  NotificationElement="!" Style="{StaticResource ErrorNotificationItem}"
@@ -385,6 +399,10 @@
         </Grid>
 
         <ControlTemplate.Triggers>
+
+            <Trigger Property="LabelText" Value="">
+                <Setter TargetName="TextBlock" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
 
             <Trigger Property="Orientation" Value="Top">
                 <Setter Property="LayoutTransform" TargetName="PART_ContentPresenter">
