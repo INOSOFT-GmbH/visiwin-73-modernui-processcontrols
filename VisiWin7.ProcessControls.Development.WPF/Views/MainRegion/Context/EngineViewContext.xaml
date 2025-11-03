@@ -5,8 +5,7 @@
          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
          xmlns:vw="http://inosoft.com/visiwin7"
          xmlns:adapter="clr-namespace:HMI.Adapter"
-         mc:Ignorable="d"
-         d:DesignWidth="1920" d:DesignHeight="880">
+         mc:Ignorable="d">
 
     <Grid x:Name="LayoutRoot" Background="{DynamicResource ApplicationBackgroundBrush}" Margin="10">
 
@@ -31,11 +30,16 @@
 
                 <Grid>
 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
                     <vw:Switch x:Name="Switch" LocalizableText="@Views.ProcessControls.FrameTemplateActive" HorizontalAlignment="Left" Margin="10"
                                DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
                                IsChecked="{Binding IsFrameTemplateActive, Mode=TwoWay}" />
 
-                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
 
                         <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                VariableName="EngineOne{.ActualValue}"

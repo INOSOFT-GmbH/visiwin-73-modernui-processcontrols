@@ -7,7 +7,8 @@
 	mc:Ignorable="d"
     WindowStyle="None"
     WindowState="Maximized" 
-    WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen" d:DesignWidth="1920" d:DesignHeight="880"
+	Background="{DynamicResource ApplicationBackgroundBrush}">
 	
 	<Grid x:Name="LayoutRoot" UseLayoutRounding="True">
 		<Grid.RowDefinitions>
@@ -16,9 +17,9 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-		<vw:Region x:Name="MainRegion" Grid.Row="1" />
+		<vw:Region x:Name="MainRegion" Grid.Row="1" DesignTimeView="EngineView"/>
 		<vw:Region x:Name="HeaderRegion" StartView="HeaderView" DesignTimeView="HeaderView" Grid.Row="0" />
-        <vw:Region x:Name="ContextRegion" Grid.Row="2" />
+        <vw:Region x:Name="ContextRegion" Grid.Row="2" DesignTimeView="EngineViewContext"/>
         <vw:Region x:Name="FooterRegion" StartView="FooterView" DesignTimeView="FooterView" Grid.Row="3" />
 		<vw:Region x:Name="DialogRegion" Grid.Row="0" Grid.RowSpan="4" />
 		<vw:Region x:Name="TouchpadRegion" Grid.Row="0" Grid.RowSpan="4" />
