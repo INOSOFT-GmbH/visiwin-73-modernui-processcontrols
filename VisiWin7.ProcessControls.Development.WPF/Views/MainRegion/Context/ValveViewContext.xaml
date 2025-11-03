@@ -34,10 +34,10 @@
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <vw:Switch x:Name="Switch" LabelText="FrameTemplate active" HorizontalAlignment="Left"
+                        <vw:Switch x:Name="Switch" LabelText="FrameTemplate active" HorizontalAlignment="Left" VerticalAlignment="Bottom"
                                    Margin="10"
                                    DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
                                    IsChecked="{Binding IsFrameTemplateActive, Mode=TwoWay}" />
@@ -85,11 +85,16 @@
 
                     <Grid>
 
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
                         <vw:UpDownNumericVarIn UseVariableText="True" Width="300"
                                                VariableName="ThreeWayValveOne{.Errors}"
                                                Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-                        <StackPanel HorizontalAlignment="Right" Orientation="Vertical">
+                        <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical">
 
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
 

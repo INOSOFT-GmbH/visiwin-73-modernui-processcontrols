@@ -32,10 +32,10 @@
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <vw:Switch x:Name="Switch" LocalizableText="@Views.ProcessControls.FrameTemplateActive" HorizontalAlignment="Left" Margin="10"
+                    <vw:Switch x:Name="Switch" LocalizableText="@Views.ProcessControls.FrameTemplateActive" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Bottom"
                                DataContext="{vw:AdapterBinding Type={x:Type adapter:ProcessControlAdapter}}"
                                IsChecked="{Binding IsFrameTemplateActive, Mode=TwoWay}" />
 
