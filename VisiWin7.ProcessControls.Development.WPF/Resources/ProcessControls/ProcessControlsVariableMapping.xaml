@@ -8,6 +8,12 @@
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
+    <pc:VariableNameMappingCollection x:Key="ValveMapping">
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
+    </pc:VariableNameMappingCollection>
+
     <pc:VariableNameMappingCollection x:Key="AngleValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />

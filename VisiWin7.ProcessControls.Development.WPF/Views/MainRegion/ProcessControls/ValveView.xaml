@@ -133,7 +133,7 @@
                                     <pc:Valve Width="{StaticResource ProcessControlWidth}" Height="{StaticResource ProcessControlHeight}" 
                                               StructVariableName="ValveOne" 
                                               StateBrushes="{StaticResource ProcessControlStates}"
-                                              Mapping="{StaticResource DefaultMapping}"
+                                              Mapping="{StaticResource ValveMapping}"
                                               HorizontalAlignment="Center" LocalizableLabelText="@Variables.Valve"/>
                                 </StackPanel>
 
