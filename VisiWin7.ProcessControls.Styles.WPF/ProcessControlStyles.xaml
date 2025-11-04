@@ -381,7 +381,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="TextBlock" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"
+                <TextBlock x:Name="TextBlock" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"
                            Foreground="{TemplateBinding Foreground}"
                            Text="{TemplateBinding LabelText}"
                            VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,0,0,10"/>
@@ -507,7 +507,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock x:Name="TextBlock" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"
+                    <TextBlock x:Name="TextBlock" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"
                                Foreground="{TemplateBinding Foreground}"
                                Text="{TemplateBinding LabelText}"
                                VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,0,0,10"/>
