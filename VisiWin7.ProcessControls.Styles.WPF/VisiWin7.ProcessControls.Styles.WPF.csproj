@@ -68,9 +68,6 @@
     <Reference Include="VisiWin7.View.WPF" />
     <Reference Include="VisiWin7.PlainStyles.WPF" />
   </ItemGroup>
-  <PropertyGroup>
-    <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
-  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

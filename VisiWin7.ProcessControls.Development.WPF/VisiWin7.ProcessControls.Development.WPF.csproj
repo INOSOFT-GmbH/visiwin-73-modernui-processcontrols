@@ -60,9 +60,6 @@
     <Reference Include="System.Windows.Interactivity" />
     <Reference Include="NLog" />
   </ItemGroup>
-  <PropertyGroup>
-    <ReferencePath>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\7.3\Runtime</ReferencePath>
-  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Adapter\ProcessControlAdapter.cs" />
     <Compile Include="App.xaml.cs">
