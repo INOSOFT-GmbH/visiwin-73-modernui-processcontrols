@@ -313,7 +313,6 @@ namespace VisiWin7.ProcessControls.WPF.VW7.Design
 
                     case nameof(ProcessControlBase.LocalizableLabelText):
                         builder.AddCustomAttributes(type, info.Name, new EditorAttribute(typeof(TextDialogPropertyEditor), typeof(DialogPropertyEditor)));
-
                         continue;
                 }
             }

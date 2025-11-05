@@ -390,3 +390,10 @@ UserManagerRuntimeConfig.urc
 /References/VisiWin7.View.WPF.xml
 /VisiWin7.ProcessControls.Styles.WPF/nuget.exe
 /VisiWin7.ProcessControls.WPF/nuget.exe
+/References/ActiproSoftware.Shared.Wpf.xml
+/References/ActiproSoftware.SyntaxEditor.Addons.Xml.Wpf.xml
+/References/ActiproSoftware.SyntaxEditor.Wpf.xml
+/References/ActiproSoftware.Text.Addons.Xml.Wpf.xml
+/References/ActiproSoftware.Text.LLParser.Wpf.xml
+/References/ActiproSoftware.Text.Wpf.xml
+/References/C1.Win.C1FlexGrid.4.xml
