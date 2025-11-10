@@ -18,13 +18,18 @@ namespace VisiWin7.ProcessControls.WPF.Controls
     {
         private string dialogViewName = "ProcessControlDialogView";
         private bool canShowDialog = true;
+        private ObservableDictionary<string, DialogProperty> dialogProperties = new ObservableDictionary<string, DialogProperty>();
 
         /// <summary>
         /// Gets the collection of dialog properties associated with the current instance.
         /// </summary>
         /// <remarks>The collection allows dynamic storage and retrieval of dialog-specific properties by
         /// name. Changes to the collection are observable, enabling UI or logic to react to property updates.</remarks>
-        public ObservableDictionary<string, DialogProperty> DialogProperties { get; } = new ObservableDictionary<string, DialogProperty>();
+        public ObservableDictionary<string, DialogProperty> DialogProperties
+        {
+            get => this.dialogProperties;
+            set => this.SetField(ref this.dialogProperties, value);
+        }
 
         /// <summary>
         /// Gets or sets the name of the dialog view to be used when displaying the process control dialog.
@@ -105,7 +110,7 @@ namespace VisiWin7.ProcessControls.WPF.Controls
                 return;
             }
 
-            this.DialogProperties.Clear();
+            this.DialogProperties = new ObservableDictionary<string, DialogProperty>();
 
             foreach (var mappingEntry in this.Mapping)
             {
