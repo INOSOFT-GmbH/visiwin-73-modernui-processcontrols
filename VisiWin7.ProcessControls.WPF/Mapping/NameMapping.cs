@@ -15,5 +15,10 @@
         /// Gets or sets the name of the control property associated with the variable.
         /// </summary>
         public string ControlPropertyName { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the property is treated as a dialog property.
+        /// </summary>
+        public bool IsDialogProperty { get; set; } = true;
     }
 }

@@ -77,7 +77,8 @@
                                           StructVariableName="EngineOne"
                                           StateBrushes="{StaticResource ProcessControlStates}"
                                           Mapping="{StaticResource MotorMapping}"
-                                          HorizontalAlignment="Center" LocalizableLabelText="@Variables.Engine" />
+                                          HorizontalAlignment="Center" LocalizableLabelText="@Variables.Engine" 
+                                          DialogViewName="EngineControlDialogView"/>
                                 </StackPanel>
 
                             </Border>
@@ -101,7 +102,8 @@
                                             StructVariableName="EngineOne"
                                             StateBrushes="{StaticResource ProcessControlStates}"
                                             Mapping="{StaticResource TurbineMapping}"
-                                            HorizontalAlignment="Center" LocalizableLabelText="@Variables.Turbine"/>
+                                            HorizontalAlignment="Center" LocalizableLabelText="@Variables.Turbine"
+                                            DialogViewName="EngineControlDialogView"/>
                                 </StackPanel>
 
                             </Border>

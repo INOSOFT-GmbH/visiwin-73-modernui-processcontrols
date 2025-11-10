@@ -44,7 +44,7 @@
                                 CornerRadius="{DynamicResource CornerRadius}"
                                 Padding="30"
                                 HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
+                                VerticalAlignment="Center" Margin="10">
 
                             <Border.Effect>
                                 <DropShadowEffect ShadowDepth="2"

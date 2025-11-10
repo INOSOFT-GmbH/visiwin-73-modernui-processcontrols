@@ -60,7 +60,7 @@
 
     <system:Double x:Key="ScrollBarThickness">8</system:Double>
 
-    <system:Double x:Key="ProcessControlHeight">125</system:Double>
+    <system:Double x:Key="ProcessControlHeight">120</system:Double>
     <system:Double x:Key="ProcessControlWidth">350</system:Double>
 
     <SolidColorBrush x:Key="ApplicationBackgroundBrush" Color="{StaticResource ApplicationBackgroundColor}" ice:Freeze="True"/>

@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:pc="http://inosoft.com/ProcessControls"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/VisiWin7.PlainStyles.WPF;component/Styling.xaml" />
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/Resources.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate DataType="{x:Type pc:BoolDialogProperty}">
+        <vw:Switch IsChecked="{Binding PropertyValue, Mode=TwoWay}"
+                   LocalizableLabelText="{Binding LocalizableLabelText, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type pc:IntDialogProperty}">
+        <vw:NumericVarIn RawValue="{Binding PropertyValue, Mode=TwoWay}"
+                         LocalizableLabelText="{Binding LocalizableLabelText, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type pc:StringDialogProperty}">
+        <vw:TextVarIn Value="{Binding PropertyValue, Mode=TwoWay}"
+                      LocalizableLabelText="{Binding LocalizableLabelText, UpdateSourceTrigger=PropertyChanged}" />
+    </DataTemplate>
+
+</ResourceDictionary>

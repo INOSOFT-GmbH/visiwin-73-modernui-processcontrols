@@ -4,236 +4,236 @@
 
     <pc:VariableNameMappingCollection x:Key="DefaultMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="ValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="AngleValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="ArrowMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="BallValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="BeltConveyorMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="BurnerMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="CentrifugalMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="CompressorMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="CoolerMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="CoolingTowerMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="CoolingTowerWithInletMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="DiverterMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="FanMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="FlapValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="GateValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="GlobeValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="MotorValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="PistonValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="PumpMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="RotaryFeederMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="RoundTankMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Volume" VariableName="Volume" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="ScaleMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="SiloMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Volume" VariableName="Volume" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="StirerMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="TankMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Volume" VariableName="Volume" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="PipeBridgeMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="PipeConnectionMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="PipeMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="ThreeWayValveMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValuePortA" VariableName="ActualValuePortA" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortA" VariableName="SetValuePortA" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortA" VariableName="SetValuePortA" IsDialogProperty="false"/>
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValuePortB" VariableName="ActualValuePortB" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortB" VariableName="SetValuePortB" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortB" VariableName="SetValuePortB" IsDialogProperty="false"/>
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValuePortC" VariableName="ActualValuePortC" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortC" VariableName="SetValuePortC" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValuePortC" VariableName="SetValuePortC" IsDialogProperty="false"/>
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="HeatExchangerMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="HeatExchangerTubesMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="HeatExchangerWithoutCrossingFlowMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="ExchangerTubesMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="MotorMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="TurbineMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="ScrewConveyorMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 
     <pc:VariableNameMappingCollection x:Key="CeilingConveyorMapping">
         <pc:VariableNameControlPropertyMapping ControlPropertyName="ActualValue" VariableName="ActualValue" />
-        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" />
+        <pc:VariableNameControlPropertyMapping ControlPropertyName="SetValue" VariableName="SetValue" IsDialogProperty="false" />
         <pc:VariableNameControlPropertyMapping ControlPropertyName="Errors" VariableName="Errors" />
     </pc:VariableNameMappingCollection>
 

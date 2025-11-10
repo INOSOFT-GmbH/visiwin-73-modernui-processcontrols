@@ -91,6 +91,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </None>
+    <Compile Include="Views\DialogRegion\EngineControlDialogView.xaml.cs">
+      <DependentUpon>EngineControlDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DialogRegion\ProcessControlDialogView.xaml.cs">
+      <DependentUpon>ProcessControlDialogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmptyView.xaml.cs">
       <DependentUpon>EmptyView.xaml</DependentUpon>
     </Compile>
@@ -265,6 +271,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\DialogRegion\EngineControlDialogView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DialogRegion\ProcessControlDialogView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\EmptyView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -397,10 +411,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-	<Content Include="VisiWin7.ProcessControls.WPF_AssetConfigurationExtension.xaml">
-	  <Generator>MSBuild:Compile</Generator>
-	  <SubType>Designer</SubType>
-	</Content>
+    <Content Include="VisiWin7.ProcessControls.WPF_AssetConfigurationExtension.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -424,7 +438,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-      <UserProperties VisiWinVersion="7.3" VisiWinProjectName="VisiWin7.ProcessControls.Development.WPF" />
+      <UserProperties VisiWinProjectName="VisiWin7.ProcessControls.Development.WPF" VisiWinVersion="7.3" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

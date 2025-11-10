@@ -12,6 +12,7 @@
         <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ConveyorStyles.xaml"/>
         <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/EngineStyles.xaml"/>
         <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/MechanicalEquipmentStyles.xaml"/>
+        <ResourceDictionary Source="/VisiWin7.ProcessControls.Styles.WPF;component/ProcessControlDialogTemplates.xaml"/>
 
     </ResourceDictionary.MergedDictionaries>
 

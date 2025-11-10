@@ -13,8 +13,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
-	
-	<!-- NuGet Package Properties -->
+    <!-- NuGet Package Properties -->
     <PackageId>VisiWin7.ProcessControls.WPF</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Title>VisiWin7 Process Controls</Title>
@@ -76,6 +75,12 @@
   <ItemGroup>
     <Compile Include="Async\AsyncLock.cs" />
     <Compile Include="Controls\Base\Default\DefaultErrorProcessControlBase.cs" />
+    <Compile Include="Controls\Base\DialogProperties\BoolDialogProperty.cs" />
+    <Compile Include="Controls\Base\DialogProperties\DialogProperty.cs" />
+    <Compile Include="Controls\Base\DialogProperties\DialogPropertyOfT.cs" />
+    <Compile Include="Controls\Base\DialogProperties\IntDialogProperty.cs" />
+    <Compile Include="Controls\Base\ProcessControlBase.Touch.cs" />
+    <Compile Include="Controls\Base\DialogProperties\StringDialogProperty.cs" />
     <Compile Include="Controls\Conveyors\BeltConveyor.cs" />
     <Compile Include="Controls\Conveyors\CeilingConveyor.cs" />
     <Compile Include="Controls\Conveyors\ScrewConveyor.cs" />
@@ -161,5 +166,5 @@
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /></Project>
-
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
