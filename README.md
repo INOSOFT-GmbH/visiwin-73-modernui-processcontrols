@@ -27,7 +27,7 @@ This sample works with and was tested with VisiWin 7 2025-1 and later.
 
 This repository contains six main projects that work together to provide a complete process controls framework:
 
-### [VisiWin7.ProcessControls.WPF](../VisiWin7.ProcessControls.WPF/)
+### [VisiWin7.ProcessControls.WPF](VisiWin7.ProcessControls.WPF/)
 
 The **core logic project** containing all process control classes and business logic.
 
@@ -47,7 +47,7 @@ The **core logic project** containing all process control classes and business l
 - `DefaultProcessControlBase` – Standard process values and visual state selection (`ActualValue`, `SetValue`, `CurrentStateBrush`)
 - Category-specific base classes for common control types
 
-### [VisiWin7.ProcessControls.Styles.WPF](../VisiWin7.ProcessControls.Styles.WPF/)
+### [VisiWin7.ProcessControls.Styles.WPF](VisiWin7.ProcessControls.Styles.WPF/)
 
 The **styling and visual representation project** containing all XAML styles and symbols.
 
@@ -64,7 +64,7 @@ The **styling and visual representation project** containing all XAML styles and
 - Binding support for dynamic properties (stroke, fill, thickness)
 - Support for special cases like tank fill level visualization
 
-### [VisiWin7.ProcessControls.Development.WPF](../VisiWin7.ProcessControls.Development.WPF/)
+### [VisiWin7.ProcessControls.Development.WPF](VisiWin7.ProcessControls.Development.WPF/)
 
 The **example/development project** demonstrating usage patterns.
 
@@ -76,7 +76,7 @@ The **example/development project** demonstrating usage patterns.
   - Sample XAML usage patterns
   - Integration examples with VisiWin7 IDE toolbox
 
-### [VisiWin7.ProcessControls.WPF.VW7.Design](../VisiWin7.ProcessControls.WPF.VW7.Design/)
+### [VisiWin7.ProcessControls.WPF.VW7.Design](VisiWin7.ProcessControls.WPF.VW7.Design/)
 
 The **VisiWin7 IDE design-time support project** for enhanced development experience.
 
@@ -91,7 +91,7 @@ The **VisiWin7 IDE design-time support project** for enhanced development experi
 
 **Note**: This project uses VisiWin7-specific design-time APIs and is only active when working within the VisiWin7 IDE.
 
-### [VisiWin7.ProcessControls.WPF.DesignTools](../VisiWin7.ProcessControls.WPF.DesignTools/)
+### [VisiWin7.ProcessControls.WPF.DesignTools](VisiWin7.ProcessControls.WPF.DesignTools/)
 
 The **Microsoft Blend/Visual Studio design-time support project** for enhanced XAML designer experience.
 
@@ -109,7 +109,7 @@ The **Microsoft Blend/Visual Studio design-time support project** for enhanced X
 - Initializers inherit from `ProcessControlBaseInitializer` base class
 - Automatically registers with designers through `[ProvideMetadata]` assembly attribute
 
-### [VisiWin7.ProcessControls.WPF.VisualStudio.Design](../VisiWin7.ProcessControls.WPF.VisualStudio.Design/)
+### [VisiWin7.ProcessControls.WPF.VisualStudio.Design](VisiWin7.ProcessControls.WPF.VisualStudio.Design/)
 
 The **Visual Studio-specific design-time support project** for property grid and XAML designer integration.
 
