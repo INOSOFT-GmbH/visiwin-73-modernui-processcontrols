@@ -420,6 +420,153 @@ Tank1.Mapping = mappingCollection;
 - `DefaultProcessControlBase` selects the matching state as `CurrentStateBrush` when `ActualValue` changes.
 - Styles can bind fills/strokes to the `CurrentStateBrush` to reflect the current state visually.
 
+## Process Control Dialog Functionality
+
+All process controls in this framework support built-in dialog functionality that allows operators to interact with process values at runtime. When a user clicks or taps on a process control, a dialog can be displayed to view and edit mapped properties.
+
+### Dialog Architecture Overview
+
+The dialog system consists of the following components:
+
+1. **Touch/Mouse Interaction**: Built into `ProcessControlBase` to respond to user clicks
+2. **Dialog Properties**: Type-safe property wrappers for dialog display and editing
+3. **Dialog View**: XAML view that displays the properties in the client application
+4. **Variable Mapping Integration**: Automatic synchronization between dialog inputs and PLC variables
+
+### Required Implementation in Client Projects
+
+**?? IMPORTANT**: To use the dialog functionality, your **client project MUST include a `ProcessControlDialogView`** implementation. Without this view, the controls will not be able to display the dialog when clicked.
+
+#### Creating the Required ProcessControlDialogView
+
+1. **Create the XAML View** (e.g., in `Views\DialogRegion\ProcessControlDialogView.xaml`):
+
+```xml
+<vw:View x:Class="HMI.ProcessControlDialogView"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         MinWidth="380" MinHeight="140"
+         Background="{DynamicResource ApplicationBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot">
+        <ItemsControl ItemsSource="{Binding Path=Values}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" Margin="10" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="FrameworkElement.Margin" Value="0,0,0,10" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+        </ItemsControl>
+    </Grid>
+</vw:View>
+```
+
+2. **Create the Code-Behind** (`ProcessControlDialogView.xaml.cs`):
+
+```csharp
+
+namespace HMI
+{
+    /// <summary>
+    /// Interaction logic for ProcessControlDialogView.xaml
+    /// </summary>
+    [ExportView("ProcessControlDialogView")]
+    public partial class ProcessControlDialogView : VisiWin.Controls.View
+    {
+        public ProcessControlDialogView()
+        {
+            this.InitializeComponent();
+        }
+    }
+}
+```
+
+**Key Requirements:**
+- The class **MUST** be named `HMI.ProcessControlDialogView` (namespace and class name)
+- The class **MUST** have the `[ExportView("ProcessControlDialogView")]` attribute
+- The view name in the attribute must be `"ProcessControlDialogView"` to match the default `DialogViewName` property
+
+### Enabling Dialog Properties in Variable Mappings
+
+By default, all variable mappings are treated as dialog properties. To configure which properties appear in the dialog:
+
+```xml
+<controls:Tank x:Name="Tank1"
+        StructVariableName="PLC.Tank1">
+    <controls:Tank.Mapping>
+        <mapping:VariableNameMappingCollection>
+            <!-- This property WILL appear in the dialog (IsDialogProperty defaults to true) -->
+            <mapping:VariableNameControlPropertyMapping 
+                VariableName="SetValue" 
+                ControlPropertyName="SetValue"/>
+            
+            <!-- This property will NOT appear in the dialog -->
+            <mapping:VariableNameControlPropertyMapping 
+                VariableName="ActualValue" 
+                ControlPropertyName="ActualValue"
+                IsDialogProperty="False"/>
+            
+            <!-- Error property typically excluded from dialog -->
+            <mapping:VariableNameControlPropertyMapping 
+                VariableName="Errors" 
+                ControlPropertyName="Errors"
+                IsDialogProperty="False"/>
+        </mapping:VariableNameMappingCollection>
+    </controls:Tank.Mapping>
+</controls:Tank>
+```
+
+### Supported Dialog Property Types
+
+The dialog system automatically creates appropriate input controls based on property types:
+
+| Property Type | Dialog Property Class | Input Control |
+|---------------|----------------------|---------------|
+| `bool` | `BoolDialogProperty` | Checkbox or toggle |
+| `string` | `StringDialogProperty` | Text input field |
+| `int` | `IntDialogProperty` | Numeric input field |
+
+**Example of automatic type mapping:**
+
+```csharp
+// In your custom control
+[Category("Process")]
+public bool IsEnabled
+{
+    get => (bool)GetValue(IsEnabledProperty);
+    set => SetValue(IsEnabledProperty, value);
+}
+
+public static readonly DependencyProperty IsEnabledProperty =
+    DependencyProperty.Register("IsEnabled", typeof(bool), 
+        typeof(CustomControl), new PropertyMetadata(false));
+```
+
+When mapped with `IsDialogProperty="True"`, this boolean property will automatically appear as a checkbox in the dialog.
+
+### Controlling Dialog Behavior
+
+The `ProcessControlBase` class provides several properties to control dialog behavior:
+
+```csharp
+// Enable or disable the dialog functionality
+control.CanShowDialog = true; // Default: true
+
+// Change the dialog view name (if you create a custom dialog view)
+control.DialogViewName = "CustomProcessControlDialogView";
+
+// Access dialog properties programmatically
+var dialogProps = control.DialogProperties;
+```
+
+**Disabling Dialog for Specific Controls:**
+
 ### Available Process Controls
 
 The framework includes the following categories of process controls:
