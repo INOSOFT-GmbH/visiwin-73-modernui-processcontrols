@@ -35,18 +35,18 @@ The **core logic project** containing all process control classes and business l
 
 - **Purpose**: Contains class definitions and implementations for all process controls
 - **Key Components**:
-  - `ProcessControlBase` � Root base class (state brushes, mapping, orientation, async init)
-  - `DefaultErrorProcessControlBase` � Adds `Errors` mapping support
-  - `DefaultProcessControlBase` � Adds `ActualValue`, `SetValue` and exposes `CurrentStateBrush` selected from `StateBrushes`
+  - `ProcessControlBase` — Root base class (state brushes, mapping, orientation, async init)
+  - `DefaultErrorProcessControlBase` — Adds `Errors` mapping support
+  - `DefaultProcessControlBase` — Adds `ActualValue`, `SetValue` and exposes `CurrentStateBrush` selected from `StateBrushes`
   - Category base classes (`ConveyorBase`, `ValveBase`, `PumpBase`, `PipeBase`, `ExchangerBase`, `EngineBase`)
   - Concrete implementations (e.g., `BeltConveyor`, `Tank`, `ThreeWayValve`, `Centrifugal`)
   - Custom properties with dependency property support
   - Process-specific logic and behaviors
 
 **Main Types**:
-- `ProcessControlBase` � Root base with mapping (`StructVariableName` + `Mapping`), state system, orientation
-- `DefaultErrorProcessControlBase` � Error value (`Errors`) handling
-- `DefaultProcessControlBase` � Standard process values and visual state selection (`ActualValue`, `SetValue`, `CurrentStateBrush`)
+- `ProcessControlBase` — Root base with mapping (`StructVariableName` + `Mapping`), state system, orientation
+- `DefaultErrorProcessControlBase` — Error value (`Errors`) handling
+- `DefaultProcessControlBase` — Standard process values and visual state selection (`ActualValue`, `SetValue`, `CurrentStateBrush`)
 - Category-specific base classes for common control types
 
 ### [VisiWin7.ProcessControls.Styles.WPF](VisiWin7.ProcessControls.Styles.WPF/)
