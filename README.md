@@ -5,6 +5,13 @@ This is the **example/development project** demonstrating how to create and exte
 
 The project serves as both a sample implementation and a foundation for developing custom process controls such as tanks, valves, pumps, conveyors, and other industrial automation components. Useful for UI developers and automation engineers working with the VisiWin7 IDE who need to create custom visual representations of industrial processes.
 
+[![VisiWin](https://img.shields.io/badge/VisiWin-7.3-green.svg)](https://www.inosoft.com/)
+![.NET Framework](https://img.shields.io/badge/.NET%20Framework-%23512BD4.svg?style=flat&logo=dotnet&logoColor=white)
+![WPF](https://img.shields.io/badge/WPF-%23512BD4.svg?style=flat&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-%235C2D91.svg?style=flat&logo=visualstudio&logoColor=white)
+
 ![Process Controls Preview](Controls.gif)
 
 ## Related packages
