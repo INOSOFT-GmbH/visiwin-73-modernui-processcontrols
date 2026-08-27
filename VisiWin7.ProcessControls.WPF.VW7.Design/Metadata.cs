@@ -218,7 +218,7 @@ namespace VisiWin7.ProcessControls.WPF.VW7.Design
                                                                  {
                                                                      ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "MechanicalEquipment" }
                                                                  }));
-                builder.AddCustomAttributes(typeof(HeatExchangerTubes), nameof(HeatExchangerTubes.StructVariableName),
+                builder.AddCustomAttributes(typeof(HeatExchanger), nameof(HeatExchanger.StructVariableName),
                     new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
                                                                  {
                                                                      ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
@@ -228,7 +228,7 @@ namespace VisiWin7.ProcessControls.WPF.VW7.Design
                                                                  {
                                                                      ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
                                                                  }));
-                builder.AddCustomAttributes(typeof(HeatExchangerTubes), nameof(HeatExchangerTubes.StructVariableName),
+                builder.AddCustomAttributes(typeof(HeatExchangerWithoutCrossingFlow), nameof(HeatExchangerWithoutCrossingFlow.StructVariableName),
                     new ItemSelectionDialogSettingsAttribute(new ItemSelectionDialogSettings
                                                                  {
                                                                      ItemComplexFilter = ItemComplexFilter.Structure, StructureNamesFilter = new List<string> { "Exchanger" }
